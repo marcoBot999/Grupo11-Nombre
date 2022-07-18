@@ -14,6 +14,8 @@ https://github.com/marcoBot999/Grupo11-Nombre
 
 -Mi nombre es Marco Bottelli, tengo 17 años, estoy en el 5to año del secundario y hobbys jugar al futbol y participar en torneos electronicos.
 
+-Mi nombre es Lina Gómez, tengo 32 años y actualmente quiero darle otro enfoque a mi profesión a través de la programación. En mis tiempos libres hago trekking, yoga y bailo.
+
 
 3.Buscar inspiración en referentes del mercado
 -https://nuevowevo.com/
