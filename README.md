@@ -4,7 +4,10 @@ a. Repositorio del proyecto y colaboradores:
 
  https://github.com/marcoBot999/Grupo11-Nombre
 
-b. Temática del Market Place: 
+b. Tablero de trabajo:
+https://trello.com/invite/b/xX4Erxux/b7c99015fb218766a4a72db218da620b/equipo-11
+
+c. Temática del Market Place: 
 
 Nuestro sitio se enfocará en los productos e insumos de computación desde lo más básico, hasta productos de gama alta, como computadores y sus respectivas piezas de hardware. El público objetivo serán personas que estén enfocadas principalmente en el gaming o streaming, y con intenciones de mejorar sus computadores, ya sea para trabajo, estudio o entretenimiento.
 
@@ -38,7 +41,7 @@ Integrantes del grupo
 -  Mi nombre es Marco Bottelli, tengo 17 años, estoy en el 5to año del secundario y hobbys jugar al futbol y participar en torneos electronicos.
 -  Mi nombre es Lina Gómez, tengo 32 años y actualmente quiero darle otro enfoque a mi profesión a través de la programación. En mis tiempos libres hago trekking, yoga y bailo.
 
-c. Referentes del mercado: 
+d. Referentes del mercado: 
 
 - https://nuevowevo.com/ 
 - https://www.logg.com.ar/ 
