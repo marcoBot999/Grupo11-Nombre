@@ -1,10 +1,150 @@
-.logo{
-    margin: 25px;
-    width: 200px;
-    margin-bottom: 10px;
-}
-
 *{
+    margin: 0px;
+    padding: 0px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
+}
+
+header{
+    background-color: #191068;
+}
+
+.logo{
+    width: 30vw;
+    align-items: flex-start;
+}
+
+header .buscador{
+    display: flex;
+    justify-content: center;
+}
+
+
+header input{
+    background-color: #FFF;
+    border: 1px solid #c0fd68;
+    outline: none;
+    color: #666;
+    border-radius: 6px;  
+    width: 60vw;
+}
+
+header button{
+    color: #191068;
+
+}
+
+header .top{
+    display: flex;
+    margin: 0px 30px 10px 30px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+header nav ul{
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+        list-style: none;
+        font-size: 2vh;
+    }
+
+header nav .ingreso{
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 2vh;
+    color:#c0fd68
+}
+
+body header nav.barra{
+    padding: 2%;
+    font-size: 2vh;
+    ;
+}
+
+
+.barra{
+    background-color: #c0fd68;
+    color:#191068;
+     }
+
+.botonBuscar{
+    border: 1px solid #c0fd68;
+    border-radius: 50%;
+    background-color: #c0fd68;
+    color: #191068;
+
+}
+
+/*.burgerMenu{
+    width: 40px;
+    height: 40px;
+    background-color: #c0fd68;
+    color:#191068;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    margin: 0 auto;
+}*/
+
+.burgerMenu{
+    color:#c0fd68;
+    align-items: flex-start;
+
+}
+
+header nav a{
+    color:#c0fd68;
+    text-decoration: none;
+}
+
+body main section{
+    width: 20vw;
+    height: 20vh;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    border: solid 5px #191068;
+    margin: 20%;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+}
+
+.flecha{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10%;
+}
+
+.footer{
+    background-color: #191068;
+    display: flex;
+    align-items: center;
+}
+footer nav ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 2vh;
+}
+footer img{
+    width:20vw;
+    align-items: flex-start;
+}
+
+
+
+@media (min-width: 361px){
+    .barra{display:block;
+    }
+}
+
+@media (min-width: 769px){
+
 }
