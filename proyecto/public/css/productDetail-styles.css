@@ -10,7 +10,7 @@ header{
 }
 
 .logo{
-    width: 200px;
+    width: 30vw;
     align-items: flex-start;
 }
 
@@ -26,7 +26,7 @@ header input{
     outline: none;
     color: #666;
     border-radius: 6px;  
-    max-width: 70vw;
+    width: 60vw;
 }
 
 header button{
@@ -48,15 +48,18 @@ header nav ul{
         justify-content: space-around;
         margin: 20px;
         list-style: none;
+        font-size: 2vh;
     }
 
 header nav .ingreso{
     flex-direction: column;
     align-items: flex-end;
+    font-size: 2vh;
 }
 
 header nav .barra{
     padding: 2%;
+    font-size: 2vh;
 }
 
 
@@ -88,7 +91,9 @@ header nav .barra{
 
 header nav a {
     color:#c0fd68;
+    text-decoration: none;
 }
+
 
 
 
