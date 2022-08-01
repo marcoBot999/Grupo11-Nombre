@@ -17,6 +17,7 @@ header{
 header .buscador{
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 
@@ -46,7 +47,6 @@ header .top{
 header nav ul{
         display: flex;
         justify-content: space-around;
-        margin: 20px;
         list-style: none;
         font-size: 2vh;
     }
@@ -57,18 +57,33 @@ header nav .ingreso{
     font-size: 2vh;
 }
 
+header nav .ingreso a{
+    color: #c0fd68;
+    align-content: space-between;
+}
+
 header nav .barra{
-    padding: 2%;
-    font-size: 2vh;
+    display: flex;
+    padding: 2vw;
+    width: 100vw;
+    background-color: #c0fd68;
+    color: #191068;
+    font-weight: 900;
+    font-size: 90%;
+    
+}
+
+.barra{
+    padding-right: 20px;
 }
 
 
 .botonBuscar{
     border: 1px solid #c0fd68;
-    border-radius: 50%;
+    border-radius: 40%;
     background-color: #c0fd68;
     color: #191068;
-
+    width: 20px;
 }
 
 /*.burgerMenu{
@@ -90,7 +105,6 @@ header nav .barra{
 }
 
 header nav a {
-    color:#c0fd68;
     text-decoration: none;
 }
 
@@ -100,14 +114,22 @@ header nav a {
     display: flex;
     align-items: center;
 }
+
 footer nav ul a{
     color: white;
     text-decoration: none;
     font-size: 2vh;
+    align-items: center;
 }
+
 footer img{
     width:20vw;
     align-items: flex-start;
+}
+
+footer .barraFooter{
+    display: flex;
+    justify-content: space-around;
 }
 
 
