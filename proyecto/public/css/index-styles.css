@@ -51,24 +51,19 @@ header nav ul{
         font-size: 2vh;
     }
 
+.barra{
+        background-color:#c0fd68;
+        color: #191068;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 header nav .ingreso{
     flex-direction: column;
     align-items: flex-end;
     font-size: 2vh;
     color:#c0fd68
 }
-
-body header nav.barra{
-    padding: 2%;
-    font-size: 2vh;
-    ;
-}
-
-
-.barra{
-    background-color: #c0fd68;
-    color:#191068;
-     }
 
 .botonBuscar{
     border: 1px solid #c0fd68;
@@ -102,8 +97,8 @@ header nav a{
 }
 
 body main section{
-    width: 20vw;
-    height: 20vh;
+    width: 20 vw;
+    height:20 vh;
     padding-top: 10%;
     padding-bottom: 10%;
     padding-left: 20%;
@@ -114,13 +109,17 @@ body main section{
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
-    box-sizing: content-box;
+    box-sizing:content-box;
 }
-
+.imagen{
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 1%;
+}
 .flecha{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10%;
+   justify-content: space-between;
+   margin: 10%;
 }
 
 .footer{
@@ -140,11 +139,12 @@ footer img{
 
 
 
-@media (min-width: 361px){
-    .barra{display:block;
+@media (min-width: 360px){
+    .barra{display:none;
     }
 }
 
 @media (min-width: 769px){
-
+    .barra{display:block;
+    }
 }
