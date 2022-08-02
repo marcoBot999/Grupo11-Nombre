@@ -9,6 +9,13 @@ header{
     background-color: #191068;
 }
 
+body {
+    background-color: white;
+    position: relative;
+    padding-bottom: 12vh;
+    min-height: 100vh;
+}
+
 .logo{
     width: 30vw;
     align-items: flex-start;
@@ -17,6 +24,7 @@ header{
 header .buscador{
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 
@@ -41,14 +49,23 @@ header .top{
     justify-content: space-around;
 }
 
-
-
 header nav ul{
-        display: flex;
-        justify-content: space-around;
-        margin: 20px;
-        list-style: none;
-        font-size: 2vh;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 2vh;
+    box-sizing: border-box;
+}
+
+header nav .ingreso{
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 2vh;
+}
+
+header nav .ingreso a{
+    color: #c0fd68;
+    align-content: space-between;
 }
 
 header nav .barra{
@@ -61,115 +78,114 @@ header nav .barra{
     font-size: 90%;
 }
 
-header nav .ingreso{
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 2vh;
-    color:#c0fd68
+.barra{
+    padding-right: 20px;
 }
 
 .botonBuscar{
     border: 1px solid #c0fd68;
-    border-radius: 50%;
+    border-radius: 40%;
     background-color: #c0fd68;
     color: #191068;
-
+    width: 4vh;
+    height: 4vh;
 }
-
-/*.burgerMenu{
-    width: 40px;
-    height: 40px;
-    background-color: #c0fd68;
-    color:#191068;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    margin: 0 auto;
-}*/
 
 .burgerMenu{
     color:#c0fd68;
     align-items: flex-start;
 
 }
-
-header nav a{
-    color:#c0fd68;
+header nav a {
     text-decoration: none;
 }
 
-body main section{
-    width: 20 vw;
-    height:20 vh;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 20%;
-    padding-right: 20%;
-    border: solid 5px #191068;
-    margin: 20%;
+main{
+    width: 90vw;
+    margin: auto;
+}
+
+body main section.offers{
+    margin-top: 5vh;
+    border: solid 3px #191068;
+    border-radius: 3%;
+    justify-content: center;
+    align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
     box-sizing:content-box;
+    position: relative;
+    
 }
-.imagenGrande{
+
+main section a img{
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    height: 1%;
-    box-sizing: content-box;
-    flex-wrap: nowrap;
+    width: 100%;
 }
-.imagenGrande img{
-    height: 150%;
-    width: 150%;
-}
-
-.imagenesChicas{
+main section article div a{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-sizing: content-box;
-    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
-
-.imagenChica{
-    padding: 20%;
-    margin: 20%;
-    border:solid 2px #191068;
-    width: 25%;
-    height: 25%;
-    font-size: 75%;
-    box-sizing: content-box;
-    text-align: left;
-    line-height: 90%;
-}
-.imagenChica img{
-    width: 150%;
-    height: 150%;
+main section article{
+    margin-top: 5vh;
+    border: #191068 solid 3px;
+    border-radius: 5px;
 }
 
 
-.flecha{
-   margin: 100%;
+main section article img{
+    width: 70%;
 }
+
+.main-desc{
+    width: 100%;
+    border-top: solid 2px rgb(207, 207, 207);
+    background-color:#ebebeb;
+    padding:15px;
+    box-sizing: border-box;
+}
+
+.description{
+    font-size: 18px;
+    flex-grow: 0.2%;
+}
+
 
 .footer{
+    height: 10vh;
+    min-width: 100%;
     background-color: #191068;
     display: flex;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
 }
+
 footer nav ul a{
     color: white;
     text-decoration: none;
     font-size: 2vh;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
+
 footer img{
-    width:20vw;
+    max-height: 10vh;
+    max-width: 20vh;
+    width: 20vw;
     align-items: flex-start;
+    
 }
 
-
+footer .barraFooter{
+    display: flex;
+    justify-content: space-around;
+}
 
 @media (min-width: 360px){
     .barra{display:none;
