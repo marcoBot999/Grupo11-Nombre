@@ -55,12 +55,17 @@ header nav .ingreso{
     flex-direction: column;
     align-items: flex-end;
     font-size: 2vh;
+    gap: 5px;
+    vertical-align: middle;
 }
+
 
 header nav .ingreso a{
     color: #c0fd68;
-    align-content: space-between;
+    align-content: space-around;
+
 }
+
 
 header nav .barra{
     display: flex;
@@ -120,6 +125,7 @@ footer nav ul a{
     text-decoration: none;
     font-size: 2vh;
     align-items: center;
+    justify-content: center;
 }
 
 footer img{
@@ -129,9 +135,25 @@ footer img{
 
 footer .barraFooter{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5%;
+    padding-right: 20px;
 }
 
+
+
+/*@media (min-width: 0px){
+    header nav .barra{display:none;
+    }
+    .burgerMenu{display:block ;}
+}
+
+@media (min-width: 769px){
+    header nav .barra{display:block;
+    }
+    .burgerMenu{display: none;}
+}*/
 
 
 
