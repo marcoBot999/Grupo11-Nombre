@@ -140,6 +140,11 @@ main section article img{
     width: 70%;
 }
 
+.productos img{
+    width: 15%;
+    height: 15%;
+}
+
 .main-desc{
     width: 100%;
     border-top: solid 2px rgb(207, 207, 207);
