@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+header{
+    background-color: #191068;
+}
+
+body {
+    background-color: #c0fd68;
+    position: relative;
+    padding-bottom: 12vh;
+    min-height: 100vh;
+}
+
+.logo{
+    width: 30vw;
+    align-items: flex-start;
+}
+
+header .buscador{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+
+header input{
+    background-color: #FFF;
+    border: 1px solid #c0fd68;
+    outline: none;
+    color: #666;
+    border-radius: 6px;  
+    width: 60vw;
+}
+
+header button{
+    color: #191068;
+
+}
+
+header .top{
+    display: flex;
+    margin: 0px 30px 10px 30px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 2vh;
+    box-sizing: border-box;
+}
+
+header nav .ingreso{
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 2vh;
+}
+
+header nav .ingreso a{
+    color: #c0fd68;
+    align-content: space-between;
+}
+
+header nav .barra{
+    display: flex;
+    padding: 2vw;
+    max-width: 100%;
+    background-color: #c0fd68;
+    color: #191068;
+    font-weight: 900;
+    font-size: 90%;
+}
+
+.barra{
+    padding-right: 20px;
+}
+
+.botonBuscar{
+    border: 1px solid #c0fd68;
+    border-radius: 40%;
+    background-color: #c0fd68;
+    color: #191068;
+    width: 4vh;
+    height: 4vh;
+}
+
+.burgerMenu{
+    color:#c0fd68;
+    align-items: flex-start;
+
+}
+header nav a {
+    text-decoration: none;
+}
+
+.formulario{
+    border:solid 5px #191068;
+    border-radius: 50px;
+    margin: 5%;
+    padding: 5%;
+    background-color: #c0fd68;
+    color: #191068;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.iniciarsesion{
+    background-color: #191068;
+    color: #c0fd68;
+    border: solid 3px #191068;
+    border-radius: 5px;
+    font-size: 90%;
+}
+.registrarse{
+    color: #191068;
+    font-size: 90%;
+}
+
+.botonregistrarse{
+    background-color: #191068;
+    color: #c0fd68;
+    border: solid 3px #191068;
+    border-radius: 5px;
+    font-size: 90%;
+}
+
+.footer{
+    height: 10vh;
+    min-width: 100%;
+    background-color: #191068;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+}
+
+footer nav ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 2vh;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+footer img{
+    max-height: 10vh;
+    max-width: 20vh;
+    width: 20vw;
+    align-items: flex-start;
+    
+}
+
+footer .barraFooter{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 0px){
+    header nav .barra{display:none;
+    }
+    .burgerMenu{display: block;}
+    header{display: none;}
+}
+
+@media (min-width: 769px){
+    header nav .barra{display:none;
+    }
+    .burgerMenu{display: none;}
+    header{display: block;}
+}
