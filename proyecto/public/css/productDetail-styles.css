@@ -55,7 +55,7 @@ header nav .ingreso{
     flex-direction: column;
     align-items: flex-end;
     font-size: 2vh;
-    gap: 5px;
+    gap: 4px;
     vertical-align: middle;
 }
 
@@ -70,12 +70,11 @@ header nav .ingreso a{
 header nav .barra{
     display: flex;
     padding: 2vw;
-    width: 100vw;
+    max-width: 100vw;
     background-color: #c0fd68;
     color: #191068;
     font-weight: 900;
     font-size: 90%;
-    
 }
 
 .barra{

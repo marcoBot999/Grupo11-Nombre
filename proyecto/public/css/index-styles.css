@@ -49,14 +49,17 @@ header nav ul{
         margin: 20px;
         list-style: none;
         font-size: 2vh;
-    }
+}
 
-.barra{
-        background-color:#c0fd68;
-        color: #191068;
-        display: flex;
-        flex-wrap: wrap;
-    }
+header nav .barra{
+    display: flex;
+    padding: 2vw;
+    max-width: 100%;
+    background-color: #c0fd68;
+    color: #191068;
+    font-weight: 900;
+    font-size: 90%;
+}
 
 header nav .ingreso{
     flex-direction: column;
