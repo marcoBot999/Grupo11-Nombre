@@ -140,6 +140,14 @@ main section article img{
     width: 70%;
 }
 
+.productos{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+}
 .productos img{
     width: 15%;
     height: 15%;
@@ -192,12 +200,14 @@ footer .barraFooter{
     justify-content: space-around;
 }
 
-@media (min-width: 360px){
-    .barra{display:none;
+@media (min-width: 0px){
+    header nav .barra{display:none;
     }
+    .burgerMenu{display: block;}
 }
 
 @media (min-width: 769px){
-    .barra{display:block;
+    header nav .barra{display:flex;
     }
+    .burgerMenu{display: none;}
 }

@@ -166,7 +166,7 @@ footer .barraFooter{
 }
 
 
-/*@media (min-width: 0px){
+@media (min-width: 0px){
     header nav .barra{display:none;
     }
     .burgerMenu{display:block ;}
@@ -178,7 +178,7 @@ footer .barraFooter{
     .burgerMenu{display: none;}
 }
 
-
+/*
 aumentar el ancho de la barra cuando pase a versión tablet*/
 
 
