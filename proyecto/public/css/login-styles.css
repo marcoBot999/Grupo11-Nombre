@@ -10,7 +10,7 @@ header{
 }
 
 body {
-    background-color: #c0fd68;
+    background-color: white;
     position: relative;
     padding-bottom: 12vh;
     min-height: 100vh;
@@ -103,7 +103,7 @@ header nav a {
 .formulario{
     border:solid 5px #191068;
     border-radius: 50px;
-    margin: 5%;
+    margin: 10%;
     padding: 5%;
     background-color: #c0fd68;
     color: #191068;
@@ -111,6 +111,7 @@ header nav a {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    box-sizing: content-box;
 }
 .iniciarsesion{
     background-color: #191068;
