@@ -173,7 +173,7 @@ footer .barraFooter{
 }
 
 @media (min-width: 769px){
-    header nav .barra{display:block;
+    header nav .barra{display:flex;
     }
     .burgerMenu{display: none;}
 }
