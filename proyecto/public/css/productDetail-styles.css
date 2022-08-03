@@ -17,8 +17,7 @@ body {
 }
 
 .logo{
-    width: 30vw;
-    align-items: flex-start;
+    width: 18vw;
 }
 
 header .buscador{
@@ -30,14 +29,17 @@ header .buscador{
 header .carroCompras{
     display: flex;
     flex-direction: row-reverse;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    padding: 0 8vw 2vw 0;
 }
 
 header .carroCompras a{
-    color: #c0fd68;
-    padding: 0 8.5vw 3vw 0;
+    color: #191068;
+    background-color:#c0fd68;
+    display: inline-block;
+    border-radius: 60px;
+    padding: 0.5em 0.6em;
 }
-
 
 header input{
     background-color: #FFF;
@@ -46,8 +48,8 @@ header input{
     color: #666;
     border-radius: 10px;  
     width: 60vw;
-    height: 4vw;
-    font-size: 2vw;
+    height: 100%;
+    font-size: 1.4vw;
 }
 
 header button{
@@ -56,7 +58,7 @@ header button{
 
 header .top{
     display: flex;
-    margin: 0vw 1vw 0vw 2vw;
+    margin: 0vw 1vw 0vw 1vw;
     align-items: center;
     justify-content: space-around;
 }
@@ -72,26 +74,29 @@ header nav ul{
 header nav .ingreso{
     flex-direction: column;
     align-items: flex-end;
-    font-size: 2vh;
-    gap: 4px;
-    vertical-align: middle;
+    gap: 3px;
+    max-height: 20%;
 }
 
 
 header nav .ingreso a{
-    color: #c0fd68;
+    color: white;
     align-content: space-around;
-    font-size: 2.6vw;
+    font-size: 1.7vw;
+}
+
+header nav .ingreso i{
+    color: #c0fd68;
 }
 
 header nav .barra{
     display: flex;
-    padding: 2vw;
+    padding: 1vw;
     max-width: 100vw;
     background-color: #c0fd68;
     color: #191068;
-    font-weight: 900;
-    font-size: 2vw;
+    font-weight: 800;
+    font-size: 1.5vw;
 }
 
 .barra{
@@ -104,7 +109,7 @@ header nav .barra{
     border-radius: 10px;
     background-color: #c0fd68;
     color: #191068;
-    width: 5vw;
+    max-height: 100%;
 }
 
 .botonBuscar i{
@@ -127,6 +132,7 @@ header nav .barra{
 .burgerMenu{
     color:#c0fd68;
     align-items: flex-start;
+    font-size: 2vh;
 }
 
 header nav a {
@@ -134,51 +140,57 @@ header nav a {
 }
 
 .footer{
-    height: 10vh;
+    max-height: 11vh;
     background-color: #191068;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     position: absolute;
     width: 100%;
     bottom: 0;
 }
 
-footer nav ul a{
+footer nav ul li a{
     color: white;
     text-decoration: none;
-    font-size: 2vh;
-    align-items: center;
-    justify-content: center;
+    font-size: 1.5vw;
 
 }
 
-footer img{
-    max-height: 10vh;
-    max-width: 20vh;
-    width: 20vw;
-    align-items: flex-start;
-
-}
-
-footer .barraFooter{
+footer nav ul{
     display: flex;
     justify-content: space-around;
+    
+    list-style: none;
+    gap: 10vw
 }
 
 
-/*@media (min-width: 0px){
+footer img{
+    max-width: 20vh;
+    max-height: 10vh;
+    width: 20vw;
+}
+
+footer .logoFooter{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+@media (min-width: 0px){
     header nav .barra{display:none;
     }
     .burgerMenu{display:block ;}
 }
 
 @media (min-width: 769px){
-    header nav .barra{display:block;
+    header nav .barra{display:flex;
     }
     .burgerMenu{display: none;}
 }
 
-
+/*
 aumentar el ancho de la barra cuando pase a versión tablet*/
 
 
