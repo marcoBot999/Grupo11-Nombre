@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unlimited Gaming</title>
-    <link rel="stylesheet" href="/css/login-styles.css">
+    <link rel="stylesheet" href="/css/register-styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
     
@@ -42,24 +42,30 @@
     </header>
 
     <main class="formulario">
-       <form action=""  method="">
-            <label for="NombreyApellido">Nombre y Apellido</label>
-        <input type="name" id="NombreyApellido" name="NombreyApellido" placeholder="Nombre y Apellido">
+       <form action="/register"  method="POST">
+        <div><label for="NombreyApellido">Nombre y Apellido</label>
+        <input type="name" id="NombreyApellido" name="NombreyApellido" placeholder="Nombre y Apellido" required></div>
         <br>
-            <label for="NombredeUsuario">Nombre de Usuario</label>
-        <input type="name" id="NombredeUsuario" name="NombredeUsuario" placeholder="Nombre de Usuario">
-        <br> <label for="Date">Fecha de Nacimiento</label>
-        <input type="date" id="Date" name="Date" placeholder="Fecha de Nacimiento">
-        <br> <label for="domiciliio">Domicilio</label>
-        <input type="text" id="domiciliio" name="domiciliio" placeholder="Domicilio">
+        <div><label for="NombredeUsuario">Nombre de Usuario</label>
+        <input type="name" id="NombredeUsuario" name="NombredeUsuario" placeholder="Nombre de Usuario" required></div>
         <br>
-        <label for="password">contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Contraseña">
+        <div><label for="email">Email</label>
+            <br>
+        <input type="email" id="email" name="email" placeholder="Email" required></div>
+        <br> 
+        <div><label for="Date">Fecha de Nacimiento</label>
+        <input type="date" id="Date" name="Date" placeholder="Fecha de Nacimiento" required></div>
+        <br> 
+        <div><label for="domiciliio">Domicilio</label>
+        <input type="text" id="domiciliio" name="domiciliio" placeholder="Domicilio" required></div>
         <br>
-        <label for="password">Confirmar Contraseña</label>
-        <input type="password" id="password" name="confirm password" placeholder="Confirmar Contraseña">
+        <div><label for="password">contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Contraseña" minlength="5"></div>
+        <br>
+        <div><label for="password">Confirmar Contraseña</label>
+        <input type="password" id="password" name="confirm password" placeholder="Confirmar Contraseña" required></div>
         <br>    
-        <button type="submit">inicar sesion</button>
+        <button type="post">Registrarse</button>
         <br>
         <button type="reset">Cancelar</button>
     </main>
