@@ -113,25 +113,7 @@ header nav a {
     flex-wrap: wrap;
     box-sizing: content-box;
 }
-.iniciarsesion{
-    background-color: #c0fd68;
-    color: #191068;
-    border: solid 3px #c0fd68;
-    border-radius: 5px;
-    font-size: 90%;
-}
-.registrarse{
-    color: #c0fd68;
-    font-size: 90%;
-}
 
-.botonregistrarse{
-    background-color: #191068;
-    color: #c0fd68;
-    border: solid 3px #191068;
-    border-radius: 5px;
-    font-size: 90%;
-}
 
 .footer{
     height: 10vh;
