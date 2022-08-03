@@ -101,12 +101,12 @@ header nav a {
 }
 
 .formulario{
-    border:solid 5px #191068;
+    border:solid 5px #c0fd68;
     border-radius: 50px;
     margin: 10%;
     padding: 5%;
-    background-color: #c0fd68;
-    color: #191068;
+    background-color: #191068;
+    color: #c0fd68;
     justify-content: center;
     align-items: center;
     display: flex;
