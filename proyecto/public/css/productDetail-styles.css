@@ -26,19 +26,12 @@ header .buscador{
     padding-bottom: 30px;
 }
 
-header .carroCompras{
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 1.5vw;
-    padding: 0 8vw 2vw 0;
-}
-
-header .carroCompras a{
+header nav .carroCompras{
     color: #191068;
     background-color:#c0fd68;
     display: inline-block;
     border-radius: 60px;
-    padding: 0.5em 0.6em;
+    padding: 0.4em 0.5em;
 }
 
 header input{
@@ -49,7 +42,7 @@ header input{
     border-radius: 10px;  
     width: 60vw;
     height: 100%;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
 }
 
 header button{
@@ -62,7 +55,6 @@ header .top{
     align-items: center;
     justify-content: space-around;
 }
-
 
 header nav ul{
         display: flex;
@@ -78,14 +70,20 @@ header nav .ingreso{
     max-height: 20%;
 }
 
-
-header nav .ingreso a{
-    color: white;
+header nav .ingreso li{
     align-content: space-around;
-    font-size: 1.7vw;
+    font-size: 1.4vw;
 }
 
-header nav .ingreso i{
+header nav li .ingresar{
+    color: white;
+}
+
+header nav li .registrarse{
+    color: white;
+}
+
+header nav .ingresar i, .registrarse i{
     color: #c0fd68;
 }
 
@@ -96,13 +94,8 @@ header nav .barra{
     background-color: #c0fd68;
     color: #191068;
     font-weight: 800;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
 }
-
-.barra{
-    padding-right: 20px;
-}
-
 
 .botonBuscar{
     border: 1px solid #c0fd68;
@@ -116,18 +109,9 @@ header nav .barra{
     font-size: 3vw;
 }
 
-
-/*.burgerMenu{
-    width: 40px;
-    height: 40px;
-    background-color: #c0fd68;
-    color:#191068;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    margin: 0 auto;
-}*/
+.botonBuscar:hover{
+    cursor: pointer;
+}
 
 .burgerMenu{
     color:#c0fd68;
@@ -138,6 +122,19 @@ header nav .barra{
 header nav a {
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer{
     max-height: 11vh;
