@@ -5,15 +5,19 @@
     font-weight: 800;
 }
 
-header{
-    background-color: #191068;
-}
-
 body {
     background-color: #191068ab;
     position: relative;
     padding-bottom: 12vh;
     min-height: 100vh;
+    background-image: url(https://thefintechtimes.com/wp-content/uploads/2021/02/iStock-1170073827.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header{
+    background-color: #191068;
 }
 
 .logo{
