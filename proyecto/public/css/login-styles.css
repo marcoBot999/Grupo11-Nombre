@@ -172,18 +172,19 @@ footer .barraFooter{
 
 
 nav .barra li:hover{
-    background-color: #191068;
-    color: #c0fd68;
-    font-size: larger;
+    background-color: #a6fd2d;
+    color: #191068;
+    font-size: 175%;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 100px;
+    padding: 7px;
 }
 
 
 @media (min-width: 0px){
     header nav .barra{display:none;
     }
-    .burgerMenu{display: block;}
+    .burgerMenu{display: show;}
 }
 
 @media (min-width: 769px){

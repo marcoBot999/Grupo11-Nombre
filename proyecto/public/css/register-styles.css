@@ -155,11 +155,11 @@ footer .barraFooter{
 @media (min-width: 0px){
     header nav .barra{display:none;
     }
-    .burgerMenu{display: block;}
+    .burgerMenu{display: show;}
 }
 
 @media (min-width: 769px){
     header nav .barra{display:none;
     }
-    .burgerMenu{display: none;}
+    .burgerMenu{display: show;}
 }
