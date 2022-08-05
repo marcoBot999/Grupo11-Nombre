@@ -170,6 +170,16 @@ footer .barraFooter{
     justify-content: space-around;
 }
 
+
+nav .barra li:hover{
+    background-color: #191068;
+    color: #c0fd68;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
 @media (min-width: 0px){
     header nav .barra{display:none;
     }
@@ -179,5 +189,5 @@ footer .barraFooter{
 @media (min-width: 769px){
     header nav .barra{display:none;
     }
-    .burgerMenu{display: none;}
+    .burgerMenu{display: show;}
 }
