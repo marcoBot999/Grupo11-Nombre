@@ -42,41 +42,52 @@
     </header>
 
     <main>
-        <section class="producto">
-            <div>
+        <section class="detalleProducto">
+            <article class="producto">
                 <h4>
                     Motherboard MSI A320M-A PRO MAX AMD AM4
-                </h4>
-            </div>
-            <div class="interacionProducto">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-            </div>
-            <div>
-                <img src="images\Motherboard MSI A320M-A PRO MAX AMD AM4.jpg" />
-            </div>
-            <div>
-                <p>$</p>
-            </div>
-            <div class="">
-                <div class="contador"><input placeholder="0"></div>
-                <a class="carroCompras" href="/compras"><i class="fas fa-shopping-cart"></i></a>
-                <a class="comprar" href="">Comprar</a>
-            </div>
+                </h4>   
+                <div class="meGustaCompartir">
+                    <a href=""><i class="far fa-heart"></i></a>
+                    <a href=""><i class="fas fa-share-alt"></i></a>
+                </div>
+                <div class="imagenProducto">
+                    <img src="images\Motherboard MSI A320M-A PRO MAX AMD AM4.png" />
+                </div>
+                <br>
+                <div class="precio">
+                    <p>$</p>
+                </div>
+            </article>
+            <article class="interacionProducto">
+                <div class="cantidad">
+                    <label>Cantidad</label>
+                   <select name="categoria" class="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                   </select>
+                </div>
+                <a class="carroCompras"><i class="fas fa-cart-arrow-down"></i></a>
+                <a class="comprar" href="/compras">Comprar</a>
+            </article> 
+                
+            <article class="caracteristicas">
+                    <h4>Características</h4>
+                    <p>Motherboard básico para PCs simples, compatible con procesadores Ryzen de generaciones pasadas.</p>
+            </article>
         </section>
         <br>
-        <section>
-            <div>
-                <h4>Características</h4>
-                <p>Motherboard básico para PCs simples, compatible con procesadores Ryzen de generaciones pasadas.</p>
-            </div>
-        </section>
-        <br>
-        <section>
-            <div>
+        <section class="productoRelacionado">
                 <h4>Producto Relacionado</h4>
-            </div>
-            <div>
+            <div class="detalleProdRela">
                 <div>
                     <img src="images\Motherboard_Gigabyte_A320M_S2H_V2.jpg" />
                 </div>

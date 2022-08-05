@@ -106,7 +106,7 @@ header nav .barra{
 }
 
 .botonBuscar i{
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 .botonBuscar:hover{
@@ -124,15 +124,123 @@ header nav a {
 }
 
 
+main section .producto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 3px #191068;
+    border-radius: 10px;
+    margin: 5vw 10vw 0vw 10vw;
+    box-sizing: border-box;
+}
+
+main h4{
+    padding: 1%;
+    font-size: 1.7vw;
+}
+
+.meGustaCompartir {
+    padding-bottom: 2%;
+    padding-left: 85%;
+    justify-content: flex-end;
+   
+}
+
+.meGustaCompartir i{
+    color: #191068;
+    text-decoration: none;
+    font-size: 1.8vw;
+}
+
+main section .imagenProducto{
+    box-shadow: 0px 0px 10px #c0fd68;
+    max-width: 90%;
+}
+
+main section img{
+    max-width: 90%;
+}
+
+main .interacionProducto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0vw 20vw 0vw 20vw;
+    box-sizing: border-box;
+    gap:1%;
+    padding: 1% 0%;
+}
+    
+.contador h5{
+    width: 3vw;
+    height: 3vw;
+    font-size: 90%;
+    background-color: white;
+    align-self: center;
+}
+
+.precio{
+    padding: 1%;
+}
+
+main section .cantidad {
+    font-size: 1.5vw;
+}
 
 
 
+main section .carroCompras{
+    color: #191068;
+    background-color: #c0fd68;
+    display: inline-block;
+    border-radius: 60px;
+    padding: 0.4em 0.5em;
+    font-size: 1.5vw;
+}
+
+main section .comprar{
+    background-color: #191068;
+    color: #c0fd68;
+    width: 9.4%;
+    padding: 2%;
+    border-radius: 10px;
+    text-decoration: none;
+    align-self: center;
+    font-size: 1.3vw;
+    
+}
+
+main .caracteristicas{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    margin: 0vw 10vw 0vw 10vw;
+    box-sizing: border-box;
+}
+main p{
+    font-size: 1.5vw;
+    padding: 1%;
+}
+
+main .productoRelacionado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 3px #191068;
+    border-radius: 10px;
+    margin: 0vw 10vw 0vw 10vw;
+    box-sizing: border-box;
+}
 
 
+main section .detalleProdRela{
+    padding: 1%;
+    font-size: 1.5vw;
 
-
-
-
+}
 
 
 
@@ -187,8 +295,14 @@ footer .logoFooter{
     .burgerMenu{display: none;}
 }
 
-/*
-aumentar el ancho de la barra cuando pase a versión tablet*/
+@media (min-width: 769px){
+    header nav .barra{display:flex;
+    }
+    .burgerMenu{display: none;}
+
+}
+
+
 
 
 
