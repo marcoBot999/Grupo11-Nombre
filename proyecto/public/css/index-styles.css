@@ -9,7 +9,6 @@ body {
     background-color: white;
     position: relative;
     padding-bottom: 12vh;
-    min-height: 100vh;
 }
 
 .logo{
@@ -21,12 +20,6 @@ header{
     background-color: #191068;
 }
 
-header .buscador{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-}
-
 header .carroCompras{
     display: flex;
     flex-direction: row-reverse;
@@ -35,11 +28,25 @@ header .carroCompras{
 }
 
 header .carroCompras a{
-    color: #191068;
-    background-color:#c0fd68;
-    display: inline-block;
+    font-size: 100%;
     border-radius: 50px;
-    padding: 0.5em 0.6em;
+    background-color: #c0fd68;
+    color: #191068;
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 4px;
+}
+header .buscador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8%;
+    height: 4vh;
 }
 
 header input{
@@ -49,12 +56,27 @@ header input{
     color: #666;
     border-radius: 10px;  
     width: 60vw;
-    height: 100%;
-    font-size: 1.4vw;
+    height: 4vw;
+    min-height: 50%;
+    max-height: 100%;
+    font-size: 3vw;
 }
 
-header button{
+.botonBuscar{
+    border: 1px solid #c0fd68;
+    border-radius: 50px;
+    background-color: #c0fd68;
     color: #191068;
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.botonBuscar i{
+    font-size: 3vw;
 }
 
 header .top{
@@ -78,12 +100,10 @@ header nav .ingreso{
     gap: 3px;
     max-height: 20%;
 }
-
-
 header nav .ingreso a{
     color: white;
     align-content: space-around;
-    font-size: 1.7vw;
+    font-size: 3vw;
 }
 
 header nav .ingreso i{
@@ -104,21 +124,9 @@ header nav .barra{
     padding-right: 20px;
 }
 
-
-.botonBuscar{
-    border: 1px solid #c0fd68;
-    border-radius: 10px;
-    background-color: #c0fd68;
-    color: #191068;
-    max-height: 10vh;
-    max-width: 100%;
-    box-sizing: border-box;
+header nav .barra{
+    display:none;
 }
-
-.botonBuscar i{
-    font-size: 3vw;
-}
-
 
 /*.burgerMenu{
     width: 40px;
@@ -144,7 +152,7 @@ header nav a {
 
 main{
     width: 90vw;
-    margin: auto;
+    margin: 0 auto;
 }
 
 body main section.offers{
@@ -157,70 +165,52 @@ body main section.offers{
     box-sizing: border-box;
     
 }
+body main section.offers a img{
+    box-sizing: border-box;
+    width: 90%;
+}
 .flechas{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
-}
-
-main section div img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 90%;
 }
 
 main section article div a{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.ofertDesc{
-    font-size: 100%;
-    box-sizing: border-box;
+    
 }
 
+
 main section article{
+    max-width: 80vh;
     margin-top: 5vh;
     border: #191068 solid 3px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     box-sizing: border-box;
 }
-
 
 main section article a img{
     width: 70%;
 }
 
 .main-desc{
-    width: 100%;
     border-top: solid 2px rgb(207, 207, 207);
     background-color:#ebebeb;
     padding:15px;
     box-sizing: border-box;
 }
 .main-desc p{
-    font-size: 100%;
-    box-sizing: border-box;
-}
-.productos{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
+    font-size: 16px;
 }
 
 .description{
     font-size: 18px;
     flex-grow: 0.2%;
-    display: block;
 }
-
 
 .footer{
     height: 10vh;
@@ -254,25 +244,16 @@ footer .barraFooter{
     justify-content: space-around;
 }
 
-@media (min-width: 0px){
-    header nav .barra{
-        display:none;
+@media (min-width:360px){
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(0, 0, 0);
     }
-}
-
-@media (min-width:360){
-    main section{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    main section div.productos{
+    .productos{
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    main section div.products article{
-        width: 45%;
+        gap: 25px;
+        justify-content: center;
+        width: 100%;
     }
 }
 
@@ -281,24 +262,3 @@ footer .barraFooter{
     }
     .burgerMenu{display: none;}
 }
-
-
-/*prueba*/
-.main-article{
-    position: relative;
-}
-main section article div.main-article{
-    width: 100%;
-    border-top: solid 2px rgb(207, 207, 207);
-    padding:15px;
-    box-sizing: border-box;
-    background-color: #ebebeb;
-} 
-
-main section article img{
-    width: 90%;;
-}
-main section article{
-    position: relative;
-}
-
