@@ -20,31 +20,12 @@ header{
     background-color: #191068;
 }
 
-header .carroCompras{
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 1.5vw;
-    padding: 0 8vw 2vw 0;
-}
-
-header .carroCompras a{
-    font-size: 100%;
-    border-radius: 50px;
-    background-color: #c0fd68;
-    color: #191068;
-    width: 4vw;
-    height: 4vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 4px;
-}
 header .buscador{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-top: 4%;
     padding-bottom: 8%;
     height: 4vh;
 }
@@ -100,6 +81,7 @@ header nav .ingreso{
     gap: 3px;
     max-height: 20%;
 }
+
 header nav .ingreso a{
     color: white;
     align-content: space-around;
@@ -108,6 +90,23 @@ header nav .ingreso a{
 
 header nav .ingreso i{
     color: #c0fd68;
+}
+
+header div ul div.carroCompras{
+    display: flex;
+    font-size: 1.5vw;
+}
+header nav .ingreso li div.carroCompras a i{
+    font-size: 100%;
+    border-radius: 50px;
+    color:#191068;
+    background-color: #c0fd68;
+    width: 4vw;
+    height: 4vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
 }
 
 header nav .barra{
@@ -255,6 +254,8 @@ footer .barraFooter{
         width: 100%;
     }
 }
+
+
 @media (min-width: 769px){
     .logo{
         width: 15vw;
@@ -266,35 +267,39 @@ footer .barraFooter{
     header{
         background-color: #191068;
     }
-
-    header .carroCompras{
+    header nav .ingreso a{
+        font-size: 1.5vw;
+    }
+    header nav .ingreso li div.carroCompras{
         font-size: 1vw;
     }
-    header .carroCompras a{
-        width: 3vw;
-        height: 3vw;
+
+    header nav .ingreso li div.carroCompras a i{
+        width: 2vw;
+        height: 2vw;
     }
+
     header .buscador{
+        padding-top: 2%;
         padding-bottom: 4%;
         height: 1vh;
     }
+
     header input{
-        width: 60vw;
+        width: 59vw;
         height: 3vw;
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
+
     .botonBuscar{
         width: 3vw;
         height: 3vw;
     }
+
     .botonBuscar i{
         font-size: 2vw;
     }
-    header nav .ingreso a{
-        color: white;
-        align-content: space-around;
-        font-size: 2vw;
-    }
+
     header nav .barra{
         display: flex;
         padding: 1vw;
@@ -304,6 +309,7 @@ footer .barraFooter{
         font-weight: 1200;
         font-size: 1.5vw;
     }
+
     .burgerMenu{
         color:#c0fd68;
         align-items: flex-start;
