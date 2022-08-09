@@ -40,7 +40,7 @@ header input{
     height: 4vw;
     min-height: 50%;
     max-height: 100%;
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 .botonBuscar{
@@ -73,7 +73,7 @@ header nav ul{
         justify-content: space-around;
         list-style: none;
         font-size: 2vw;
-    }
+}
 
 header nav .ingreso{
     flex-direction: column;
@@ -261,15 +261,19 @@ footer .barraFooter{
         width: 15vw;
         align-items: flex-start;
     }
+    
     header nav .barra{display:flex;
     }
+
     .burgerMenu{display: none;}
     header{
         background-color: #191068;
     }
+
     header nav .ingreso a{
         font-size: 1.5vw;
     }
+
     header nav .ingreso li div.carroCompras{
         font-size: 1vw;
     }

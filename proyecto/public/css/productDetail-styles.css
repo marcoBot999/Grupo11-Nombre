@@ -9,11 +9,11 @@ body {
     background-color: white;
     position: relative;
     padding-bottom: 12vh;
-    min-height: 100vh;
 }
 
 .logo{
-    width: 18vw;
+    width: 30vw;
+    align-items: flex-start;
 }
 
 header{
@@ -22,31 +22,33 @@ header{
 
 header .buscador{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    padding-bottom: 30px;
+    align-items: center;
+    padding-top: 4%;
+    padding-bottom: 8%;
+    height: 4vh;
 }
 
-header nav .carroCompras{
+/*header nav .carroCompras i{
     color: #191068;
     background-color:#c0fd68;
     display: inline-block;
     border-radius: 60px;
     padding: 0.4em 0.5em;
-}
+}*/
 
 header input{
     background-color: #FFF;
     border: 1px solid #c0fd68;
     outline: none;
     color: #666;
-    border-radius: 10px;  
+    border-radius: 15px;  
     width: 60vw;
-    height: 100%;
-    font-size: 1.2vw;
-}
-
-header button{
-    color: #191068;
+    height: 4vw;
+    min-height: 50%;
+    max-height: 100%;
+    font-size: 2vw;
 }
 
 header .top{
@@ -57,11 +59,11 @@ header .top{
 }
 
 header nav ul{
-        display: flex;
-        justify-content: space-around;
-        list-style: none;
-        font-size: 2vh;
-    }
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 2vw;
+}
 
 header nav .ingreso{
     flex-direction: column;
@@ -70,20 +72,30 @@ header nav .ingreso{
     max-height: 20%;
 }
 
-header nav .ingreso li{
+/*header div ul div.carroCompras{
+    display: flex;
+    font-size: 1.5vw;
+}*/
+
+/*header nav .ingreso li div.carroCompras a i{
+    font-size: 100%;
+    border-radius: 50px;
+    color:#191068;
+    background-color: #c0fd68;
+    width: 4vw;
+    height: 4vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}*/
+header nav .ingreso a{
+    color: white;
     align-content: space-around;
-    font-size: 1.4vw;
+    font-size: 3vw;
 }
 
-header nav li .ingresar{
-    color: white;
-}
-
-header nav li .registrarse{
-    color: white;
-}
-
-header nav .ingresar i, .registrarse i{
+header nav i{
     color: #c0fd68;
 }
 
@@ -94,23 +106,32 @@ header nav .barra{
     background-color: #c0fd68;
     color: #191068;
     font-weight: 800;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
 }
+
+.barra{
+    padding-right: 20px;
+}
+
+/*header nav .barra{
+    display:none;
+}*/
 
 .botonBuscar{
     border: 1px solid #c0fd68;
-    border-radius: 10px;
+    border-radius: 50px;
     background-color: #c0fd68;
     color: #191068;
-    max-height: 100%;
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .botonBuscar i{
-    font-size: 2vw;
-}
-
-.botonBuscar:hover{
-    cursor: pointer;
+    font-size: 3vw;
 }
 
 .burgerMenu{
@@ -125,19 +146,23 @@ header nav a {
 
 
 main section .producto{
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
+    align-self: center;
     flex-direction: column;
     border: solid 3px #191068;
     border-radius: 10px;
-    margin: 5vw 10vw 0vw 10vw;
+    margin: 5vw 10vw 2vw 10vw;
     box-sizing: border-box;
 }
 
 main h4{
     padding: 1%;
     font-size: 1.7vw;
+    display: flex;
+    justify-content: center;
+    padding: 2vw;
 }
 
 .meGustaCompartir {
@@ -153,9 +178,15 @@ main h4{
     font-size: 1.8vw;
 }
 
+main section div .imagenProducto{
+    display: flex;
+    justify-content: center;
+}
+
 main section .imagenProducto{
     box-shadow: 0px 0px 10px #c0fd68;
-    max-width: 90%;
+    max-width: 80%;
+    margin: 0 10%;
 }
 
 main section img{
@@ -181,23 +212,28 @@ main .interacionProducto{
 }
 
 .precio{
-    padding: 1%;
+    padding: 0 0 5% 10% ;
 }
 
 main section .cantidad {
     font-size: 1.5vw;
 }
 
-
-
-main section .carroCompras{
-    color: #191068;
-    background-color: #c0fd68;
-    display: inline-block;
-    border-radius: 60px;
-    padding: 0.4em 0.5em;
-    font-size: 1.5vw;
+main section .carroComprasProduct{
+    color: #c0fd68;
+    background-color: #191068;
+    width: 4%;
+    padding: 1.5%;
+    border-radius: 10px;
+    text-decoration: none;
+    align-self: center;
+    font-size: 1.3vw;
 }
+
+main section .carroComprasProduct i{
+    font-size: 150%;
+}
+
 
 main section .comprar{
     background-color: #191068;
@@ -222,6 +258,7 @@ main .caracteristicas{
 main p{
     font-size: 1.5vw;
     padding: 1%;
+    text-align: justify;
 }
 
 main .productoRelacionado{
@@ -235,14 +272,10 @@ main .productoRelacionado{
     box-sizing: border-box;
 }
 
-
 main section .detalleProdRela{
     padding: 1%;
     font-size: 1.5vw;
-
 }
-
-
 
 .footer{
     max-height: 11vh;
@@ -259,17 +292,14 @@ footer nav ul li a{
     color: white;
     text-decoration: none;
     font-size: 1.5vw;
-
 }
 
 footer nav ul{
     display: flex;
     justify-content: space-around;
-    
     list-style: none;
     gap: 10vw
 }
-
 
 footer img{
     max-width: 20vh;
@@ -289,18 +319,109 @@ footer .logoFooter{
     .burgerMenu{display:block ;}
 }
 
-@media (min-width: 769px){
-    header nav .barra{display:flex;
-    }
-    .burgerMenu{display: none;}
+main section .detalleProducto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
 }
 
 @media (min-width: 769px){
+    
+    .logo{
+        width: 15vw;
+        align-items: flex-start;
+    }
+
     header nav .barra{display:flex;
     }
-    .burgerMenu{display: none;}
 
+    header nav .ingreso a{
+        font-size: 1.5vw;
+    }
+
+    /*header nav .ingreso li div.carroCompras{
+        font-size: 1vw;
+    }
+
+    header nav .ingreso li div.carroCompras a i{
+        width: 2vw;
+        height: 2vw;
+    }*/
+
+    .burgerMenu{
+        display: none;
+        color:#c0fd68;
+        align-items: flex-start;
+        font-size: 2vh;
+    }
+
+    header .buscador{
+        padding-top: 2%;
+        padding-bottom: 4%;
+        height: 1vh;
+    }
+
+    header input{
+        width: 59vw;
+        height: 3vw;
+        font-size: 1.5vw;
+    }
+
+    .botonBuscar{
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .botonBuscar i{
+        font-size: 2vw;
+    }
+
+    header nav .barra{
+        display: flex;
+        padding: 1vw;
+        max-width: 100vw;
+        background-color: #c0fd68;
+        color: #191068;
+        font-weight: 1200;
+        font-size: 1.5vw;
+    }
+
+
+    main section .producto{
+        display: inline-block;
+        flex-direction:row;
+        width: 45%;
+        margin: 4vw 1vw 2vw 4vw;
+    }
+
+    main section .caracteristicas{
+        display: inline-block;
+        flex-direction:row;
+        justify-content: space-between;
+        width: 45%;
+        margin: 4vw 4vw 2vw 1vw;
+        position: absolute;
+        top: auto;
+    }
+
+    main .interacionProducto{
+        display: flex;
+        justify-content:flex-end;
+        margin: 0vw 14vw 0vw 20vw;
+        box-sizing: border-box;
+        gap:1%;
+        padding: 1% 0%;
+    }
+
+    main .productoRelacionado{
+        margin: 0vw 4vw 0vw 4vw;
+    }
 }
+
+
 
 
 
