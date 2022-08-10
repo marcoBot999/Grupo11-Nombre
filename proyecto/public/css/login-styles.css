@@ -105,11 +105,12 @@ header nav a {
 }
 
 .formulario{
-    border:solid 5px #c0fd68;
+    border:solid 4px #c0fd68;
     border-radius: 50px;
     margin: 10%;
     padding: 5%;
-    background-color: #191068;
+    max-width: 80vw;
+    background-color: rgba(25,16,104, 0.6);
     color: #c0fd68;
     justify-content: center;
     align-items: center;
@@ -117,16 +118,42 @@ header nav a {
     flex-wrap: wrap;
     box-sizing: content-box;
 }
-.iniciarsesion{
+
+main input{
+    border: 3px solid transparent;
+    border-radius: 6px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 1vw;
+    margin-top: 1vh;
+    width: 100%;
+}
+
+main .buttonSes{
+    display: inline-block;
+}
+
+main button{
+    background-color: #ffff;
+    color: #c0fd68;
+    padding: 1vw;
+    background-color: #191068;
+    border: #c0fd68 solid 1px;
+    border-radius: 5px;
+    font-size: 100%;
+    font-weight: bolder;
+    transition: all .8s;
+}
+
+main button:hover{
     background-color: #c0fd68;
     color: #191068;
-    border: solid 3px #c0fd68;
-    border-radius: 5px;
-    font-size: 90%;
 }
+
 .registrarse{
     color: #c0fd68;
     font-size: 90%;
+    margin-top: 1vw;
 }
 
 .botonregistrarse{
