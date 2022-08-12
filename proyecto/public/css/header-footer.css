@@ -156,6 +156,13 @@ footer .barraFooter{
     justify-content: space-around;
 }
 
+header nav .barra a:hover{
+        background-color: #191068;
+        color: #c0fd68;
+       padding: 0.5vw;
+        border-radius: 10px;
+}
+
 @media (min-width: 769px){
     .logo{
         width: 15vw;
