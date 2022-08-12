@@ -387,11 +387,6 @@ main .carrousel .punto.activo{
         gap:1%;
         padding: 0vw 14vw 0vw 20vw;
         background-color: rgba(255, 255, 255, 0.8); 
-<<<<<<< HEAD
-        
-=======
-        margin-top: 5%;
->>>>>>> c6ca7a363a7c9a710caf60197215001f101de714
     }
 
     main .productoRelacionado{
