@@ -1,17 +1,215 @@
-    <footer>
-        <div class="footer">
-            <div class="logoFooter">
-                <img src="/images/logo ug 2.jpg">
-            </div>
-            <nav class="barraFooter">
-                <ul>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contactos</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
-</body>
-</html>
+.logo{
+    width: 30vw;
+    align-items: flex-start;
+}
+
+header{
+    background-color: #191068;
+}
+
+header .buscador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4%;
+    padding-bottom: 8%;
+    height: 4vh;
+}
+
+header input{
+    background-color: #FFF;
+    border: 1px solid #c0fd68;
+    outline: none;
+    color: #666;
+    border-radius: 15px;  
+    width: 60vw;
+    height: 4vw;
+    min-height: 50%;
+    max-height: 100%;
+    font-size: 2vw;
+}
+
+.botonBuscar{
+    border: 1px solid #c0fd68;
+    border-radius: 50px;
+    background-color: #c0fd68;
+    color: #191068;
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.botonBuscar i{
+    font-size: 3vw;
+}
+
+header .top{
+    display: flex;
+    margin: 0vw 1vw 0vw 1vw;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+header nav ul{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 2vw;
+}
+
+header nav .ingreso{
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+    max-height: 20%;
+}
+
+header nav .ingreso a{
+    color: white;
+    align-content: space-around;
+    font-size: 3vw;
+}
+
+header nav .ingreso i{
+    color: #c0fd68;
+}
+
+header div ul div.carroCompras{
+    display: flex;
+    font-size: 1.5vw;
+}
+header nav .ingreso li div.carroCompras a i{
+    font-size: 100%;
+    border-radius: 50px;
+    color:#191068;
+    background-color: #c0fd68;
+    width: 4vw;
+    height: 4vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+header nav .barra{
+    display: flex;
+    padding: 1vw;
+    max-width: 100vw;
+    background-color: #c0fd68;
+    color: #191068;
+    font-weight: 800;
+    font-size: 1.5vw;
+}
+
+.barra{
+    padding-right: 20px;
+}
+
+header nav .barra{
+    display:none;
+}
+
+.burgerMenu{
+    color:#c0fd68;
+    align-items: flex-start;
+    font-size: 2vh;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+.footer{
+    height: 10vh;
+    min-width: 100%;
+    background-color: #191068;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+}
+
+footer nav ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 2vh;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+footer img{
+    max-height: 10vh;
+    max-width: 20vh;
+    width: 20vw;
+    align-items: flex-start;
+}
+
+footer .barraFooter{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 769px){
+    .logo{
+        width: 15vw;
+        align-items: flex-start;
+    }
+    
+    header nav .barra{display:flex;
+    }
+
+    header{
+        background-color: #191068;
+    }
+
+    header nav .ingreso a{
+        font-size: 1.5vw;
+    }
+
+    header nav .ingreso li div.carroCompras{
+        font-size: 1vw;
+    }
+
+    header nav .ingreso li div.carroCompras a i{
+        width: 2vw;
+        height: 2vw;
+    }
+
+    header .buscador{
+        padding-top: 2%;
+        padding-bottom: 4%;
+        height: 1vh;
+    }
+
+    header input{
+        width: 59vw;
+        height: 3vw;
+        font-size: 1.5vw;
+    }
+
+    .botonBuscar{
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .botonBuscar i{
+        font-size: 2vw;
+    }
+
+    header nav .barra{
+        display: flex;
+        padding: 1vw;
+        max-width: 100vw;
+        background-color: #c0fd68;
+        color: #191068;
+        font-weight: 1200;
+        font-size: 1.5vw;
+    }
+}
