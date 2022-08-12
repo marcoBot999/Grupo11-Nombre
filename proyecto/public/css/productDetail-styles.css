@@ -104,23 +104,9 @@ header nav i{
     color: #c0fd68;
 }
 
-header nav .barra{
-    display: flex;
-    padding: 1vw;
-    max-width: 100vw;
-    background-color: #c0fd68;
-    color: #191068;
-    font-weight: 800;
-    font-size: 1.5vw;
-}
-
 .barra{
     padding-right: 20px;
 }
-
-/*header nav .barra{
-    display:none;
-}*/
 
 .botonBuscar{
     border: 1px solid #c0fd68;
@@ -452,9 +438,12 @@ footer .logoFooter{
 
 
 @media (min-width: 0px){
-    header nav .barra{display:none;
+    header nav .barra{
+        display:none;
     }
-    .burgerMenu{display:block ;}
+    .burgerMenu{
+        display:block ;
+    }
 }
 
 main section .detalleProducto{
@@ -471,9 +460,6 @@ main section .detalleProducto{
     .logo{
         width: 15vw;
         align-items: flex-start;
-    }
-
-    header nav .barra{display:flex;
     }
 
     header nav .ingreso a{
@@ -525,8 +511,15 @@ main section .detalleProducto{
         color: #191068;
         font-weight: 1200;
         font-size: 1.5vw;
+        transition: 2s all;
     }
 
+    header nav .barra a:hover{
+        background-color: #191068;
+        color: #c0fd68;
+       padding: 0.5vw;
+        border-radius: 10px;
+    }
 
     main section .producto{
         display: inline-block;
