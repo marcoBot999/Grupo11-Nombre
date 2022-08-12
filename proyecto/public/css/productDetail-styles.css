@@ -157,7 +157,7 @@ main .caracteristicas{
     padding: 0 1vw 2vw 1vw;
 }
 main p{
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     padding: 1%;
     text-align: justify;
 }
@@ -292,8 +292,13 @@ main .carrousel .punto.activo{
     }
 }
 
-.detalleProducto{
-    min-height: 3vw;
+main section .detalleProducto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
 }
 
 @media (min-width: 769px){
@@ -387,11 +392,7 @@ main .carrousel .punto.activo{
         gap:1%;
         padding: 0vw 14vw 0vw 20vw;
         background-color: rgba(255, 255, 255, 0.8); 
-<<<<<<< HEAD
-        
-=======
         margin-top: 5%;
->>>>>>> c6ca7a363a7c9a710caf60197215001f101de714
     }
 
     main .productoRelacionado{
