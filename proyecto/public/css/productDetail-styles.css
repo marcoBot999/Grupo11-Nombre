@@ -157,7 +157,7 @@ main .caracteristicas{
     padding: 0 1vw 2vw 1vw;
 }
 main p{
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     padding: 1%;
     text-align: justify;
 }
@@ -205,7 +205,6 @@ main section .detalleProdRela{
 main .carrousel{
     width: 100%;
     max-width: 120em;
-    
     border-top: solid 3px #191068;
     border-bottom: solid 3px #191068;
     background-color: rgba(255, 255, 255, 0.8);
@@ -282,90 +281,19 @@ main .carrousel .punto.activo{
 }
 
 
-
 @media (min-width: 0px){
-    header nav .barra{
-        display:none;
-    }
-    .burgerMenu{
-        display:block ;
-    }
-}
 
-main section .detalleProducto{
+    main section .detalleProducto{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+    }
 }
 
 @media (min-width: 769px){
-    
-    .logo{
-        width: 15vw;
-        align-items: flex-start;
-    }
-
-    header nav .ingreso a{
-        font-size: 1.5vw;
-    }
-
-    /*header nav .ingreso li div.carroCompras{
-        font-size: 1vw;
-    }
-
-    header nav .ingreso li div.carroCompras a i{
-        width: 2vw;
-        height: 2vw;
-    }*/
-
-    .burgerMenu{
-        display: none;
-        color:#c0fd68;
-        align-items: flex-start;
-        font-size: 2vh;
-    }
-
-    header .buscador{
-        padding-top: 2%;
-        padding-bottom: 4%;
-        height: 1vh;
-    }
-
-    header input{
-        width: 59vw;
-        height: 3vw;
-        font-size: 1.5vw;
-    }
-
-    .botonBuscar{
-        width: 3vw;
-        height: 3vw;
-    }
-
-    .botonBuscar i{
-        font-size: 2vw;
-    }
-
-    header nav .barra{
-        display: flex;
-        padding: 1vw;
-        max-width: 100vw;
-        background-color: #c0fd68;
-        color: #191068;
-        font-weight: 1200;
-        font-size: 1.5vw;
-        transition: 2s all;
-    }
-
-    header nav .barra a:hover{
-        background-color: #191068;
-        color: #c0fd68;
-       padding: 0.5vw;
-        border-radius: 10px;
-    }
 
     main section .producto{
         display: inline-block;
@@ -382,7 +310,6 @@ main section .detalleProducto{
         margin: 4vw 4vw 2vw 1vw;
         position: absolute;
         top: auto;
-        
     }
 
     main .interacionProducto{
@@ -392,7 +319,6 @@ main section .detalleProducto{
         gap:1%;
         padding: 0vw 14vw 0vw 20vw;
         background-color: rgba(255, 255, 255, 0.8); 
-        margin-top: 5%;
     }
     
     main .productoRelacionado{
