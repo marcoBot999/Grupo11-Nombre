@@ -127,18 +127,6 @@ header nav .barra{
     display:none;
 }
 
-/*.burgerMenu{
-    width: 40px;
-    height: 40px;
-    background-color: #c0fd68;
-    color:#191068;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    margin: 0 auto;
-}*/
-
 .burgerMenu{
     color:#c0fd68;
     align-items: flex-start;
