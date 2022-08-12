@@ -281,40 +281,6 @@ main .carrousel .punto.activo{
     border-radius: 50%;
 }
 
-.footer{
-    max-height: 11vh;
-    background-color: #191068;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-footer nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.5vw;
-}
-
-footer nav ul{
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    gap: 10vw
-}
-
-footer img{
-    max-width: 20vh;
-    max-height: 10vh;
-    width: 20vw;
-}
-
-footer .logoFooter{
-    display: flex;
-    justify-content: flex-start;
-}
 
 
 @media (min-width: 0px){
@@ -411,6 +377,7 @@ footer .logoFooter{
         margin: 4vw 4vw 2vw 1vw;
         position: absolute;
         top: auto;
+        
     }
 
     main .interacionProducto{
@@ -420,7 +387,11 @@ footer .logoFooter{
         gap:1%;
         padding: 0vw 14vw 0vw 20vw;
         background-color: rgba(255, 255, 255, 0.8); 
+<<<<<<< HEAD
         
+=======
+        margin-top: 5%;
+>>>>>>> c6ca7a363a7c9a710caf60197215001f101de714
     }
 
     main .productoRelacionado{
@@ -431,11 +402,3 @@ footer .logoFooter{
         display: block;
     }
 }
-
-
-
-
-
-
-
-

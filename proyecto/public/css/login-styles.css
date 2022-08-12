@@ -16,93 +16,7 @@ body {
     background-size: cover;
 }
 
-header{
-    background-color: #191068;
-}
 
-.logo{
-    width: 30vw;
-    align-items: flex-start;
-}
-
-header .buscador{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-}
-
-
-header input{
-    background-color: #FFF;
-    border: 1px solid #c0fd68;
-    outline: none;
-    color: #666;
-    border-radius: 6px;  
-    width: 60vw;
-}
-
-header button{
-    color: #191068;
-
-}
-
-header .top{
-    display: flex;
-    margin: 0px 30px 10px 30px;
-    align-items: center;
-    justify-content: space-around;
-}
-
-header nav ul{
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    font-size: 2vh;
-    box-sizing: border-box;
-}
-
-header nav .ingreso{
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 2vh;
-}
-
-header nav .ingreso a{
-    color: #c0fd68;
-    align-content: space-between;
-}
-
-header nav .barra{
-    display: flex;
-    padding: 2vw;
-    max-width: 100%;
-    background-color: #c0fd68;
-    color: #191068;
-    font-weight: 900;
-    font-size: 90%;
-}
-
-.barra{
-    padding-right: 20px;
-}
-
-.botonBuscar{
-    border: 1px solid #c0fd68;
-    border-radius: 40%;
-    background-color: #c0fd68;
-    color: #191068;
-    width: 4vh;
-    height: 4vh;
-}
-
-.burgerMenu{
-    color:#c0fd68;
-    align-items: flex-start;
-
-}
-header nav a {
-    text-decoration: none;
-}
 
 .formulario{
     border:solid 4px #c0fd68;
@@ -164,48 +78,6 @@ main button:hover{
     font-size: 90%;
 }
 
-.footer{
-    height: 10vh;
-    min-width: 100%;
-    background-color: #191068;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    justify-content: center;
-}
-
-footer nav ul a{
-    color: white;
-    text-decoration: none;
-    font-size: 2vh;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-footer img{
-    max-height: 10vh;
-    max-width: 20vh;
-    width: 20vw;
-    align-items: flex-start;
-    
-}
-
-footer .barraFooter{
-    display: flex;
-    justify-content: space-around;
-}
-
-
-nav .barra li:hover{
-    background-color: #a6fd2d;
-    color: #191068;
-    font-size: 175%;
-    font-weight: bold;
-    border-radius: 100px;
-    padding: 7px;
-}
 
 
 @media (min-width: 0px){
