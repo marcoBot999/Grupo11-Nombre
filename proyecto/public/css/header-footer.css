@@ -124,44 +124,48 @@ header nav a {
     text-decoration: none;
 }
 
+header nav .barra a:hover{
+    background-color: #191068;
+    color: #c0fd68;
+   padding: 0.5vw;
+    border-radius: 10px;
+}
+
 .footer{
-    height: 10vh;
-    min-width: 100%;
+    max-height: 11vh;
     background-color: #191068;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     position: absolute;
+    width: 100%;
     bottom: 0;
-    justify-content: center;
 }
 
-footer nav ul a{
+footer nav ul li a{
     color: white;
     text-decoration: none;
-    font-size: 2vh;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+    font-size: 1.5vw;
+}
+
+footer nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 10vw
 }
 
 footer img{
-    max-height: 10vh;
     max-width: 20vh;
+    max-height: 10vh;
     width: 20vw;
-    align-items: flex-start;
 }
 
-footer .barraFooter{
+footer .logoFooter{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
-header nav .barra a:hover{
-        background-color: #191068;
-        color: #c0fd68;
-       padding: 0.5vw;
-        border-radius: 10px;
-}
 
 @media (min-width: 769px){
     .logo{

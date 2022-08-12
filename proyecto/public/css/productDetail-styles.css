@@ -382,6 +382,7 @@ main section .detalleProducto{
         margin: 4vw 4vw 2vw 1vw;
         position: absolute;
         top: auto;
+        
     }
 
     main .interacionProducto{
@@ -391,6 +392,7 @@ main section .detalleProducto{
         gap:1%;
         padding: 0vw 14vw 0vw 20vw;
         background-color: rgba(255, 255, 255, 0.8); 
+        margin-top: 5%;
     }
 
     main .productoRelacionado{
@@ -401,11 +403,3 @@ main section .detalleProducto{
         display: block;
     }
 }
-
-
-
-
-
-
-
-
