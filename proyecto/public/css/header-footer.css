@@ -168,6 +168,10 @@ footer .logoFooter{
 
 
 @media (min-width: 769px){
+
+    .burgerMenu{
+        display: none;
+    }
     .logo{
         width: 15vw;
         align-items: flex-start;
