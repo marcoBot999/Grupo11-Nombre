@@ -19,27 +19,40 @@ main{
     width: 90vw;
     margin: 0 auto;
 }
-
+body main section.offers div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
 body main section.offers{
     margin-top: 5vh;
     border: solid 3px #191068;
-    border-radius: 3%;
+    border-radius: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);  
+    margin-bottom: 5vh;
 }
 body main section.offers a img{
     box-sizing: border-box;
-    width: 90%;
-}
-.flechas{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    width: 80%;
 }
 
+.titP{
+    display: flex;
+    justify-content: center ;
+    background-color: rgba(25, 16, 104, 0.8);
+    font-size: 100%;
+    border: transparent 1px solid;
+    border-radius: 10px;
+}
+h2{
+    color: #FFF;
+}
 main section article div a{
     display: flex;
     justify-content: center;
@@ -64,6 +77,7 @@ main section article div a div{
 main section article:hover div a div{
     box-shadow: 0px 0px 10px #191068;
 }
+
 main section article{
     max-width: 80vh;
     margin-top: 5vh;
@@ -86,16 +100,24 @@ main section article a img{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.main-desc p{
-    font-size: 16px;
-}
 
+.main-desc p{
+    font-size: 90%;
+}
 .description{
-    font-size: 18px;
-    flex-grow: 0.2%;
+    font-size: 110%;
+    box-sizing: border-box;
 }
 
 @media (min-width:360px){
+    .main-desc p{
+        font-size: 100%;
+    }
+    
+    .description{
+        font-size: 120%;
+        box-sizing: border-box;
+    }
     main section article:hover{
         box-shadow: 0px 0px 10px rgb(0, 0, 0);
     }
@@ -115,5 +137,5 @@ main section article a img{
         align-items: flex-start;
         font-size: 2vh;
     }
-
+    
 }
