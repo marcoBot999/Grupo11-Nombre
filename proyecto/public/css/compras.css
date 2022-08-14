@@ -5,18 +5,24 @@
 }
 
 body {
-    background-color: white;
+    position: relative;
     padding-bottom: 12vh;
-        
+    min-height: 100vh;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-
 .CartContainer{
+	margin: auto;
+	margin-top: 2%;
 	width: 70%;
 	height: 90%;
-	background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0px 10px 20px #1687d933;
+	background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+	box-shadow: 0px 0px 10px #191068;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .Header{
@@ -26,7 +32,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	
 }
 
 .Heading{
@@ -34,6 +39,7 @@ body {
 	font-family: 'Open Sans';
 	font-weight: 700;
 	color: #2F3841;
+	padding: 2%;
 }
 
 .Action{
@@ -46,33 +52,40 @@ body {
 }
 
 .Cart-Items{
+	padding: 2%;
 	margin: auto;
-	width: 90%;
-	height: 30%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	border-top: #191068 2px solid;
+	border-bottom:#191068 2px solid;
+	width: 100%;
 }
-.image-box{
-	width: 15%;
-	text-align: center;
+.Cart-Items:hover .image-box{
+	box-shadow: 0px 0px 10px #191068;;
+}
+.Cart-Items:hover{
+	box-shadow: 0px 0px 10px #191068;;
+
 }
 .about{
 	height: 100%;
 	width: 24%;
+	display: flex;
+	flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+	box-sizing: border-box;
 }
 .title{
 	padding-top: 10px;
-	line-height: 10px;
 	font-size: 18px;
 	font-family: 'Open Sans';
 	font-weight: 800;
 	color: #202020;
 }
 .subtitle{
-	line-height: 10px;
 	font-size: 18px;
 	font-family: 'Open Sans';
 	font-weight: 600;
@@ -115,11 +128,12 @@ body {
 	text-align: right;
 }
 .amount{
-	padding-top: 20px;
 	font-size: 26px;
 	font-family: 'Open Sans';
 	font-weight: 800;
 	color: #202020;
+	display: flex;
+	justify-content: center;
 }
 .save{
 	padding-top: 5px;
@@ -157,9 +171,10 @@ hr{
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	padding: 4%;
 }
 .Subtotal{
-	font-size: 22px;
+	font-size: 20px;
 	font-family: 'Open Sans';
 	font-weight: 700;
 	color: #202020;
@@ -172,11 +187,13 @@ hr{
 	line-height: 10px;
 }
 .total-amount{
-	font-size: 36px;
+	font-size: 28px;
 	font-family: 'Open Sans';
 	font-weight: 900;
 	color: #202020;
 }
+
+
 .button{
 	margin-top: 10px;
 	width: 100%;
@@ -192,65 +209,15 @@ hr{
 }
 
 
-/*abajo header y footer*/
+@media(max-width:250){
 
-
-
-@media (min-width: 0px){
-    header nav .barra{display:none;
-    }
-    .burgerMenu{display:block ;}
 }
 
-
 @media (min-width: 769px){
-    
-    .logo{
-        width: 15vw;
-        align-items: flex-start;
-    }
-
-    header nav .barra{display:flex;
-    }
-
-    header nav .ingreso a{
-        font-size: 1.5vw;
-    }
-    .burgerMenu{
-        display: none;
-        color:#c0fd68;
-        align-items: flex-start;
-        font-size: 2vh;
-    }
-
-    header .buscador{
-        padding-top: 2%;
-        padding-bottom: 4%;
-        height: 1vh;
-    }
-
-    header input{
-        width: 59vw;
-        height: 3vw;
-        font-size: 1.5vw;
-    }
-
-    .botonBuscar{
-        width: 3vw;
-        height: 3vw;
-    }
-
-    .botonBuscar i{
-        font-size: 2vw;
-    }
-
-    header nav .barra{
-        display: flex;
-        padding: 1vw;
-        max-width: 100vw;
-        background-color: #c0fd68;
-        color: #191068;
-        font-weight: 1200;
-        font-size: 1.5vw;
-    }
+    .Cart-Items{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+	}
 }
