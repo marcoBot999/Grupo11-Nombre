@@ -11,7 +11,7 @@ body {
 }
 
 
-.CartContainer{
+.cartContainer{
 	width: 70%;
 	height: 90%;
 	background-color: #ffffff;
@@ -19,7 +19,7 @@ body {
     box-shadow: 0px 10px 20px #1687d933;
 }
 
-.Header{
+.headerShopping{
 	margin: auto;
 	width: 90%;
 	height: 15%;
@@ -29,14 +29,14 @@ body {
 	
 }
 
-.Heading{
+.heading{
 	font-size: 20px;
 	font-family: 'Open Sans';
 	font-weight: 700;
 	color: #2F3841;
 }
 
-.Action{
+.action{
 	font-size: 14px;
 	font-family: 'Open Sans';
 	font-weight: 600;
@@ -45,7 +45,7 @@ body {
 	border-bottom: 1px solid #E44C4C;
 }
 
-.Cart-Items{
+.cart-items{
 	margin: auto;
 	width: 90%;
 	height: 30%;
