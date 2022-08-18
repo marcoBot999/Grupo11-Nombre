@@ -28,15 +28,13 @@ app.post("/register",(req,res)=>{
 app.get("/compras",(req,res)=>{
     res.sendFile(path.join(__dirname,"/views/compras.html"))
 })
-
 app.post("/compras",(req,res)=>{
     res.sendFile(path.join(__dirname,"/views/index.html"))
 })
 
-app.get('/productDetail', (req,res)=>{
+app.get("/productDetail",(req,res)=>{
     res.sendFile(path.join(__dirname,"/views/productDetail.html"))
 })
-
 app.post("/productDetail",(req,res)=>{
     res.sendFile(path.join(__dirname,"/views/index.html"))
 })

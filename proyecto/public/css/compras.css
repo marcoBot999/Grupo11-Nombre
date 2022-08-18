@@ -25,7 +25,7 @@ body {
 	flex-wrap: wrap;
 }
 
-.headerShopping{
+.Header{
 	margin: auto;
 	width: 90%;
 	height: 15%;
@@ -34,7 +34,7 @@ body {
 	align-items: center;
 }
 
-.heading{
+.Heading{
 	font-size: 20px;
 	font-family: 'Open Sans';
 	font-weight: 700;
@@ -42,7 +42,7 @@ body {
 	padding: 2%;
 }
 
-.action{
+.Action{
 	font-size: 14px;
 	font-family: 'Open Sans';
 	font-weight: 600;
