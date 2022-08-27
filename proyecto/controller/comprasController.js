@@ -10,6 +10,9 @@ const comprasController = {
         let producto = listaProductos.find((producto) => producto.id == req.params.prodId);
         res.render("product-detail", { producto: producto });
     },
+    creacion:(req,res) =>{
+        res.render("creacion-de-productos")
+    }
 }
 
 module.exports = comprasController

@@ -9,9 +9,9 @@
     <%- include ("./partials/header.ejs")%>
 
     <main class="formulario">
-       <form action="/register"  method="POST">
-        <div><label for="NombreyApellido">Nombre y Apellido</label>
-        <input type="name" id="NombreyApellido" name="NombreyApellido" placeholder="John Doe" required></div>
+       <form action="/creacion-de-producto"  method="POST">
+        <div><label for="Nombredelproducto">Nombre del Producto</label>
+        <input type="name" id="Nombredelproducto" name="Nombredelproducto" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4" required></div>
         <br>
         <div><label for="NombredeUsuario">Nombre de Usuario</label>
         <input type="name" id="NombredeUsuario" name="NombredeUsuario" placeholder="Usuario" required></div>
@@ -38,7 +38,21 @@
         </div>
     </main>
 
-    <%- include ("./partials/footer.ejs")%>  
+    <footer>
+        <div class="footer">
+            <div class="logoFooter">
+                <img src="/images/logo ug 2.jpg">
+            </div>
+            <nav class="barraFooter">
+                <ul>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contactos</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>     
     </div>  
 </body>
 </html>
