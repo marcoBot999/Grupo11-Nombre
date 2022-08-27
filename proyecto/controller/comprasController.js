@@ -11,7 +11,7 @@ const comprasController = {
         res.render("product-detail", { producto: producto });
     },
     creacion:(req,res) =>{
-        res.render("creacion-de-productos")
+        res.render("creacion-de-producto")
     }
 }
 
