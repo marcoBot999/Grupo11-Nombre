@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "nombre": "Motherboard MSI A320M-A PRO MAX AMD AM4",
+        "descripcion": "La A320M-A Pro Max es un motherboard básico para PCs simples, compatible con procesadores Ryzen de generaciones pasadas.",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 2,
+        "nombre": "Motherboard Gigabyte A320 S2H AM4",
+        "descripcion": "El A320M S2H es un motherboard básico para PCs simples, con chipset AMD A320 y compatible con socket AM4. Incluye 2 slots de memoria DDR4 con soporte de hasta 64 GB, 1 puerto PCIe 3.0 x16 y 2 puertos PCIe 2.0 x1. Es compatible con procesadores Ryzen de generaciones pasadas.",
+        "precio": "",
+        "img":"Motherboard_Gigabyte_A320_S2H_AM4.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 4,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 5,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 6,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 7,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 8,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 9,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 10,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 11,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 12,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 13,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 14,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 15,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 16,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 17,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 18,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 19,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    },
+    {
+        "id": 20,
+        "nombre": "",
+        "descripcion": "",
+        "precio": "",
+        "img":""
+    }
+]
