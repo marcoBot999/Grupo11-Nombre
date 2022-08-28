@@ -35,65 +35,21 @@
         
         <section class="productos">
             <!-- hacer dinamico cada uno de los productos -->
-            <article>
-                <div>
-                    <a href="#" >
-                        <div>
-                            <img src="images\Microprocesador Intel Celeron G5905 3.50 GHz Comet Lake 4MB LGA1200.jpg"/>
-                        </div>
-                    </a>
-                </div>
-                <div class="main-desc">
-                    <p class="price">$precio</p>
-                    <p class="discount">descuento(si tiene)</p>
-                    <h4 class="description">descripcion/nombre</h4>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <a href="#" >
-                        <div>
-                            <img src="images\Microprocesador Intel Celeron G5905 3.50 GHz Comet Lake 4MB LGA1200.jpg"/>
-                        </div>
-                    </a>
-                </div>
-                <div class="main-desc">
-                    <p class="price">$precio</p>
-                    <p class="discount">descuento(si tiene)</p>
-                    <h4 class="description">descripcion/nombre</h4>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <a href="#" >
-                        <div>
-                            <img src="images\Microprocesador Intel Celeron G5905 3.50 GHz Comet Lake 4MB LGA1200.jpg"/>
-                        </div>
-                    </a>
-                </div>
-                <div class="main-desc">
-                    <p class="price">$precio</p>
-                    <p class="discount">descuento(si tiene)</p>
-                    <h4 class="description">descripcion/nombre</h4>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <a href="#" >
-                        <div>
-                            <img src="images\Microprocesador Intel Celeron G5905 3.50 GHz Comet Lake 4MB LGA1200.jpg"/>
-                        </div>
-                    </a>
-                </div>
-                <div class="main-desc">
-                    <p class="price">$precio</p>
-                    <p class="discount">descuento(si tiene)</p>
-                    <h4 class="description">descripcion/nombre</h4>
-                </div>
-            </article>
+            <% for(let p of productos) { %>
+                <article>
+                    <div>
+                        <a href="#" >
+                            <div>
+                                <img class="imgs" src="images\<%=p.img%>"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="main-desc">
+                        <p class="price"><%=p.precio%></p>
+                        <h4 class="title"><%=p.nombre%></h4>
+                    </div>
+                </article>
+            <% } %>
         </section>
     </main>
     <%- include ("./partials/footer.ejs")%>
