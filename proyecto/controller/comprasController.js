@@ -12,6 +12,9 @@ const comprasController = {
     },
     creacion:(req,res) =>{
         res.render("creacion-de-producto")
+    },
+    edicion:(req,res) =>{
+        res.render("edicion-de-producto")
     }
 }
 
