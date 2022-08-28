@@ -16,7 +16,7 @@ Productos que venderemos:
 1. Motherboard MSI A320M-A PRO MAX AMD AM4 La A320M-A Pro Max es un motherboard básico para PCs simples, compatible con procesadores Ryzen de generaciones pasadas.
 2. Motherboard Gigabyte A320 S2H AM4 Rev.1.2 El A320M S2H es un motherboard básico para PCs simples, con chipset AMD A320 y compatible con socket AM4. Incluye 2 slots de memoria DDR4 con soporte de hasta 64 GB, 1 puerto PCIe 3.0 x16 y 2 puertos PCIe 2.0 x1. Es compatible con procesadores Ryzen de generaciones pasadas.
 
-3. Portátil HP Pavilion Gaming Listo para juegos, listo para rendir. El portátil HP Pavilion Gaming 15 delgado y potente te permite experimentar gráficos de alta calidad, capacidad de procesamiento que satisface tus necesidades de juego y te permite realizar múltiples tareas. 
+3. Motherboard Gigabyte A320M S2H V2 AM4
 
 4. Microprocesador Intel Celeron G5905 3.50 GHz Comet Lake 4MB LGA1200 Los nuevos procesadores Intel® Core™ de 10ª generación ofrecen mejoras de rendimiento notables para conseguir una productividad mejorada y un entretenimiento impresionante, incluyendo Intel® Wi-Fi 6 (Gig+), tecnología Thunderbolt™ 3, HDR 4K, optimización de sistema inteligente y mucho más.
 
