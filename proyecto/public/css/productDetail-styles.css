@@ -10,7 +10,6 @@ body {
     position: relative;
     padding-bottom: 12vh;
     min-height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1587202372634-32705e3bf49c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
