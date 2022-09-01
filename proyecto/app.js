@@ -10,12 +10,13 @@ app.set("view engine", "ejs")
 
 app.use("/",indexRouter)
 app.use("/",loginRegister)
-app.use('/', comprasRouter)
+app.use('/compras', comprasRouter)
 
 app.use(express.static(path.join(__dirname,"/public")))
 // capturan y procesal la informacion de los formularios
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
 
 
 // app.get("/",(req,res)=>{

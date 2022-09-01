@@ -1,15 +1,23 @@
 const path = require("path");
-const listaProductos = require("../data/productos.json")
+const fs = require("fs")
+const productsFilePath = path.join(__dirname, '../data/productos.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 
 const comprasController = {
     compras:(req,res)=>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render("compras")
     },
+    
     detail: (req, res) => {
-        const listaProductos = require("../data/productos.json")
-        let producto = listaProductos.find((producto) => producto.id == req.params.prodId);
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        const producto = products.find((p) => p.id == req.params.id);
         res.render("product-detail", { producto: producto });
     },
+
+
+    
     creacion:(req,res) =>{
         res.render("creacion-de-producto")
     },
