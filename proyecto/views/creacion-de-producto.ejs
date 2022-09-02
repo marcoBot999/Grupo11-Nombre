@@ -12,7 +12,7 @@
 
        <form action="/compras/create"  method="POST" enctype="multipart/form-data">
         
-        <div><label for="name">Nombre del Producto:</label>
+        <div><label for="name">Nombre del Producto</label>
         <input type="text" id="name" name="name" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4" ></div>
         <br>
         <div>
@@ -26,21 +26,17 @@
         <div>
             <label>Categoría</label>
            <select name="category" class="categoria">
-            <option value="Disipador">Disipador</option>
-            <option value="Fan">Fan</option>
-            <option value="Fuente">Fuente</option>
-            <option value="Memoria RAM">Memoria RAM</option>
-            <option value="Microprocesador">Microprocesador</option>
-            <option value="Motherboard">Motherboard</option>
-            <option value="Notebook">Notebook</option>
-            <option value="Periféricos">Periférico</option>
-            <option value="Placa de video">Placa de video</option>
-            <option value="Procesador">Procesador</option>    
+            <option value="none">---</option>
+            <option value="Componentes">Componentes</option>
+            <option value="Perifericos">Perifericos</option>
+            <option value="Portatiles">Portatiles</option>
+            <option value="Pc Armadas">Pc Armadas</option>
+               
            </select>
         </div>
         <br> 
         <div><label for="image">Foto del Producto</label>
-        <input type="file" id="image" name="image" accept=".jpg" multiple ></div>
+        <input type="file" id="image" name="image" accept=".jpg"></div>
         <br> 
         <div class="buttonReg">
             <button type="submit">Publicar</button>

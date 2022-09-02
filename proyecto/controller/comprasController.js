@@ -21,16 +21,24 @@ const comprasController = {
      //Ingresar un producto//
     creacion:(req,res) =>{
         res.render("creacion-de-producto")
-        
+
     },
 
     store: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        console.log(req.file);
 
         console.log(req.body);
         res.redirect("creacion-de-producto")
 
+        const productoNuevo = {
+            id: Date.now(),
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            discount: req.body.discount,
+            category: req.body.category,
+            image: "default-image.png",
+          };
     },
 
     //Editar un producto//
