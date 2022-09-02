@@ -9,7 +9,7 @@ const app =  express();
 app.set("view engine", "ejs")
 
 app.use("/",indexRouter)
-app.use("/login",loginRegister)
+app.use("/user",loginRegister)
 app.use('/compras', comprasRouter)
 
 app.use(express.static(path.join(__dirname,"/public")))
