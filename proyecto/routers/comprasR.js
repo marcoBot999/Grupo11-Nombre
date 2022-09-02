@@ -10,7 +10,7 @@ router.get("/product-detail/:id", comprasController.detail);
 
 //Creación de producto//
 router.get("/creacion-de-producto",comprasController.creacion)
-router.post("/create",comprasController.store)
+router.post("/compras/create",comprasController.store)
 
 //Edición de producto//
 router.get("/edicion-de-producto",comprasController.edicion)

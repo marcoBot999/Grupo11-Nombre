@@ -6,16 +6,19 @@ const comprasRouter = require("./routers/comprasR")
 
 const app =  express();
 
+app.use(express.static(path.join(__dirname,"/public")))
+// capturan y procesal la informacion de los formularios
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+//Template Engine
 app.set("view engine", "ejs")
 
 app.use("/",indexRouter)
 app.use("/user",loginRegister)
 app.use('/compras', comprasRouter)
 
-app.use(express.static(path.join(__dirname,"/public")))
-// capturan y procesal la informacion de los formularios
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+
 
 
 
