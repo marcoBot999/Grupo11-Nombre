@@ -13,7 +13,7 @@ const comprasController = {
     detail: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         const producto = products.find((p) => p.id == req.params.id);
-        res.render("product-detail", { producto: producto });
+        res.render("product-detail", { p: producto});
     },
 
 

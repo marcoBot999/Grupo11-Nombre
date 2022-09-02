@@ -4,6 +4,7 @@ const comprasController=require("../controller/comprasController")
 
 
 router.get("/",comprasController.compras);
+
 router.get("/product-detail/:id", comprasController.detail);
 
 
