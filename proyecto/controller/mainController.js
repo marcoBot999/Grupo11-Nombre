@@ -4,9 +4,11 @@ const productsFilePath = path.join(__dirname, '../data/productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
+	//Mostrar el index//
     index:(req,res)=>{
         res.render("index",{productos: products })
     },
+	//Buscador//
     search: (req, res) => {
 
 		let search = req.query.keywords;

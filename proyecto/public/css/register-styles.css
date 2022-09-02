@@ -41,6 +41,16 @@ main input{
     width: 100%;
 }
 
+main .categoria{
+    border: 3px solid transparent;
+    border-radius: 6px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 1vw;
+    margin-top: 1vh;
+    width: 100%;
+}
+
 main .buttonReg{
     display: inline-block;
 }

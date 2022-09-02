@@ -9,7 +9,7 @@
     <%- include ("./partials/header.ejs")%>
 
     <main class="formulario">
-       <form action="/creacion-de-producto"  method="POST">
+       <form action="/compras/create"  method="POST" enctype="multipart/form-data">
         <div><label for="Nombredelproducto">Nombre del Producto</label>
         <input type="text" id="Nombredelproducto" name="Nombredelproducto" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4" required></div>
         <br>
@@ -20,12 +20,28 @@
         <div>
         <label for="precio">Precio</label>
         <input type="number" id="precio" name="precio" placeholder="Precio" required></div>
+        <br>
+        <div>
+            <label>Categoría</label>
+           <select name="categoria" class="categoria">
+            <option value="Disipador">Disipador</option>
+            <option value="Fan">Fan</option>
+            <option value="Fuente">Fuente</option>
+            <option value="Memoria RAM">Memoria RAM</option>
+            <option value="Microprocesador">Microprocesador</option>
+            <option value="Motherboard">Motherboard</option>
+            <option value="Notebook">Notebook</option>
+            <option value="Periféricos">Periférico</option>
+            <option value="Placa de video">Placa de video</option>
+            <option value="Procesador">Procesador</option>    
+           </select>
+        </div>
         <br> 
         <div><label for="imagen">Foto del Producto</label>
-        <input type="file" id="imagen" name="imagen" accept=".jpg" multiple required></div>
+        <input type="file" id="imagen" name="imagen" accept=".jpg" multiple ></div>
         <br> 
         <div class="buttonReg">
-            <button type="post">Publicar</button>
+            <button type="submit">Publicar</button>
             <button type="reset">Cancelar</button>
         </div>
     </main>
