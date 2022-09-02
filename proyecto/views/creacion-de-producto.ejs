@@ -9,21 +9,23 @@
     <%- include ("./partials/header.ejs")%>
 
     <main class="formulario">
+
        <form action="/compras/create"  method="POST" enctype="multipart/form-data">
-        <div><label for="Nombredelproducto">Nombre del Producto</label>
-        <input type="text" id="Nombredelproducto" name="Nombredelproducto" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4" required></div>
+        
+        <div><label for="name">Nombre del Producto:</label>
+        <input type="text" id="name" name="name" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4" ></div>
         <br>
         <div>
-        <label for="Descripcion">Descripción</label>
-        <input type="text" id="Descripcion" name="Descripcion" placeholder="Descripcion" required></div>
+        <label for="Description">Descripción</label>
+        <input type="text" id="Description" name="Description" placeholder="Descripción" ></div>
         <br>
         <div>
         <label for="precio">Precio</label>
-        <input type="number" id="precio" name="precio" placeholder="Precio" required></div>
+        <input type="number" id="price" name="price" placeholder="Precio" ></div>
         <br>
         <div>
             <label>Categoría</label>
-           <select name="categoria" class="categoria">
+           <select name="category" class="categoria">
             <option value="Disipador">Disipador</option>
             <option value="Fan">Fan</option>
             <option value="Fuente">Fuente</option>
@@ -37,8 +39,8 @@
            </select>
         </div>
         <br> 
-        <div><label for="imagen">Foto del Producto</label>
-        <input type="file" id="imagen" name="imagen" accept=".jpg" multiple ></div>
+        <div><label for="image">Foto del Producto</label>
+        <input type="file" id="image" name="image" accept=".jpg" multiple ></div>
         <br> 
         <div class="buttonReg">
             <button type="submit">Publicar</button>

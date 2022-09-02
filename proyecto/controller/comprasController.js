@@ -21,13 +21,16 @@ const comprasController = {
      //Ingresar un producto//
     creacion:(req,res) =>{
         res.render("creacion-de-producto")
+        
     },
 
     store: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        console.log(req.file);
 
         console.log(req.body);
-
         res.redirect("creacion-de-producto")
+
     },
 
     //Editar un producto//
