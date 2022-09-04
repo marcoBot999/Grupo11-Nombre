@@ -6,43 +6,47 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const comprasController = {
     //Mostrar los productos//
-    compras:(req,res)=>{
+    compras: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render("compras")
     },
-     //Detalle de un producto//
+    //Detalle de un producto//
     detail: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         const producto = products.find((p) => p.id == req.params.id);
-        res.render("product-detail", { p: producto});
+        res.render("product-detail", { p: producto });
     },
 
 
-     //Ingresar un producto//
-    creacion:(req,res) =>{
+    //Ingresar un producto//
+    creacion: (req, res) => {
         res.render("creacion-de-producto")
 
     },
 
     store: (req, res) => {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-        console.log(req.body);
-        res.redirect("creacion-de-producto")
-
-        const productoNuevo = {
+        const productNew = {
             id: Date.now(),
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
-            discount: req.body.discount,
             category: req.body.category,
-            image: "default-image.png",
-          };
+            img: "image-default.png"
+        };
+
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+        products.push(productNew);
+
+        const data = JSON.stringify(products, null, 4);
+        fs.writeFileSync(productsFilePath, data);
+
+        res.redirect("creacion-de-producto")
     },
 
     //Editar un producto//
-    edicion:(req,res) =>{
+    edicion: (req, res) => {
         res.render("edicion-de-producto")
     }
 

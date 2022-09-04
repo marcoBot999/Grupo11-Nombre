@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include ("./partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/register-styles.css">
+        <link rel="stylesheet" href="/css/register-styles.css">
 </head>
+
 <body background="/images/fondo-create-product.jpg">
-    
+
     <%- include ("./partials/header.ejs")%>
 
-    <main class="formulario">
+        <main class="formulario">
 
-       <form action="/compras/create"  method="POST" enctype="multipart/form-data">
-        
-        <div><label for="name">Nombre del Producto</label>
-        <input type="text" id="name" name="name" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4" ></div>
-        <br>
-        <div>
-        <label for="Description">Descripción</label>
-        <input type="text" id="Description" name="Description" placeholder="Descripción" ></div>
-        <br>
-        <div>
-        <label for="precio">Precio</label>
-        <input type="number" id="price" name="price" placeholder="Precio" ></div>
-        <br>
-        <div>
-            <label>Categoría</label>
-           <select name="category" class="categoria">
-            <option value="none">---</option>
-            <option value="Componentes">Componentes</option>
-            <option value="Perifericos">Perifericos</option>
-            <option value="Portatiles">Portatiles</option>
-            <option value="Pc Armadas">Pc Armadas</option>
-               
-           </select>
-        </div>
-        <br> 
-        <div><label for="image">Foto del Producto</label>
-        <input type="file" id="image" name="image" accept=".jpg"></div>
-        <br> 
-        <div class="buttonReg">
-            <button type="submit">Publicar</button>
-            <button type="reset">Cancelar</button>
-        </div>
-    </main>
-    <%- include ("./partials/footer.ejs")%>  
-    </div>  
+            <form action="/compras/creacion-de-producto" method="POST" enctype="multipart/form-data">
+
+                <div><label for="name">Nombre del Producto</label>
+                    <input type="text" id="name" name="name" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4">
+                </div>
+                <br>
+                <div>
+                    <label for="description">Descripción</label>
+                    <input type="text" id="description" name="description" placeholder="Descripción">
+                </div>
+                <br>
+                <div>
+                    <label for="price">Precio</label>
+                    <input type="number" id="price" name="price" placeholder="Precio">
+                </div>
+                <br>
+                <div>
+                    <label>Categoría</label>
+                    <select name="category" class="categoria">
+                        <option value="none">---</option>
+                        <option value="Componentes">Componentes</option>
+                        <option value="Perifericos">Periféricos</option>
+                        <option value="Portatiles">Portátiles</option>
+                        <option value="Pc Armadas">Pc Armadas</option>
+
+                    </select>
+                </div>
+                <br>
+                <div><label for="img">Foto del Producto</label>
+                    <input type="file" id="img" name="img" accept=".jpg">
+                </div>
+                <br>
+                <div class="buttonReg">
+                    <button type="submit">Publicar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+        </main>
+        <%- include ("./partials/footer.ejs")%>
+            </div>
 </body>
+
 </html>

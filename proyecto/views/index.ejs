@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include ("./partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/index-styles.css">
+        <link rel="stylesheet" href="/css/index-styles.css">
 </head>
+
 <body background="/images/wallhaven-4lrg1p.jpg">
-    
+
     <%- include ("./partials/header.ejs")%>
 
-    <main>
-        <section class="offers">
-            <div>
-                <a href="product-detail" >
-                    <div>
-                        <img src="images\Motherboard MSI A320M-A PRO MAX AMD AM4.png"/>
-                    </div>
-                </a>
-            </div>
-            <div class="contenedorFlechas">
+        <main>
+            <section class="offers">
                 <div>
-                    <button><i class="fas fa-angle-left"></i></button>
+                    <a href="product-detail">
+                        <div>
+                            <img src="images\Motherboard MSI A320M-A PRO MAX AMD AM4.png" />
+                        </div>
+                    </a>
                 </div>
-                <div>
-                    <button ><i class="fas fa-angle-right"></i></button>
-                </div>
-                
-            </div>
-            
-        </section>
-        
-        <div class="titP">
-            <h2>Productos</h2>
-        </div>
-        
-        <section class="productos">
-            <!-- hacer dinamico cada uno de los productos -->
-            <% for(let p of productos) { %>
-                <article>
+                <div class="contenedorFlechas">
                     <div>
-                        <a href="/compras/product-detail/<%= p.id %>">
-                            <div>
-                                <img class="imgs" src="/images/<%=p.img%>"/>
-                            </div>
-                        </a>
+                        <button><i class="fas fa-angle-left"></i></button>
                     </div>
-                    <div class="main-desc">
-                        <p class="price"><%=p.precio%></p>
-                        <h4 class="title"><%=p.nombre%></h4>
+                    <div>
+                        <button><i class="fas fa-angle-right"></i></button>
                     </div>
-                </article>
-            <% } %>
-        </section>
-    </main>
-    <%- include ("./partials/footer.ejs")%>
-    </div>  
+
+                </div>
+
+            </section>
+
+            <div class="titP">
+                <h2>Productos</h2>
+            </div>
+
+            <section class="productos">
+                <!-- hacer dinamico cada uno de los productos -->
+                <% for(let p of productos) { %>
+                    <article>
+                        <div>
+                            <a href="/compras/product-detail/<%= p.id %>">
+                                <div>
+                                    <img class="imgs" src="/images/<%=p.img%>" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="main-desc">
+                            <p class="price">
+                                <%=p.price%>
+                            </p>
+                            <h4 class="title">
+                                <%=p.name%>
+                            </h4>
+                        </div>
+                    </article>
+                    <% } %>
+            </section>
+        </main>
+        <%- include ("./partials/footer.ejs")%>
+            </div>
 </body>
+
 </html>
