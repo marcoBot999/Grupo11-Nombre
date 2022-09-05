@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
@@ -15,7 +15,7 @@ body {
     background-size: cover;
 }
 
-main section .producto{
+main section .producto {
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ main section .producto{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-main h4{
+main h4 {
     font-size: 1.7vw;
     display: flex;
     justify-content: center;
@@ -39,21 +39,21 @@ main h4{
     padding-bottom: 2%;
     padding-left: 85%;
     justify-content: flex-end;
-   
+
 }
 
-.meGustaCompartir i{
+.meGustaCompartir i {
     color: #191068;
     text-decoration: none;
     font-size: 1.8vw;
 }
 
-main section div .imagenProducto{
+main section div .imagenProducto {
     display: flex;
     justify-content: center;
 }
 
-main section .imagenProducto{
+main section .imagenProducto {
     box-shadow: 0px 0px 10px #191068;
     background-color: #FFF;
     max-width: 80%;
@@ -63,31 +63,33 @@ main section .imagenProducto{
     padding: 1%;
 }
 
-main section .imagenProducto:hover{
+main section .imagenProducto:hover {
     box-shadow: 0px 0px 20px #191068;
 }
 
-main section img{
+main section img {
     max-width: 90%;
     text-align: center;
 }
 
-main article .interacionProducto{
+main article .interacionProducto {
     padding: 1%;
 }
-main .interacionProducto{
+
+main .interacionProducto {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    gap:1%;
+    gap: 1%;
     background-color: rgba(255, 255, 255, 0.8);
     border-top: solid 3px #191068;
-    border-bottom: solid 3px #191068;;
+    border-bottom: solid 3px #191068;
+    ;
 }
-    
-.contador h5{
+
+.contador h5 {
     width: 3vw;
     height: 3vw;
     font-size: 90%;
@@ -95,8 +97,8 @@ main .interacionProducto{
     align-self: center;
 }
 
-.precio{
-    padding: 0 0 5% 10% ;
+.precio {
+    padding: 0 0 5% 10%;
     font-size: 90%;
 }
 
@@ -104,7 +106,7 @@ main section .cantidad {
     font-size: 1.5vw;
 }
 
-main section .carroComprasProduct{
+main section .carroComprasProduct {
     color: #c0fd68;
     background-color: #191068;
     width: 4%;
@@ -117,36 +119,49 @@ main section .carroComprasProduct{
     margin: 2% 0;
 }
 
-main section .carroComprasProduct:hover{
+main section .carroComprasProduct:hover {
     color: #191068;
     background-color: #c0fd68
 }
 
-main section .carroComprasProduct i{
+main section .carroComprasProduct i {
     font-size: 150%;
 }
 
-main section .comprar{
+main section .enlaceComprarEditar {
     background-color: #191068;
     color: #c0fd68;
     max-width: max-content;
     padding: 2%;
     border-radius: 10px;
+    border: none;
     text-decoration: none;
     align-self: center;
-    font-size: 1.3vw;   
+    font-size: 1.3vw;
     transition: 1s all;
 }
 
-main section .comprar:hover{
+main section .enlaceComprarEditar:hover {
     color: #191068;
     background-color: #c0fd68
 }
 
-main .caracteristicas{
+main form .botonEliminar {
+    background-color: #ffff;
+    color: #c0fd68;
+    padding: 1.2vw;
+    background-color: #191068;
+    border: #191068 solid 1px;
+    border-radius: 10px;
+    font-size: 70%;
+    font-weight: bolder;
+    transition: all .8s;
+}
+
+main .caracteristicas {
     display: flex;
     justify-content: center;
-    align-items:flex-start;
+    align-items: flex-start;
     flex-direction: column;
     margin: 0vw 10vw 2vw 10vw;
     box-sizing: border-box;
@@ -155,13 +170,14 @@ main .caracteristicas{
     border-radius: 5px;
     padding: 0 1vw 2vw 1vw;
 }
-main p{
+
+main p {
     font-size: 1.3vw;
     padding: 1%;
     text-align: justify;
 }
 
-main .productoRelacionado{
+main .productoRelacionado {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,21 +190,22 @@ main .productoRelacionado{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-main .productoRelacionado img{
+main .productoRelacionado img {
     box-shadow: 0px 0px 10px #191068;
     padding: 2%;
     background-color: #FFF;
 }
 
-main .productoRelacionado img:hover{
+main .productoRelacionado img:hover {
     box-shadow: 0px 0px 20px #191068;
 }
 
-main .productoRelacionado .img-text1{
+main .productoRelacionado .img-text1 {
     position: relative;
     text-align: center;
 }
-main .productoRelacionado .text1{
+
+main .productoRelacionado .text1 {
     position: absolute;
     bottom: 0%;
     width: 100%;
@@ -196,12 +213,12 @@ main .productoRelacionado .text1{
     text-align: left;
 }
 
-main section .detalleProdRela{
+main section .detalleProdRela {
     padding: 1%;
     font-size: 1.5vw;
 }
 
-main .carrousel{
+main .carrousel {
     width: 100%;
     max-width: 120em;
     border-top: solid 3px #191068;
@@ -213,48 +230,49 @@ main .carrousel{
     display: none;
 }
 
-main .carrousel h4{
+main .carrousel h4 {
     text-align: center;
-    font-size: 1.7vw ;
+    font-size: 1.7vw;
 }
 
-main .carrousel .grande{
+main .carrousel .grande {
     width: 200%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    align-items: center;   
+    align-items: center;
     transition: all .5s ease;
     transform: translateX(0%);
     font-size: 100%;
 }
 
-main .carrousel .img{
+main .carrousel .img {
     text-align: center;
     padding: 2%;
     box-shadow: 0px 0px 10px #191068;
     background-color: #FFF;
 }
 
-main .carrousel .img:hover{
+main .carrousel .img:hover {
     box-shadow: 0px 0px 20px #191068;
 }
 
-main .carrousel .img-text2{
+main .carrousel .img-text2 {
     position: relative;
 }
-main .carrousel .text2{
+
+main .carrousel .text2 {
     position: absolute;
     bottom: 0%;
     width: 103%;
     padding: 2% 3%;
 }
 
-main .carrousel .text2 p{
+main .carrousel .text2 p {
     font-size: 1vw;
 }
 
-main .carrousel .puntos{
+main .carrousel .puntos {
     width: 100%;
     padding: .4em;
     display: flex;
@@ -265,45 +283,45 @@ main .carrousel .puntos{
     list-style: none;
 }
 
-main .carrousel .punto{
+main .carrousel .punto {
     width: 2em;
     height: 2em;
     margin: .2em;
-    border:#191068 solid 2px;
+    border: #191068 solid 2px;
     border-radius: 50%;
 }
 
-main .carrousel .punto.activo{
+main .carrousel .punto.activo {
     background-color: #c0fd68;
     border: #c0fd68 solid 2px;
     border-radius: 50%;
 }
 
 
-@media (min-width: 0px){
+@media (min-width: 0px) {
 
-    main section .detalleProducto{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
+    main section .detalleProducto {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
     }
 }
 
-@media (min-width: 769px){
+@media (min-width: 769px) {
 
-    main section .producto{
+    main section .producto {
         display: inline-block;
-        flex-direction:row;
+        flex-direction: row;
         width: 45%;
         margin: 4vw 1vw 2vw 4vw;
     }
 
-    main section .caracteristicas{
+    main section .caracteristicas {
         display: inline-block;
-        flex-direction:row;
+        flex-direction: row;
         justify-content: space-between;
         width: 45%;
         margin: 4vw 4vw 2vw 1vw;
@@ -311,20 +329,20 @@ main .carrousel .punto.activo{
         top: auto;
     }
 
-    main .interacionProducto{
+    main .interacionProducto {
         display: flex;
-        justify-content:flex-end;
+        justify-content: flex-end;
         box-sizing: border-box;
-        gap:1%;
+        gap: 1%;
         padding: 0vw 14vw 0vw 20vw;
-        background-color: rgba(255, 255, 255, 0.8); 
+        background-color: rgba(255, 255, 255, 0.8);
     }
-    
-    main .productoRelacionado{
+
+    main .productoRelacionado {
         display: none;
     }
 
-    main .carrousel{
+    main .carrousel {
         display: block;
     }
 }

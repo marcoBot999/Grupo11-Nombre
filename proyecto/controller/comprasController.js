@@ -5,10 +5,10 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const comprasController = {
-    //Mostrar los productos//
-    compras: (req, res) => {
+    //Mostrar el carro de compras//
+    shoppingCart: (req, res) => {
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render("compras");
+        res.render("carro-compras");
     },
     //Detalle de un producto//
     detail: (req, res) => {
@@ -17,18 +17,9 @@ const comprasController = {
         res.render("product-detail", { p: producto });
     },
 
-    delete: (req, res) => {
-        let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        products = products.filter((p) => p.id != req.params.id);
-        let data = JSON.stringify(products, null, 4);
-        fs.writeFileSync(productsFilePath, data);
-        res.redirect("/");
-    },
-
-
     //Ingresar un producto//
-    creacion: (req, res) => {
-        res.render("creacion-de-producto");
+    create: (req, res) => {
+        res.render("creacion-de-producto-form");
     },
 
     store: (req, res) => {
@@ -46,16 +37,50 @@ const comprasController = {
 
         products.push(productNew);
 
-        const data = JSON.stringify(products, null, 4);
+        const data = JSON.stringify(products, null, ' ');
         fs.writeFileSync(productsFilePath, data);
 
-        res.redirect("creacion-de-producto");
+        res.redirect("/");
     },
 
     //Editar un producto//
-    edicion: (req, res) => {
+    edit: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        const productoToEdit = products.find((p) => p.id == req.params.id);
 
-        res.render("edicion-de-producto");
+        res.render("edicion-de-producto-form", { pToEdit: productoToEdit });
+
+    },
+
+    update: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        console.log(req.body);
+        console.log(req.params.id);
+
+        products.forEach((p) => {
+            if (p.id == req.params.id) {
+                p.name = req.body.name;
+                p.price = req.body.price;
+                p.discount = req.body.discount;
+                p.description = req.body.description;
+            }
+        });
+
+        const data = JSON.stringify(products, null, ' ');
+        fs.writeFileSync(productsFilePath, data);
+
+        res.redirect("/compras/product-detail/" + req.params.id);
+    },
+
+
+
+
+    delete: (req, res) => {
+        let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        products = products.filter((p) => p.id != req.params.id);
+        let data = JSON.stringify(products, null, ' ');
+        fs.writeFileSync(productsFilePath, data);
+        res.redirect("/");
     }
 
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ("./partials/head.ejs")%>
+        <link rel="stylesheet" href="/css/register-styles.css">
+</head>
+
+<body background="/images/fondo-edit-product.jpg">
+
+    <%- include ("./partials/header.ejs")%>
+
+        <main class="formulario">
+            <form action="/compras/edicion-de-producto/<%=pToEdit.id %>?_method=PUT" method="POST">
+                <div><label for="name">Nombre del Producto</label>
+                    <input type="text" id="name" value="<%=pToEdit.name%>" name="name"
+                        placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4" required>
+                </div>
+                <br>
+                <div>
+                    <label for="description">Descripción</label>
+                    <textarea name="description" id="description"><%=pToEdit.description%></textarea>
+                </div>
+                <br>
+                <div>
+                    <label for="price">Precio</label>
+                    <input type="number" id="price" value="<%=pToEdit.price%>" name="price" placeholder="Precio"
+                        required>
+                </div>
+                <br>
+                <div>
+                    <label>Categoría</label>
+                    <select name="category" class="categoria">
+                        <option value="none" <%=(pToEdit.category=="none" )? "selected" :"" %> >---</option>
+                        <option value="Componentes" <%=(pToEdit.category=="Componentes" )? "selected" :"" %>
+                            >Componentes</option>
+                        <option value="Perifericos" <%=(pToEdit.category=="Perifericos" )? "selected" :"" %>
+                            >Periféricos</option>
+                        <option value="Portatiles" <%=(pToEdit.category=="Portatiles" )? "selected" :"" %> >Portátiles
+                        </option>
+                        <option value="Pc Armadas" <%=(pToEdit.category=="Pc Armadas" )? "selected" :"" %> >Pc Armadas
+                        </option>
+                    </select>
+                </div>
+                <br>
+                <div><label for="img">Foto del Producto</label>
+                    <input type="file" id="img" value="<%=pToEdit.img%>" name="img" accept=".jpg">
+                </div>
+                <br>
+                <div class="buttonReg">
+                    <button type="post">Editar Producto</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+        </main>
+        <%- include ("./partials/footer.ejs")%>
+            </div>
+</body>
+
+</html>

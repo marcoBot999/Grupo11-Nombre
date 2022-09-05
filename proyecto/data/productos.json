@@ -1,142 +1,158 @@
 [
-    {
-        "id": 1,
-        "name": "Motherboard MSI A320M-A PRO MAX AMD AM4",
-        "description": "La A320M-A Pro Max es un motherboard básico para PCs simples, compatible con procesadores Ryzen de generaciones pasadas.",
-        "price": "49.99 ",
-        "img": "Motherboard MSI A320M-A PRO MAX AMD AM4.png"
-    },
-    {
-        "id": 2,
-        "name": "Motherboard Gigabyte A320 S2H AM4",
-        "description": "El A320M S2H es un motherboard básico para PCs simples, con chipset AMD A320 y compatible con socket AM4. Incluye 2 slots de memoria DDR4 con soporte de hasta 64 GB, 1 puerto PCIe 3.0 x16 y 2 puertos PCIe 2.0 x1. Es compatible con procesadores Ryzen de generaciones pasadas.",
-        "price": "86,02",
-        "img": "Motherboard_Gigabyte_A320_S2H_AM4.jpg"
-    },
-    {
-        "id": 3,
-        "name": "Motherboard Gigabyte A320M S2H V2 AM4",
-        "description": "Las placas base GIGABYTE AM4 están listas para admitir los últimos procesadores AMD Ryzen™ 3000 y son compatibles con los procesadores AMD Ryzen™ 2000 y 1000.",
-        "price": "67.99 ",
-        "img": "Motherboard_Gigabyte_A320M_S2H_V2.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Microprocesador Intel Celeron G5905",
-        "description": "Los nuevos procesadores Intel® Core™ de 10ª generación ofrecen mejoras de rendimiento notables para conseguir una productividad mejorada y un entretenimiento impresionante, incluyendo Intel® Wi-Fi 6 (Gig+), tecnología Thunderbolt™ 3, HDR 4K, optimización de sistema inteligente y mucho más.",
-        "price": "42.00",
-        "img": "Microprocesador Intel Celeron G5905 3.50 GHz Comet Lake 4MB LGA1200.jpg"
-    },
-    {
-        "id": 5,
-        "name": "Procesador AMD Ryzen 5 5600G",
-        "description": "4.4 GHz Radeon Graphics AM4 + Cooler Wraith Stealth Los Ryzen 5 5600G son procesadores dirigidos al gaming que soportan memoria DDR4 de 3200 MHz y proveen un rendimiento óptimo de gráficos hasta 1080p. Vienen con un cooler Wraith Stealth propio. Además, tienen un diseño de difusor térmico integrado soldado, por lo que tienen una conducción de calor mucho más efectiva, resistiendo hasta una temperatura máxima de 95º.",
-        "price": "167.27 ",
-        "img": "Procesador AMD Ryzen 5 5600G 4.4 GHz Radeon Graphics AM4 + Cooler Wraith Stealth.png"
-    },
-    {
-        "id": 6,
-        "name": "Procesador AMD Ryzen 7 5700G",
-        "description": "los procesadores para computadoras de escritorio AMD Ryzen™ serie 5000 elevan el nivel de expectativa para jugadores y artistas por igual.",
-        "price": "279.00",
-        "img": "Procesador_AMD_Ryzen_7_5700G_4.6_GHz_Radeon_Graphics_AM4_Cooler_Wraith_Stealth.jpg"
-    },
-    {
-        "id": 7,
-        "name": "Memoria RAM Patriot Viper Steel DDR4",
-        "description": "8GB 3600MHz CL18 Las memorias Viper Steel DDR4 están pensadas y diseñadas para soportar las computadoras más demandantes y proveer la mayor estabilidad en cada una de sus tareas. Vienen provistas de un protector térmico de aluminio, que da no sólo una alta disipación del calor y una alta performance sino también una presentación extremadamente atractiva. Además, vienen con soporte del software XMP 2.0 para personalización y control de overclocking. Estos módulos tienen una frecuencia de 3600 MHz.",
-        "price": "41.99",
-        "img": "Memoria_RAM_Patriot_Viper_Steel_DDR4_8GB_3600MHz_CL18_Las_memorias_Viper_Steel_DDR4.jpg"
-    },
-    {
-        "id": 8,
-        "name": "Memoria RAM Patriot Viper Steel RGB Series DDR4",
-        "description": "8GB 3600MHz CL20 Nuestra memoria Viper Steel RGB DDR4 está diseñada para un rendimiento extremo y se combina con una iluminación RGB increíblemente personalizable para adaptarse a tu configuración general de PC sin problemas.",
-        "price": "103.99",
-        "img": "Memoria_RAM_Patriot_Viper_Steel_DDR4_8GB_3600MHz_CL20.jpg"
-    },
-    {
-        "id": 9,
-        "name": "Placa de video Palit Nvidia GeForce GTX 1660",
-        "description": "DUAL 6GB Las GeForce ® GTX 1660 están construidas con el rendimiento gráfico revolucionario de la galardonada arquitectura NVIDIA Turing ™. Con un rendimiento que rivaliza con la GeForce ® GTX 1070, es un supercargador ultrarrápido para los juegos más populares de la actualidad, e incluso más rápido con los títulos modernos.",
-        "price": "132.99",
-        "img": "Placa_de_video_Palit_Nvidia_GeForce_GTX_1660_DUAL_6GB.jpg"
-    },
-    {
-        "id": 10,
-        "name": "Placa de video Radeon Sapphire RX 6500 XT Pulse OC 4GB GDDR6",
-        "description": "La Radeon RX 6500 XT es una placa de video pensada y diseñada para la experiencia gamer, permitiendo una alta eficiencia en juegos como Halo Infinite, Fortnite, Call Of Duty Vanguard y Apex Legends en 1080p. Cuenta con la tecnología FidelityFX Super Resolution para reescalado de video.",
-        "price": "209.99",
-        "img": "Placa_de_video_Radeon_Sapphire_RX_6500_XT_Pulse_OC_4GB_GDDR6.png"
-    },
-    {
-        "id": 11,
-        "name": "Placa de video ASRock Radeon RX 6600 Challenger D",
-        "description": "8GB GDDR6 La ASRock Radeon RX 6600 Challenger D es una placa de video de gama media de 8 GB, con estándar de memoria GDDR6 y pensada y dirigida para un público gamer. Posee un diseño de fans duales rayados con flujo de aire mejorado y un diseño tan efectivo como elegante, una placa trasera de metal hecha para evitar que se curve, y un sistema que regula el trabajo de los fans según la temperatura interna. Además, incorpora tubos de calor de contacto aumentado y pads térmicos para mayor disipación del calor, una base de cobre para mayor transferencia térmica, y el uso de la tecnología DrMOS permite una reducción considerable del ruido y de la generación de calor.",
-        "price": "379.99",
-        "img": "Placa_de_video_ASRock_Radeon_RX_6600_Challenger_D_8GB_GDDR6.png"
-    },
-    {
-        "id": 12,
-        "name": "Placa de Video NVIDIA MSI RTX 2060",
-        "description": "SUPER VENTUS GP OC 8GB GDDR6 La placa de video MSI GeForce RTX 2060 Ventus OC es una versión overclockeada de la 2060 Ventus, con el ojo puesto en la performance gamer. Comparada con la serie RTX 20 original, la Ventus OC es 25% más rápida. Su diseño de fans dobles mejora el flujo de aire, con el sistema Torx Fan 2.0 de paletas tradicionales intercaladas con paletas de dispersión, que dirige el aire al heatsink. Los tubos de calor de cobre de 6 mm maximizan la transferencia de calor. Las capas de cobre permiten una transmisión óptima y rápida de señales para mantener una performance sostenida, y su placa trasera de plástico refuerza el hardware. La configuración de overclock se puede modificar a través del software Afterburner, que permite monitorear estadísticas en tiempo real.",
-        "price": "339.99",
-        "img": "Placa_de_Video_NVIDIA_MSI_RTX_2060_SUPER_VENTUS_GP_OC_8GB_GDDR6.png"
-    },
-    {
-        "id": 13,
-        "name": "Fuente Cooler Master 500W Elite V4 80+ White",
-        "description": "La fuente de alimentación Cooler Master Elite V4 es una opción segura para los equipos básicos y los sistemas de trabajo de oficina. El ventilador silencioso de 120 mm, la eficiencia 80 Plus White EU 230V garantiza funcionalidad y resistencia. Esta fuente de alimentación ha sido diseñada para aportar fiabilidad con un enfoque en la reducción de cortes aleatorios en condiciones en las que las fuentes de energía son inconsistentes e inestables, lo que la hace ideal para ubicaciones propensas a experimentar apagones. Elite V4 es una solución completa que ofrece rendimiento y estabilidad.",
-        "price": "47.23 ",
-        "img": "Fuente_Cooler_Master_500W_Elite_V4_80+_White.jpg"
-    },
-    {
-        "id": 14,
-        "name": "Fuente Cooler Master 600W Elite V4 80+ White",
-        "description": "La fuente de alimentación Cooler Master Elite V4 es una opción segura para los equipos básicos y los sistemas de trabajo de oficina. El ventilador silencioso de 120 mm, la eficiencia 80 Plus White EU 230V garantiza funcionalidad y resistencia. Esta fuente de alimentación ha sido diseñada para aportar fiabilidad con un enfoque en la reducción de cortes aleatorios en condiciones en las que las fuentes de energía son inconsistentes e inestables, lo que la hace ideal para ubicaciones propensas a experimentar apagones. Elite V4 es una solución completa que ofrece rendimiento y estabilidad.",
-        "price": "57.23 ",
-        "img": "Fuente_Cooler_Master_600W_Elite_V4_80+_White.jpg"
-    },
-    {
-        "id": 15,
-        "name": "Fuente Aerocool Dorado 750W 80+Gold ARGB",
-        "description": "Con un diseño elegante con ventilador ARGB de 12 cm, el DORADO mejora la apariencia de su configuración de juego mientras alimenta su sistema de manera eficiente. Da vida a tu sistema con 13 efectos de iluminación preestablecidos que se pueden controlar mediante el botón de control LED. Compatible con tarjetas madre RGB direccionables mediante conector ARGB.",
-        "price": "89.99",
-        "img": "Fuente_Aerocool_Dorado_750W_80+Gold_ARGB.jpg"
-    },
-    {
-        "id": 16,
-        "name": "Fuente ADATA XPG PYLON 750W 80+ BRONZE XPG PYLON",
-        "description": "ofrece más que una simple fuente de alimentación con certificación Bronze. Los convertidores de CC a CC altamente eficientes y la potencia continua en 4 opciones de potencia diferentes lo convierten en una fuente de alimentación ideal para cualquier uso.",
-        "price": "94.99 ",
-        "img": "Fuente_ADATA_XPG_PYLON_750W_80+_BRONZE_XPG_PYLON.jpg"
-    },
-    {
-        "id": 17,
-        "name": "Disipador Cooler Master Intel AMD Hyper T20",
-        "description": "El Hyper T20 de Cooler Master es un cooler para gabinete con un conector de 3 pines. El mayor atractivo es su sistema de instalación simple, su optimización de performance, paletas de aluminio y el uso de 2 tubos de calor para máxima transferencia de la temperatura, además de sus niveles de ruido reducidos. Sumado a esto, es compatible con CPUs de Intel y AMD.",
-        "price": "29.99",
-        "img": "Disipador_Cooler_Master_Intel_AMD_Hyper_T20.jpg"
-    },
-    {
-        "id": 18,
-        "name": "Fan Cooler CPU AeroCool Verkho 4 Lite",
-        "description": "Disipador con ventilador PWM potencia por tecnología Heat Core Touch con 4 heatpipes ultra-eficientes. El Verkho 4 Lite viene con iluminación LED azul. Aletas de alta eficiencia mejoradas con el máximo rendimiento térmico.",
-        "price": "39.90",
-        "img": "Fan_Cooler_CPU_AeroCool_Verkho_4_Lite.jpg"
-    },
-    {
-        "id": 19,
-        "name": "Notebook ASUS X515EA-EJ711",
-        "description": "I3 1115G4 4GB SSD 256GB 15.6 FreeOS Ya sea para trabajar o jugar, el ASUS X515 es el computador portátil que ofrece un potente rendimiento y efectos visuales envolventes. Su pantalla NanoEdge cuenta con amplios ángulos de visión de 178° y un recubrimiento antirreflejos mate para tener una experiencia verdaderamente atractiva",
-        "price": "279.99",
-        "img": "Notebook_ASUS_X515EA-EJ711_I3_1115G4_4GB_SSD_256GB_15.6_FreeOS.jpg"
-    },
-    {
-        "id": 20,
-        "name": "Notebook MSI Katana GF66",
-        "description": "12UE I7 12700H 16GB SSD 512GB RTX 3060 Construida con el detalle y la dedicación que un gran producto merece, la Katana GF66 es una notebook gamer equipada con una placa de video RTX 3060 y un procesador de 11a generación i7, diseñada para obtener el mayor rendimiento en los juegos más demandantes. Incluye 8 núcleos, y un desempeño hasta 40% mayor y el doble de caché L3 comparado con modelos anteriores, además de iluminación en rojo y teclas de atajo.",
-        "price": "1000",
-        "img": "Notebook_MSI_Katana_GF66_12UE_I7_12700H_16GB_SSD_512GB_RTX_3060.png"
-    }
+ {
+  "id": 1,
+  "name": "Motherboard MSI A320M-A PRO MAX AMD AM4",
+  "description": "La A320M-A Pro Max es un motherboard básico para PCs simples, compatible con procesadores Ryzen de generaciones pasadas.",
+  "price": 49.99,
+  "img": "Motherboard MSI A320M-A PRO MAX AMD AM4.png"
+ },
+ {
+  "id": 2,
+  "name": "Motherboard Gigabyte A320 S2H AM4",
+  "description": "El A320M S2H es un motherboard básico para PCs simples, con chipset AMD A320 y compatible con socket AM4. Incluye 2 slots de memoria DDR4 con soporte de hasta 64 GB, 1 puerto PCIe 3.0 x16 y 2 puertos PCIe 2.0 x1. Es compatible con procesadores Ryzen de generaciones pasadas.",
+  "price": 86.02,
+  "img": "Motherboard_Gigabyte_A320_S2H_AM4.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Motherboard Gigabyte A320M S2H V2 AM4",
+  "description": "Las placas base GIGABYTE AM4 están listas para admitir los últimos procesadores AMD Ryzen™ 3000 y son compatibles con los procesadores AMD Ryzen™ 2000 y 1000.",
+  "price": 67.99,
+  "img": "Motherboard_Gigabyte_A320M_S2H_V2.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Microprocesador Intel Celeron G5905",
+  "description": "Los nuevos procesadores Intel® Core™ de 10ª generación ofrecen mejoras de rendimiento notables para conseguir una productividad mejorada y un entretenimiento impresionante, incluyendo Intel® Wi-Fi 6 (Gig+), tecnología Thunderbolt™ 3, HDR 4K, optimización de sistema inteligente y mucho más.",
+  "price": 42,
+  "img": "Microprocesador Intel Celeron G5905 3.50 GHz Comet Lake 4MB LGA1200.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Procesador AMD Ryzen 5 5600G",
+  "description": "4.4 GHz Radeon Graphics AM4 + Cooler Wraith Stealth Los Ryzen 5 5600G son procesadores dirigidos al gaming que soportan memoria DDR4 de 3200 MHz y proveen un rendimiento óptimo de gráficos hasta 1080p. Vienen con un cooler Wraith Stealth propio. Además, tienen un diseño de difusor térmico integrado soldado, por lo que tienen una conducción de calor mucho más efectiva, resistiendo hasta una temperatura máxima de 95º.",
+  "price": 167.27,
+  "img": "Procesador AMD Ryzen 5 5600G 4.4 GHz Radeon Graphics AM4 + Cooler Wraith Stealth.png"
+ },
+ {
+  "id": 6,
+  "name": "Procesador AMD Ryzen 7 5700G",
+  "description": "los procesadores para computadoras de escritorio AMD Ryzen™ serie 5000 elevan el nivel de expectativa para jugadores y artistas por igual.",
+  "price": 279,
+  "img": "Procesador_AMD_Ryzen_7_5700G_4.6_GHz_Radeon_Graphics_AM4_Cooler_Wraith_Stealth.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Memoria RAM Patriot Viper Steel DDR4",
+  "description": "8GB 3600MHz CL18 Las memorias Viper Steel DDR4 están pensadas y diseñadas para soportar las computadoras más demandantes y proveer la mayor estabilidad en cada una de sus tareas. Vienen provistas de un protector térmico de aluminio, que da no sólo una alta disipación del calor y una alta performance sino también una presentación extremadamente atractiva. Además, vienen con soporte del software XMP 2.0 para personalización y control de overclocking. Estos módulos tienen una frecuencia de 3600 MHz.",
+  "price": 41.99,
+  "img": "Memoria_RAM_Patriot_Viper_Steel_DDR4_8GB_3600MHz_CL18_Las_memorias_Viper_Steel_DDR4.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Memoria RAM Patriot Viper Steel RGB Series DDR4",
+  "description": "8GB 3600MHz CL20 Nuestra memoria Viper Steel RGB DDR4 está diseñada para un rendimiento extremo y se combina con una iluminación RGB increíblemente personalizable para adaptarse a tu configuración general de PC sin problemas.",
+  "price": 103.99,
+  "img": "Memoria_RAM_Patriot_Viper_Steel_DDR4_8GB_3600MHz_CL20.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Placa de video Palit Nvidia GeForce GTX 1660",
+  "description": "DUAL 6GB Las GeForce ® GTX 1660 están construidas con el rendimiento gráfico revolucionario de la galardonada arquitectura NVIDIA Turing ™. Con un rendimiento que rivaliza con la GeForce ® GTX 1070, es un supercargador ultrarrápido para los juegos más populares de la actualidad, e incluso más rápido con los títulos modernos.",
+  "price": 132.99,
+  "img": "Placa_de_video_Palit_Nvidia_GeForce_GTX_1660_DUAL_6GB.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Placa de video Radeon Sapphire RX 6500 XT Pulse OC 4GB GDDR6",
+  "description": "La Radeon RX 6500 XT es una placa de video pensada y diseñada para la experiencia gamer, permitiendo una alta eficiencia en juegos como Halo Infinite, Fortnite, Call Of Duty Vanguard y Apex Legends en 1080p. Cuenta con la tecnología FidelityFX Super Resolution para reescalado de video.",
+  "price": 209.99,
+  "img": "Placa_de_video_Radeon_Sapphire_RX_6500_XT_Pulse_OC_4GB_GDDR6.png"
+ },
+ {
+  "id": 11,
+  "name": "Placa de video ASRock Radeon RX 6600 Challenger D",
+  "description": "8GB GDDR6 La ASRock Radeon RX 6600 Challenger D es una placa de video de gama media de 8 GB, con estándar de memoria GDDR6 y pensada y dirigida para un público gamer. Posee un diseño de fans duales rayados con flujo de aire mejorado y un diseño tan efectivo como elegante, una placa trasera de metal hecha para evitar que se curve, y un sistema que regula el trabajo de los fans según la temperatura interna. Además, incorpora tubos de calor de contacto aumentado y pads térmicos para mayor disipación del calor, una base de cobre para mayor transferencia térmica, y el uso de la tecnología DrMOS permite una reducción considerable del ruido y de la generación de calor.",
+  "price": 379.99,
+  "img": "Placa_de_video_ASRock_Radeon_RX_6600_Challenger_D_8GB_GDDR6.png"
+ },
+ {
+  "id": 12,
+  "name": "Placa de Video NVIDIA MSI RTX 2060",
+  "description": "SUPER VENTUS GP OC 8GB GDDR6 La placa de video MSI GeForce RTX 2060 Ventus OC es una versión overclockeada de la 2060 Ventus, con el ojo puesto en la performance gamer. Comparada con la serie RTX 20 original, la Ventus OC es 25% más rápida. Su diseño de fans dobles mejora el flujo de aire, con el sistema Torx Fan 2.0 de paletas tradicionales intercaladas con paletas de dispersión, que dirige el aire al heatsink. Los tubos de calor de cobre de 6 mm maximizan la transferencia de calor. Las capas de cobre permiten una transmisión óptima y rápida de señales para mantener una performance sostenida, y su placa trasera de plástico refuerza el hardware. La configuración de overclock se puede modificar a través del software Afterburner, que permite monitorear estadísticas en tiempo real.",
+  "price": 339.99,
+  "img": "Placa_de_Video_NVIDIA_MSI_RTX_2060_SUPER_VENTUS_GP_OC_8GB_GDDR6.png"
+ },
+ {
+  "id": 13,
+  "name": "Fuente Cooler Master 500W Elite V4 80+ White",
+  "description": "La fuente de alimentación Cooler Master Elite V4 es una opción segura para los equipos básicos y los sistemas de trabajo de oficina. El ventilador silencioso de 120 mm, la eficiencia 80 Plus White EU 230V garantiza funcionalidad y resistencia. Esta fuente de alimentación ha sido diseñada para aportar fiabilidad con un enfoque en la reducción de cortes aleatorios en condiciones en las que las fuentes de energía son inconsistentes e inestables, lo que la hace ideal para ubicaciones propensas a experimentar apagones. Elite V4 es una solución completa que ofrece rendimiento y estabilidad.",
+  "price": 47.23,
+  "img": "Fuente_Cooler_Master_500W_Elite_V4_80+_White.jpg"
+ },
+ {
+  "id": 14,
+  "name": "Fuente Cooler Master 600W Elite V4 80+ White",
+  "description": "La fuente de alimentación Cooler Master Elite V4 es una opción segura para los equipos básicos y los sistemas de trabajo de oficina. El ventilador silencioso de 120 mm, la eficiencia 80 Plus White EU 230V garantiza funcionalidad y resistencia. Esta fuente de alimentación ha sido diseñada para aportar fiabilidad con un enfoque en la reducción de cortes aleatorios en condiciones en las que las fuentes de energía son inconsistentes e inestables, lo que la hace ideal para ubicaciones propensas a experimentar apagones. Elite V4 es una solución completa que ofrece rendimiento y estabilidad.",
+  "price": 57.23,
+  "img": "Fuente_Cooler_Master_600W_Elite_V4_80+_White.jpg"
+ },
+ {
+  "id": 15,
+  "name": "Fuente Aerocool Dorado 750W 80+Gold ARGB",
+  "description": "Con un diseño elegante con ventilador ARGB de 12 cm, el DORADO mejora la apariencia de su configuración de juego mientras alimenta su sistema de manera eficiente. Da vida a tu sistema con 13 efectos de iluminación preestablecidos que se pueden controlar mediante el botón de control LED. Compatible con tarjetas madre RGB direccionables mediante conector ARGB.",
+  "price": 89.99,
+  "img": "Fuente_Aerocool_Dorado_750W_80+Gold_ARGB.jpg"
+ },
+ {
+  "id": 16,
+  "name": "Fuente ADATA XPG PYLON 750W 80+ BRONZE XPG PYLON",
+  "description": "ofrece más que una simple fuente de alimentación con certificación Bronze. Los convertidores de CC a CC altamente eficientes y la potencia continua en 4 opciones de potencia diferentes lo convierten en una fuente de alimentación ideal para cualquier uso.",
+  "price": 94.99,
+  "img": "Fuente_ADATA_XPG_PYLON_750W_80+_BRONZE_XPG_PYLON.jpg"
+ },
+ {
+  "id": 17,
+  "name": "Disipador Cooler Master Intel AMD Hyper T20",
+  "description": "El Hyper T20 de Cooler Master es un cooler para gabinete con un conector de 3 pines. El mayor atractivo es su sistema de instalación simple, su optimización de performance, paletas de aluminio y el uso de 2 tubos de calor para máxima transferencia de la temperatura, además de sus niveles de ruido reducidos. Sumado a esto, es compatible con CPUs de Intel y AMD.",
+  "price": 29.99,
+  "img": "Disipador_Cooler_Master_Intel_AMD_Hyper_T20.jpg"
+ },
+ {
+  "id": 18,
+  "name": "Fan Cooler CPU AeroCool Verkho 4 Lite",
+  "description": "Disipador con ventilador PWM potencia por tecnología Heat Core Touch con 4 heatpipes ultra-eficientes. El Verkho 4 Lite viene con iluminación LED azul. Aletas de alta eficiencia mejoradas con el máximo rendimiento térmico.",
+  "price": 39.9,
+  "img": "Fan_Cooler_CPU_AeroCool_Verkho_4_Lite.jpg"
+ },
+ {
+  "id": 19,
+  "name": "Notebook ASUS X515EA-EJ711",
+  "description": "I3 1115G4 4GB SSD 256GB 15.6 FreeOS Ya sea para trabajar o jugar, el ASUS X515 es el computador portátil que ofrece un potente rendimiento y efectos visuales envolventes. Su pantalla NanoEdge cuenta con amplios ángulos de visión de 178° y un recubrimiento antirreflejos mate para tener una experiencia verdaderamente atractiva",
+  "price": 279.99,
+  "img": "Notebook_ASUS_X515EA-EJ711_I3_1115G4_4GB_SSD_256GB_15.6_FreeOS.jpg"
+ },
+ {
+  "id": 20,
+  "name": "Notebook MSI Katana GF66",
+  "description": "12UE I7 12700H 16GB SSD 512GB RTX 3060 Construida con el detalle y la dedicación que un gran producto merece, la Katana GF66 es una notebook gamer equipada con una placa de video RTX 3060 y un procesador de 11a generación i7, diseñada para obtener el mayor rendimiento en los juegos más demandantes. Incluye 8 núcleos, y un desempeño hasta 40% mayor y el doble de caché L3 comparado con modelos anteriores, además de iluminación en rojo y teclas de atajo.",
+  "price": 1000,
+  "img": "Notebook_MSI_Katana_GF66_12UE_I7_12700H_16GB_SSD_512GB_RTX_3060.png"
+ },
+ {
+  "id": 1662394773476,
+  "name": "d",
+  "description": "d",
+  "price": "13",
+  "category": "none",
+  "img": "image-default.png"
+ },
+ {
+  "id": 1662407326013,
+  "name": "g",
+  "description": "g",
+  "price": "213",
+  "category": "Portatiles",
+  "img": "image-default.png"
+ }
 ]

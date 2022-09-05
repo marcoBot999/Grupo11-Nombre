@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
@@ -16,13 +16,13 @@ body {
 }
 
 
-.formulario{
-    border:solid 4px #c0fd68;
+.formulario {
+    border: solid 4px #c0fd68;
     border-radius: 50px;
     margin: 10%;
     padding: 5%;
     max-width: 80vw;
-    background-color: rgba(25,16,104, 0.6);
+    background-color: rgba(25, 16, 104, 0.6);
     color: #c0fd68;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@ body {
     box-sizing: content-box;
 }
 
-main input{
+main input {
     border: 3px solid transparent;
     border-radius: 6px;
     height: 45px;
@@ -41,7 +41,7 @@ main input{
     width: 100%;
 }
 
-main .categoria{
+main textarea {
     border: 3px solid transparent;
     border-radius: 6px;
     height: 45px;
@@ -51,11 +51,21 @@ main .categoria{
     width: 100%;
 }
 
-main .buttonReg{
+main .categoria {
+    border: 3px solid transparent;
+    border-radius: 6px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 1vw;
+    margin-top: 1vh;
+    width: 100%;
+}
+
+main .buttonReg {
     display: inline-block;
 }
 
-main button{
+main button {
     background-color: #ffff;
     color: #c0fd68;
     padding: 1vw;
@@ -67,21 +77,29 @@ main button{
     transition: all .8s;
 }
 
-main button:hover{
+main button:hover {
     background-color: #c0fd68;
     color: #191068;
 }
 
 
 
-@media (min-width: 0px){
-    header nav .barra{display:none;
+@media (min-width: 0px) {
+    header nav .barra {
+        display: none;
     }
-    .burgerMenu{display: show;}
+
+    .burgerMenu {
+        display: show;
+    }
 }
 
-@media (min-width: 769px){
-    header nav .barra{display:none;
+@media (min-width: 769px) {
+    header nav .barra {
+        display: none;
     }
-    .burgerMenu{display: show;}
+
+    .burgerMenu {
+        display: show;
+    }
 }

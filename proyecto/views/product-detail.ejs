@@ -52,9 +52,10 @@
                         </select>
                     </div>
                     <a class="carroComprasProduct"><i class="fas fa-cart-arrow-down"></i></a>
-                    <a class="comprar" href="/compras">Comprar</a>
+                    <a class="enlaceComprarEditar" href="/compras/shopping-cart">Comprar</a>
+                    <a class="enlaceComprarEditar" href="/compras/edicion-de-producto/<%=p.id %>">Editar</a>
                     <form action="/compras/delete/<%=p.id%>?_method=DELETE" method="POST">
-                        <button type="submit" class="">Eliminar</button> </button>
+                        <button class="botonEliminar" type="submit" class="">Eliminar</button> </button>
                     </form>
                 </article>
             </section>
