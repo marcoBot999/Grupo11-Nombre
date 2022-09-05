@@ -7,21 +7,28 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const comprasController = {
     //Mostrar los productos//
     compras: (req, res) => {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render("compras")
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render("compras");
     },
     //Detalle de un producto//
     detail: (req, res) => {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        const producto = products.find((p) => p.id == req.params.id);
+        let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        let producto = products.find((p) => p.id == req.params.id);
         res.render("product-detail", { p: producto });
+    },
+
+    delete: (req, res) => {
+        let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        products = products.filter((p) => p.id != req.params.id);
+        let data = JSON.stringify(products, null, 4);
+        fs.writeFileSync(productsFilePath, data);
+        res.redirect("/");
     },
 
 
     //Ingresar un producto//
     creacion: (req, res) => {
-        res.render("creacion-de-producto")
-
+        res.render("creacion-de-producto");
     },
 
     store: (req, res) => {
@@ -42,14 +49,15 @@ const comprasController = {
         const data = JSON.stringify(products, null, 4);
         fs.writeFileSync(productsFilePath, data);
 
-        res.redirect("creacion-de-producto")
+        res.redirect("creacion-de-producto");
     },
 
     //Editar un producto//
     edicion: (req, res) => {
-        res.render("edicion-de-producto")
+
+        res.render("edicion-de-producto");
     }
 
 }
 
-module.exports = comprasController
+module.exports = comprasController;

@@ -138,29 +138,5 @@
         "description": "12UE I7 12700H 16GB SSD 512GB RTX 3060 Construida con el detalle y la dedicación que un gran producto merece, la Katana GF66 es una notebook gamer equipada con una placa de video RTX 3060 y un procesador de 11a generación i7, diseñada para obtener el mayor rendimiento en los juegos más demandantes. Incluye 8 núcleos, y un desempeño hasta 40% mayor y el doble de caché L3 comparado con modelos anteriores, además de iluminación en rojo y teclas de atajo.",
         "price": "1000",
         "img": "Notebook_MSI_Katana_GF66_12UE_I7_12700H_16GB_SSD_512GB_RTX_3060.png"
-    },
-    {
-        "id": 1662260699120,
-        "name": "prueba1",
-        "description": "prueba1",
-        "price": "387",
-        "category": "Componentes",
-        "img": "image-default.png"
-    },
-    {
-        "id": 1662261341061,
-        "name": "prueba2",
-        "description": "prueba2",
-        "price": "934",
-        "category": "Perifericos",
-        "img": "image-default.png"
-    },
-    {
-        "id": 1662261726632,
-        "name": "prueba3",
-        "description": "prueba3",
-        "price": "2434",
-        "category": "Componentes",
-        "img": "image-default.png"
     }
 ]

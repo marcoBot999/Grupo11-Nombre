@@ -3,19 +3,22 @@ const path = require("path")
 const indexRouter = require("./routers/indexRouter")
 const loginRegister = require("./routers/loginRegisterR")
 const comprasRouter = require("./routers/comprasR")
+const methodOverride = require('method-override')
 
-const app =  express();
 
-app.use(express.static(path.join(__dirname,"/public")))
+const app = express();
+
+app.use(express.static(path.join(__dirname, "/public")))
 // capturan y procesal la informacion de los formularios
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(methodOverride('_method'))
 
 //Template Engine
 app.set("view engine", "ejs")
 
-app.use("/",indexRouter)
-app.use("/user",loginRegister)
+app.use("/", indexRouter)
+app.use("/user", loginRegister)
 app.use('/compras', comprasRouter)
 
 
@@ -56,6 +59,6 @@ app.use('/compras', comprasRouter)
 //     res.sendFile(path.join(__dirname,"/views/index.html"))
 // })
 
-app.listen(3000,()=>{
+app.listen(3000, () => {
     console.log("funcionando");
 })

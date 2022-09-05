@@ -27,11 +27,13 @@ router.get("/", comprasController.compras);
 router.get("/product-detail/:id", comprasController.detail);
 
 //Creación de producto//
-router.get("/creacion-de-producto", comprasController.creacion)
-router.post("/creacion-de-producto", upload.single("fotoProducto"), comprasController.store)
+router.get("/creacion-de-producto", comprasController.creacion);
+router.post("/creacion-de-producto", upload.single("fotoProducto"), comprasController.store);
 
 //Edición de producto//
-router.get("/edicion-de-producto", comprasController.edicion)
+router.get("/edicion-de-producto", comprasController.edicion);
 
+//Eliminar el producto//
+router.delete("/delete/:id", comprasController.delete);
 
 module.exports = router;
