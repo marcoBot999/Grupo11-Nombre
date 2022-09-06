@@ -6,7 +6,19 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const mainController = {
 	//Mostrar el index//
     index:(req,res)=>{
-        res.render("index",{productos: products })
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
+		const componentes = products.filter((p)=> p.category =="Componente")
+		const portatiles = products.filter((p)=> p.category =="Portatil")
+		const pcArmada = products.filter((p)=> p.category =="Pc Armadas")
+		const perifericos = products.filter((p)=> p.category =="Perifericos")
+		res.render("index",{
+			productos: products,
+			componentes:componentes, 
+			portatiles:portatiles,
+			pcArmada:pcArmada,
+			perifericos:perifericos
+		 })
     },
 	//Buscador//
     search: (req, res) => {

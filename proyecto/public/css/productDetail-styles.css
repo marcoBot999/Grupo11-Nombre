@@ -158,6 +158,12 @@ main form .botonEliminar {
     transition: all .8s;
 }
 
+main form .botonEliminar:hover {
+    background-color: #c0fd68;
+    color: #191068;
+    transition: all .8s;
+}
+
 main .caracteristicas {
     display: flex;
     justify-content: center;
