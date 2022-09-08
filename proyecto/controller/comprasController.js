@@ -23,7 +23,7 @@ const comprasController = {
     },
 
     store: (req, res) => {
-
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         const productNew = {
             id: Date.now(),
             name: req.body.name,
@@ -33,7 +33,10 @@ const comprasController = {
             img: "image-default.png"
         };
 
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        if (req.file) {
+            productNew.img = req.file.filename;
+        }
+        
 
         products.push(productNew);
 

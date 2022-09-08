@@ -158,5 +158,45 @@
   "price": 1000,
   "img": "Notebook_MSI_Katana_GF66_12UE_I7_12700H_16GB_SSD_512GB_RTX_3060.png",
   "category": "Portatil"
+ },
+ {
+  "id": 1662595147411,
+  "name": "Logitech G Series Hero G502 negro",
+  "description": "Adaptado a tus movimientos\r\nEl mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",
+  "price": "80",
+  "category": "Perifericos",
+  "img": "logitech hero g502.jpg"
+ },
+ {
+  "id": 1662595789033,
+  "name": "Audífonos Headset Logitech G335",
+  "description": "Unos audífonos con cable ligeros y modernos, con un diseño de diadema con suspensión y una cinta ajustable para un ajuste personalizado. Práctico Plug and Play y controles integrados. Elige el color que vaya mejor con tu increíble estilo.",
+  "price": "100",
+  "category": "Perifericos",
+  "img": "Audífonos Headset Logitech G335.jpg"
+ },
+ {
+  "id": 1662598590651,
+  "name": "",
+  "description": "",
+  "price": "",
+  "category": "none",
+  "img": "image-default.png"
+ },
+ {
+  "id": 1662599367972,
+  "name": "Auriculares Gamer Redragon H260 Hylas RGB",
+  "description": "Si a las suaves y acolchadas copas del Hylas, le sumas la precisión de audio estéreo, no querrás quitártelos nunca. Los controladores direccionales de neodimio ofrecen una nitidez de sonido única, que se complementa perfectamente con su avanzado aislamiento de ruido pasivo.",
+  "price": "20",
+  "category": "Perifericos",
+  "img": "Auriculares Gamer Redragon H260.PNG"
+ },
+ {
+  "id": 1662599450906,
+  "name": "Teclado Redragon Kumara K552",
+  "description": "La gran calidad del Redragon Kumara K552, y su precio económico lo vuelven un atractivo ideal para que te diviertas frente a la pantalla. Su ergonomía, su base antidelizante y su rápido tiempo de respuesta permite que tus juegos favoritos se sientan más cerca que nunca, al alcance de tus manos.",
+  "price": "50",
+  "category": "Perifericos",
+  "img": "Teclado Gamer Redragon Kumara K552 Outemu Red Negro Rainbow.webp"
  }
 ]

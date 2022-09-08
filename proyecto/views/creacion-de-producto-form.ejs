@@ -12,7 +12,7 @@
 
         <main class="formulario">
 
-            <form action="/compras/creacion-de-producto" method="POST" enctype="multipart/form-data">
+            <form action="/compras/creacion-de-producto" method="POST" enctype="multipart/form-data" charset=utf-8>
 
                 <div><label for="name">Nombre del Producto</label>
                     <input type="text" id="name" name="name" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4">
@@ -41,13 +41,14 @@
                 </div>
                 <br>
                 <div><label for="img">Foto del Producto</label>
-                    <input type="file" id="img" name="img" accept=".jpg">
+                    <input type="file" id="img" name="img" accept=".jpg,.png"> 
                 </div>
                 <br>
                 <div class="buttonReg">
                     <button type="submit">Publicar</button>
                     <button type="reset">Cancelar</button>
                 </div>
+            </form>
         </main>
         <%- include ("./partials/footer.ejs")%>
             </div>
