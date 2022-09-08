@@ -2,11 +2,12 @@ const express = require('express');
 const router = express.Router();
 const comprasController = require("../controller/comprasController")
 const multer = require("multer");
+const path = require("path");
 
 var storage = multer.diskStorage({
   //ESTO ES DONDE SE VA A GUARDAR LA IMAGEN NUEVA AUTOMATICAMENTE
   destination: function (req, file, cb) {
-    cb(null, "/images");
+    cb(null, "public/images");
   },
 
   //CONFIGURAMOS EL NOMBRE DE COMO SE VA A GUARDAR
@@ -14,9 +15,10 @@ var storage = multer.diskStorage({
     console.log({ file });
 
     // cb(null, file.fieldname + "-" + Date.now());
-    cb(null, "" + file.originalname);
+    cb(null, Date.now()+""+ file.originalname);
   },
 });
+
 
 const upload = multer({ storage });
 

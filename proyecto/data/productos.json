@@ -198,5 +198,37 @@
   "price": "50",
   "category": "Perifericos",
   "img": "Teclado Gamer Redragon Kumara K552 Outemu Red Negro Rainbow.webp"
+ },
+ {
+  "id": 1662603478552,
+  "name": "Pc Gamer Amd Ryzen 5 5600g",
+  "description": " 16gb + Ssd 240 Win11 @pd\r\n• Chasis: ICEBERG CRYSTAL G9 V3 + 4 FAN RGB + TG\r\n• Fuente de poder: REAL 400W CERTIFICACION 80 PLUS WHITE\r\n• Board: ASUS PRIME B450M-A II (4 BANCOS DDR4 )\r\n• Procesador: AMD RYZEN 5 5600g\r\n• Ram: 16GB DDR4 3200 (2X8) Dual Channel Blindada\r\n• Disco duro: 240GB SSD\r\n• Sistema operativo: WINDOWS 10",
+  "price": "600",
+  "category": "Pc Armadas",
+  "img": "1662603478531Torre Gamer Rgb Amd Ryzen 5.PNG"
+ },
+ {
+  "id": 1662603882344,
+  "name": "Torre Cpu Gamer Ryzen 5 5600g",
+  "description": "\r\n• Chasis: Gamer AX-6 con vidrio lateral templado\r\n• Fuente de poder: REAL 300W WHITE\r\n• Board: BOARD AMD A320M\r\n• Procesador: AMD Ryzen™ 5 5600G\r\n• Ram: 16GB DDR4 3200 (2X8) Dual Channel Blindada\r\n• Disco duro: Sata 1TB (ó SSD 240GB)\r\n• Sistema operativo: WINDOWS 10",
+  "price": "700",
+  "category": "Pc Armadas",
+  "img": "1662603882310Torre Cpu Gamer Ryzen 5 5600g Vega 7.PNG"
+ },
+ {
+  "id": 1662603982630,
+  "name": "Torre Cpu Gamer Ryzen 7 5700g",
+  "description": "TORRE SMART 340, FUENTE REAL 350W, BOARD AMD A520M, PROCESADOR AMD RYZEN 7 5700G, GRAFICOS INTEGRADOS AMD RADEON VEGA 8, RAM DDR4 16GB BLINDADA 3200MHZ 1X16GB (Ó 2X8GB), DISCO DURO 1TB (Ó SSD 240GB)",
+  "price": "900",
+  "category": "Pc Armadas",
+  "img": "1662603982605Torre Cpu Gamer Ryzen 7.PNG"
+ },
+ {
+  "id": 1662604110561,
+  "name": "Pc Gamer Amd Ryzen 5 ",
+  "description": "PC EQUIPO GAMER AMD RYZEN 5 5600G CON B450M SOLIDO 240GB RAM 16GB 3200 MHZ RGB.\r\n",
+  "price": "950",
+  "category": "Pc Armadas",
+  "img": "1662604110528Pc Gamer Amd Ryzen 5.PNG"
  }
 ]
