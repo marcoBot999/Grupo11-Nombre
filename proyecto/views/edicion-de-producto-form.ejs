@@ -11,7 +11,7 @@
     <%- include ("./partials/header.ejs")%>
 
         <main class="formulario">
-            <form action="/compras/edicion-de-producto/<%=pToEdit.id %>?_method=PUT" method="POST">
+            <form action="/compras/edicion-de-producto/<%=pToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div><label for="name">Nombre del Producto</label>
                     <input type="text" id="name" value="<%=pToEdit.name%>" name="name"
                         placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4" required>

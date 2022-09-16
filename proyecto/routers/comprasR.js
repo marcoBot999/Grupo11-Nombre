@@ -34,7 +34,7 @@ router.post("/creacion-de-producto", upload.single("img"), comprasController.sto
 
 //Edición de producto//
 router.get("/edicion-de-producto/:id", comprasController.edit);
-router.put("/edicion-de-producto/:id", comprasController.update);
+router.put("/edicion-de-producto/:id",upload.single("img"), comprasController.update);
 
 //Eliminar el producto//
 router.delete("/delete/:id", comprasController.delete);

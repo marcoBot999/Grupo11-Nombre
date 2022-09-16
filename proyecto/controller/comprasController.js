@@ -66,8 +66,16 @@ const comprasController = {
                 p.price = req.body.price;
                 p.discount = req.body.discount;
                 p.description = req.body.description;
+                console.log("//////////////////////////",req.file);
+                if (req.file) {
+                    
+                    p.img = req.file.filename;
+                    //eliminar imagen existente cuando viene una imagen nueva, siempre que no sea la imagen por defecto
+                }
             }
         });
+        
+        
 
         const data = JSON.stringify(products, null, ' ');
         fs.writeFileSync(productsFilePath, data);
@@ -84,6 +92,7 @@ const comprasController = {
         let data = JSON.stringify(products, null, ' ');
         fs.writeFileSync(productsFilePath, data);
         res.redirect("/");
+        //eliminar imagen existente cuando viene una imagen nueva, siempre que no sea la imagen por defecto
     }
 
 }
