@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "firstname": "Lina",
+        "lastname": "Gómez",
+        "email": "linamarce@gmail.com",
+        "address": "carrera",
+        "birthday": "2022-12-02",
+        "img": "img_user_default.png"
+    }
+]
