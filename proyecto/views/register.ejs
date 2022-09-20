@@ -9,46 +9,53 @@
 <body background="/images/fondo-register.jpg">
 
     <%- include ("./partials/header.ejs")%>
-
+        
         <main class="formulario">
+
+            <% if (locals.errors) { %>
+                <% for(let error of errors) { %>
+                    <ul>
+                        <li class="errores"><p> <%= error.msg%></p></li>
+                    </ul>  
+                <%}%>
+            <% } %>
+                <br>
             <form action="/user/register" method="POST" enctype="multipart/form-data" charset=utf-8>
                 <div>
                     <label for="firstname">Nombre</label>
-                    <input type="text" id="firstname" value="a" name="firstname" placeholder="John Doe" required>
+                    <input type="text" name="firstname" id="firstname" value="<%= locals.old && old.firstname ? old.firstname:'' %>" placeholder="John Doe" >
                 </div>
                 <br>
                 <div>
                     <label for="lastname">Apellido</label>
-                    <input type="text" id="lastname" value="a" name="lastname" placeholder="John Doe" required>
+                    <input type="text" id="lastname"  name="lastname" placeholder="John Doe" value="<%= locals.old && old.lastname ? old.lastname:'' %>">
                 </div>
                 <br>
                 <div>
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" value="a@a.com" name="email" placeholder="correo@correo.com"
-                        required>
+                    <input type="email" id="email"  name="email" placeholder="correo@correo.com" value="<%= locals.old && old.email ? old.email:'' %>">
                 </div>
                 <br>
                 <div>
                     <label for="birthday">Fecha de Nacimiento</label>
-                    <input type="date" id="birthday" value="2022-09-01" name="birthday" placeholder="12/12/2012"
-                        required>
+                    <input type="date" id="birthday"  name="birthday" placeholder="12/12/2012" value="<%= locals.old && old.birthday ? old.birthday:'' %>">
                 </div>
                 <br>
                 <div>
                     <label for="address">Domicilio</label>
-                    <input type="text" id="address" value="a" name="address" placeholder="calle 3 # 3-33" required>
+                    <input type="text" id="address"  name="address" placeholder="calle 3 # 3-33" value="<%= locals.old && old.address ? old.address:'' %>">
                 </div>
                 <br>
                 <div>
                     <label for="password">Contraseña</label>
-                    <input type="password" id="password" value="12345" name="password" placeholder="Contraseña"
+                    <input type="password" id="password" name="password" placeholder="Contraseña"
                         minlength="5">
                 </div>
                 <br>
                 <div>
                     <label for="confirmPassword">Confirmar Contraseña</label>
-                    <input type="password" id="confirmPassword" value="12345" name="confirmPassword"
-                        placeholder="Confirmar Contraseña" required>
+                    <input type="password" id="confirmPassword"  name="confirmPassword"
+                        placeholder="Confirmar Contraseña" >
                 </div>
                 <br>
                 <div>

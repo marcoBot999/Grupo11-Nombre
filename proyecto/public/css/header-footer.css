@@ -125,10 +125,18 @@ header nav .barra{
 }
 
 header nav a {
+    
     text-decoration: none;
     color:#191068
+    
 }
 
+header nav .barra a{
+    background-color: #c0fd68;
+    color: #191068;
+   padding: 0.5vw;
+    border-radius: 10px;
+}
 header nav .barra a:hover{
     background-color: #191068;
     color: #c0fd68;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ("./partials/head.ejs")%>
+        <link rel="stylesheet" href="/css/productDetail-styles.css">
+</head>
+
+<body background="/images/fondo-product-detail.avif">
+    <header>
+        <div class="top">
+            <div class="burgerMenu">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div>
+                <a href="/"><img class="logo" src="/images/logo ug 2.jpg" /></a>
+            </div>
+            <nav>
+                <ul class="ingreso">
+                    
+                    <li>
+                        <div class="carroCompras">
+                            <a href="/compras/shopping-cart"><i class="fas fa-shopping-cart fa-2x"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <nav>
+            <ul class="barra">
+                
+            </ul>
+        </nav>
+    </header>
+
+        <main>
+            <section class="detalleProducto">
+                
+                <article class="producto">
+                    <h4>
+                        <%=p.firstname%>
+                    </h4>
+                    
+                    <div class="">
+                        <img src="/images/perfil" />
+                        <p>imagen de perfil</p>
+                    </div>
+                    <br>
+                    
+                </article>
+                <article class="caracteristicas">
+                    <h4>Características</h4>
+                    <p>
+                        info
+                    </p>
+                
+                </article>
+                                                              
+            </section>
+            <br>
+            
+        </main>
+        <%- include ("./partials/footer.ejs")%>
+</body>
+
+</html>

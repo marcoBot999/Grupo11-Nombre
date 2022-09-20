@@ -1,11 +1,22 @@
 [
-    {
-        "id": 1,
-        "firstname": "Lina",
-        "lastname": "Gómez",
-        "email": "linamarce@gmail.com",
-        "address": "carrera",
-        "birthday": "2022-12-02",
-        "img": "img_user_default.png"
-    }
+ {
+  "id": 1,
+  "firstname": "Lina",
+  "lastname": "Gómez",
+  "email": "linamarce@gmail.com",
+  "address": "carrera",
+  "birthday": "2022-12-02",
+  "img": "img_user_default.png"
+ },
+ {
+  "id": 1663710671590,
+  "firstname": "johan",
+  "lastname": "leon",
+  "email": "johanleon0705@gmail.com",
+  "birthday": "2022-09-20",
+  "address": "crr 118 #83a 21",
+  "password": "Jo100000000",
+  "confirmPassword": "Jo100000000",
+  "img": "img_user_default.png"
+ }
 ]

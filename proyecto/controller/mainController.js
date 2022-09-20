@@ -18,7 +18,7 @@ const mainController = {
 			portatiles:portatiles,
 			pcArmada:pcArmada,
 			perifericos:perifericos
-		 })
+		})
     },
 	//Buscador//
     search: (req, res) => {

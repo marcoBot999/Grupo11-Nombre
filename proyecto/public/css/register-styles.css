@@ -29,8 +29,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     box-sizing: content-box;
+    flex-direction: column;
 }
-
+.errores:hover{
+    color: #191068; 
+    transition: 50ms all;
+}
 main input {
     border: 3px solid transparent;
     border-radius: 6px;
@@ -81,6 +85,7 @@ main button:hover {
     background-color: #c0fd68;
     color: #191068;
 }
+
 
 
 
