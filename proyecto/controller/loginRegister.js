@@ -72,7 +72,7 @@ const loginRegisterController = {
                 birthday: req.body.birthday,
                 address: req.body.address,
                 password: bcrypt.hashSync(req.body.password, 10),
-                confirmPassword: bcrypt.hashSync(req.body.confirmPassword, password),
+                confirmPassword: bcrypt.hashSync(req.body.confirmPassword, 10),
                 img: "img_user_default.png"
             };
 

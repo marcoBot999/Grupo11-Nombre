@@ -20,17 +20,6 @@
   "img": "img_user_default.png"
  },
  {
-  "id": 1663947295226,
-  "firstname": "santiago",
-  "lastname": "leon",
-  "email": "johanleon0705@gmail.com",
-  "birthday": "2005-04-12",
-  "address": "crr 118 #83a 21",
-  "password": "Jo1000692018",
-  "confirmPassword": "Jo1000692018",
-  "img": "img_user_default.png"
- },
- {
   "id": 1664559891363,
   "firstname": "a",
   "lastname": "b",
