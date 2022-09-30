@@ -29,5 +29,16 @@
   "password": "Jo1000692018",
   "confirmPassword": "Jo1000692018",
   "img": "img_user_default.png"
+ },
+ {
+  "id": 1664559891363,
+  "firstname": "a",
+  "lastname": "b",
+  "email": "c@c.com",
+  "birthday": "2022-09-21",
+  "address": "a",
+  "password": "$2a$10$kD63X2As5722ydYuc9Q/hO28G1YjLAGRJu/TYJS7TMgBggUb0k5tW",
+  "confirmPassword": "$2a$10$0ByIeWkNnAa/zvXcKU4KNu9sU2thc7n3wI.8UgHrlmA3pJOEem81e",
+  "img": "img_user_default.png"
  }
 ]

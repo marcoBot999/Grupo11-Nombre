@@ -6,24 +6,30 @@ const { body } = require("express-validator");
 
 const loginRegisterController = require("../controller/loginRegister.js");
 
-//validaciones
+//Validaciones
 const validaciones = [
-    body("firstname").notEmpty().withMessage("debes agregar un nombre"),
-    body("lastname").notEmpty().withMessage("debes agregar un apellido"),
-    body("email").isEmail().withMessage("debes ingresar un email"),
-    body("address").notEmpty().withMessage("debes agregar una dirección"),
-    body("password").notEmpty().withMessage("debes agregar una contraseña"),
-    body("password").isLength({min:8}).withMessage("la contraseña debe tener mínimo 8 caracteres"),
-    body("password").matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/,).withMessage("la contraseña debe tener un numero, una mayúscula y una minúscula "),
-    body("confirmPassword").custom(async (confirmPassword, {req}) => {
+    body("firstname").notEmpty().withMessage("Debes agregar un nombre"),
+    body("lastname").notEmpty().withMessage("Debes agregar un apellido"),
+    body("email").isEmail().withMessage("Debes ingresar un email"),
+    body("address").notEmpty().withMessage("Debes agregar una dirección"),
+    body("password").notEmpty().withMessage("Debes agregar una contraseña"),
+    body("password").isLength({ min: 8 }).withMessage("La contraseña debe tener mínimo 8 caracteres"),
+    body("password").matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/,).withMessage("La contraseña debe tener un número, una mayúscula y una minúscula "),
+    body("confirmPassword").custom(async (confirmPassword, { req }) => {
         const password = req.body.password
-        if(password !== confirmPassword){
-          throw new Error("Las contraseñas deben ser las mismas")
+        if (password !== confirmPassword) {
+            throw new Error("Las contraseñas deben ser las mismas")
         }
     })
-     
 ]
 
+//Validaciones Login
+const validacionesLog = [
+    body("email").isEmail().withMessage("Debes ingresar un email"),
+    body("password").notEmpty().withMessage("Debes agregar una contraseña"),
+    body("password").isLength({ min: 8 }).withMessage("La contraseña debe tener mínimo 8 caracteres"),
+    body("password").matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/,).withMessage("La contraseña debe tener un número, una mayúscula y una minúscula "),
+]
 
 var storage = multer.diskStorage({
     //ESTO ES DONDE SE VA A GUARDAR LA IMAGEN NUEVA AUTOMATICAMENTE
@@ -40,17 +46,18 @@ var storage = multer.diskStorage({
     },
 });
 
-
+//Para subir el archivo//
 const upload = multer({ storage });
 
 //Ingresar al login//
 router.get("/login", loginRegisterController.login);
-router.post("/login", loginRegisterController.login2);
+router.post("/login", validacionesLog, loginRegisterController.processLogin);
 
 
 //Ingresar al registro//
 router.get("/register", loginRegisterController.register);
-router.post("/register", upload.single("img"), validaciones, loginRegisterController.register2);
+//Procesar el registro//
+router.post("/register", upload.single("img"), validaciones, loginRegisterController.processRegister);
 
 router.get("/perfil", loginRegisterController.perfil);
 

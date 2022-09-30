@@ -9,53 +9,84 @@
 <body background="/images/fondo-register.jpg">
 
     <%- include ("./partials/header.ejs")%>
-        
-        <main class="formulario">
 
-            <% if (locals.errors) { %>
-                <% for(let error of errors) { %>
-                    <ul>
-                        <li class="errores"><p> <%= error.msg%></p></li>
-                    </ul>  
-                <%}%>
-            <% } %>
-                <br>
+        <main class="formulario">
+            <br>
             <form action="/user/register" method="POST" enctype="multipart/form-data" charset=utf-8>
                 <div>
                     <label for="firstname">Nombre</label>
-                    <input type="text" name="firstname" id="firstname" value="<%= locals.old && old.firstname ? old.firstname:'' %>" placeholder="John Doe" >
+                    <input type="text" name="firstname" id="firstname"
+                        value="<%= locals.old && old.firstname ? old.firstname:'' %>" placeholder="John Doe">
+                    <% if (locals.errors && errors.firstname) { %>
+                        <div class="errores">
+                            <%= errors.firstname.msg%>
+                        </div>
+                        <% } %>
                 </div>
                 <br>
                 <div>
                     <label for="lastname">Apellido</label>
-                    <input type="text" id="lastname"  name="lastname" placeholder="John Doe" value="<%= locals.old && old.lastname ? old.lastname:'' %>">
+                    <input type="text" id="lastname" name="lastname" placeholder="John Doe"
+                        value="<%= locals.old && old.lastname ? old.lastname:'' %>">
+                    <% if (locals.errors && errors.lastname) { %>
+                        <div class="errores">
+                            <%= errors.lastname.msg%>
+                        </div>
+                        <% } %>
                 </div>
                 <br>
                 <div>
                     <label for="email">E-mail</label>
-                    <input type="email" id="email"  name="email" placeholder="correo@correo.com" value="<%= locals.old && old.email ? old.email:'' %>">
+                    <input type="email" id="email" name="email" placeholder="correo@correo.com"
+                        value="<%= locals.old && old.email ? old.email:'' %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="errores">
+                            <%= errors.email.msg%>
+                        </div>
+                        <% } %>
                 </div>
                 <br>
                 <div>
                     <label for="birthday">Fecha de Nacimiento</label>
-                    <input type="date" id="birthday"  name="birthday" placeholder="12/12/2012" value="<%= locals.old && old.birthday ? old.birthday:'' %>">
+                    <input type="date" id="birthday" name="birthday" placeholder="12/12/2012"
+                        value="<%= locals.old && old.birthday ? old.birthday:'' %>">
+                    <% if (locals.errors && errors.birthday) { %>
+                        <div class="errores">
+                            <%= errors.birthday.msg%>
+                        </div>
+                        <% } %>
                 </div>
                 <br>
                 <div>
                     <label for="address">Domicilio</label>
-                    <input type="text" id="address"  name="address" placeholder="calle 3 # 3-33" value="<%= locals.old && old.address ? old.address:'' %>">
+                    <input type="text" id="address" name="address" placeholder="calle 3 # 3-33"
+                        value="<%= locals.old && old.address ? old.address:'' %>">
+                    <% if (locals.errors && errors.address) { %>
+                        <div class="errores">
+                            <%= errors.address.msg%>
+                        </div>
+                        <% } %>
                 </div>
                 <br>
                 <div>
                     <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="password" placeholder="Contraseña"
-                        minlength="5">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" minlength="5">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="errores">
+                            <%= errors.password.msg%>
+                        </div>
+                        <% } %>
                 </div>
                 <br>
                 <div>
                     <label for="confirmPassword">Confirmar Contraseña</label>
-                    <input type="password" id="confirmPassword"  name="confirmPassword"
-                        placeholder="Confirmar Contraseña" >
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                        placeholder="Confirmar Contraseña">
+                    <% if (locals.errors && errors.confirmPassword) { %>
+                        <div class="errores">
+                            <%= errors.confirmPassword.msg%>
+                        </div>
+                        <% } %>
                 </div>
                 <br>
                 <div>

@@ -31,10 +31,16 @@ body {
     box-sizing: content-box;
     flex-direction: column;
 }
-.errores:hover{
-    color: #191068; 
+
+.errores {
+    color: rgb(228, 26, 26);
     transition: 50ms all;
 }
+
+.errores:hover {
+    color: #c0fd68;
+}
+
 main input {
     border: 3px solid transparent;
     border-radius: 6px;
