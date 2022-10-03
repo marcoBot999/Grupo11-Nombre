@@ -8,8 +8,15 @@
         </div>
         <nav>
             <ul class="ingreso">
-                <li><a href="/user/login">Ingresar <i class="fas fa-user"></i></a></li>
-                <li><a href="/user/register">Registrarse <i class="fas fa-sign-in-alt"></i></a></li>
+                
+
+                <% if (locals.isLogged == true) { %>
+					<li><a href="/user/perfil">¡Hola <%%>!</a></li>
+				<% } else { %>
+					<li><a href="/user/login">Ingresar <i class="fas fa-user"></i></a></li>
+                    <li><a href="/user/register">Registrarse <i class="fas fa-sign-in-alt"></i></a></li>
+				<% } %>
+
                 <li>
                     <div class="carroCompras">
                         <a href="/compras/shopping-cart"><i class="fas fa-shopping-cart fa-2x"></i></a>

@@ -5,53 +5,9 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs');
 
+const UserModel = require("../models/User.js")
+
 const loginRegisterController = {
-    //Mostrar formulario de login//
-    login: (req, res) => {
-        res.render("login")
-    },
-
-    //Loguearse//
-    processLogin: function (req, res) {
-        let errors = validationResult(req)
-        if (errors.isEmpty()) {
-            const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-
-            //const userNew = {
-            //id: Date.now(),
-
-            //email: req.body.email,
-            //  password: req.body.password,
-            // };
-
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].email == req.body.email) {
-                    if (bcrypt.compareSync(req.body.password, users[i].password)); {
-                        let usuarioALoguearse = users[i];
-                        break;
-                    }
-                }
-            }
-            if (usuarioALoguearse == undefined) {
-                return res.render('login', {
-                    errors: [
-                        { msg: 'Credenciales inválidas' }
-                    ]
-                });
-            }
-
-            req.session.usuarioLogueado = usuarioALoguearse;
-            res.redirect("/");
-
-        } else {
-            res.render('login', {
-                errors: errors.mapped(),
-                old: req.body
-            })
-        }
-
-        //res.redirect("/")
-    },
 
     //Mostrar formulario de registro//
     register: (req, res) => {
@@ -72,7 +28,6 @@ const loginRegisterController = {
                 birthday: req.body.birthday,
                 address: req.body.address,
                 password: bcrypt.hashSync(req.body.password, 10),
-                confirmPassword: bcrypt.hashSync(req.body.confirmPassword, 10),
                 img: "img_user_default.png"
             };
 
@@ -81,12 +36,27 @@ const loginRegisterController = {
                 userNew.img = req.file.filename;
             }
 
-            users.push(userNew);
+            let usuarioDB = UserModel.findByField("email", req.body.email)
+            //el usuario esta en la base de datos?
+             if (usuarioDB) {
+                res.render('register', {
+                    errors: {
+                        email:{
+                            msg: "este email ya esta registrado"
+                        }
+                    },
+                    old: req.body
+                })
+            }else{
+                users.push(userNew);
 
             const data = JSON.stringify(users, null, ' ');
             fs.writeFileSync(usersFilePath, data);
 
-            res.redirect("/");
+            res.redirect("/user/login");
+            }
+
+            
         } else {
             res.render('register', {
                 errors: errors.mapped(),
@@ -97,14 +67,64 @@ const loginRegisterController = {
 
 
     },
-    perfil: (req, res) => {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        let usuario = users.find((p) => p.id == req.params.id);
-        res.render("perfil", { user: usuario })
+    //Mostrar formulario de login//
+    login: (req, res) => {
+        
+        res.render("login")
+    },
 
+    //Loguearse//
+    processLogin: function (req, res) {
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+
+            let userToLog = UserModel.findByField("email",req.body.email)
+            if(userToLog){
+                let isOkThePass = bcrypt.compareSync(req.body.password,userToLog.password)
+                if (isOkThePass) {
+                    delete userToLog.password
+                    req.session.userLogged = userToLog
+                    return res.redirect("perfil");
+                }else{
+                    return res.render("login",{
+                        errors:{
+                            email:{
+                                msg: "las credenciales son invalidas"
+                            }
+                        }
+                    })
+                }
+                
+            }else{
+                res.render("login",{
+                    errors:{
+                        email:{
+                            msg: "Este email no está registrado"
+                        }
+                    }
+                })
+            }
+            
+
+        } else {
+            res.render('login', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
+        
+    },
+    
+    perfil: (req, res) => {
+        return res.render("perfil", {
+            user: req.session.userLogged
+        })
+    },
+    logout:(req,res)=>{
+        req.session.destroy();
+		return res.redirect('/')
     }
 }
-
 
 
 module.exports = loginRegisterController

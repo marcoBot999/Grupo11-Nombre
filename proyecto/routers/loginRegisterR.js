@@ -48,17 +48,23 @@ var storage = multer.diskStorage({
 
 //Para subir el archivo//
 const upload = multer({ storage });
+const guestMiddlware = require("../middlewares/guestMiddlware") 
+const authMiddlware = require("../middlewares/authMiddleware") 
 
 //Ingresar al login//
-router.get("/login", loginRegisterController.login);
+router.get("/login", guestMiddlware ,loginRegisterController.login);
 router.post("/login", validacionesLog, loginRegisterController.processLogin);
 
 
 //Ingresar al registro//
-router.get("/register", loginRegisterController.register);
+router.get("/register", guestMiddlware ,loginRegisterController.register);
 //Procesar el registro//
 router.post("/register", upload.single("img"), validaciones, loginRegisterController.processRegister);
 
-router.get("/perfil", loginRegisterController.perfil);
+//mostrar perfil
+router.get("/perfil", authMiddlware ,loginRegisterController.perfil);
+
+//cerrar sesion //video 2 horas --- 1:21:00 ---
+router.get('/logout', loginRegisterController.logout);;
 
 module.exports = router;

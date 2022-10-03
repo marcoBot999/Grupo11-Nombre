@@ -160,6 +160,22 @@
   "category": "Portatil"
  },
  {
+  "id": 19,
+  "name": "Notebook ASUS X515EA-EJ711",
+  "description": "I3 1115G4 4GB SSD 256GB 15.6 FreeOS Ya sea para trabajar o jugar, el ASUS X515 es el computador portátil que ofrece un potente rendimiento y efectos visuales envolventes. Su pantalla NanoEdge cuenta con amplios ángulos de visión de 178° y un recubrimiento antirreflejos mate para tener una experiencia verdaderamente atractiva",
+  "price": 279.99,
+  "img": "Notebook_ASUS_X515EA-EJ711_I3_1115G4_4GB_SSD_256GB_15.6_FreeOS.jpg",
+  "category": "Portatil"
+ },
+ {
+  "id": 20,
+  "name": "Notebook MSI Katana GF66",
+  "description": "12UE I7 12700H 16GB SSD 512GB RTX 3060 Construida con el detalle y la dedicación que un gran producto merece, la Katana GF66 es una notebook gamer equipada con una placa de video RTX 3060 y un procesador de 11a generación i7, diseñada para obtener el mayor rendimiento en los juegos más demandantes. Incluye 8 núcleos, y un desempeño hasta 40% mayor y el doble de caché L3 comparado con modelos anteriores, además de iluminación en rojo y teclas de atajo.",
+  "price": 1000,
+  "img": "Notebook_MSI_Katana_GF66_12UE_I7_12700H_16GB_SSD_512GB_RTX_3060.png",
+  "category": "Portatil"
+ },
+ {
   "id": 1662595147411,
   "name": "Logitech G Series Hero G502 negro",
   "description": "Adaptado a tus movimientos\r\nEl mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.",

@@ -3,7 +3,7 @@
 
 <head>
     <%- include ("./partials/head.ejs")%>
-        <link rel="stylesheet" href="/css/productDetail-styles.css">
+        <link rel="stylesheet" href="/css/perfil.css">
 </head>
 
 <body background="/images/fondo-product-detail.avif">
@@ -23,6 +23,11 @@
                             <a href="/compras/shopping-cart"><i class="fas fa-shopping-cart fa-2x"></i></a>
                         </div>
                     </li>
+                    <li>
+                        <div class="buttonSes">
+                            <a href="/user/logout">cerrar sesion</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -39,21 +44,23 @@
                 
                 <article class="producto">
                     <h4>
-                        <%=p.firstname%>
+                        <p> Hola <%=user.firstname%> <%=user.lastname%></p>
                     </h4>
                     
-                    <div class="">
-                        <img src="/images/perfil" />
-                        <p>imagen de perfil</p>
+                    <div class="user-img">
+                        <img src="/images/user-images/<%=user.img%>" />
+                        
                     </div>
                     <br>
                     
                 </article>
                 <article class="caracteristicas">
                     <h4>Características</h4>
-                    <p>
-                        info
-                    </p>
+                    <h3>Email:</h3><p><%=user.email%></p>
+
+                    <h3>Dirección:</h3><p><%=user.address%> </p>
+
+                    <h3>Nacimiento:</h3><p><%=user.birthday%></p>
                 
                 </article>
                                                               

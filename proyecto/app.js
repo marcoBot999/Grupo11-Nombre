@@ -6,13 +6,19 @@ const session = require('express-session');
 
 const app = express();
 
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
 
-app.use(express.static(path.join(__dirname, "/public")))
+
+app.use(userLoggedMiddleware);
+
+app.use(express.static(path.join(__dirname, "/public")));
 // capturan y procesal la informacion de los formularios
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'))
-app.use(session({ secret: "sessionUnlimitedGaming" }));
+app.use(session({ 
+    secret: "session Unlimited Gaming", resave:false, saveUninitialized:false 
+}));
 
 //Template Engine
 app.set("view engine", "ejs")
@@ -20,9 +26,7 @@ app.set("view engine", "ejs")
 const indexRouter = require("./routers/indexRouter")
 const loginRegister = require("./routers/loginRegisterR")
 const comprasRouter = require("./routers/comprasR")
-//const logMiddleware = require("./middlewares/logMiddleware")
 
-//app.use(logMiddleware)
 
 app.use("/", indexRouter)
 app.use("/user", loginRegister)

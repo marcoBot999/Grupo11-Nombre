@@ -5,6 +5,12 @@
     font-weight: 800;
 }
 
+header input{
+    display: none;
+}
+.botonBuscar{
+    display: none;
+}
 body {
     background-color: #191068ab;
     position: relative;
@@ -34,11 +40,13 @@ body {
 
 .errores {
     color: rgb(228, 26, 26);
-    transition: 50ms all;
+    transition: 100ms all;
+    border-radius: 10px;
 }
 
 .errores:hover {
     color: #c0fd68;
+    background-color: rgba(25, 16, 104,0.8);
 }
 
 main input {

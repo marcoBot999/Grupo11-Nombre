@@ -6,28 +6,17 @@
   "email": "linamarce@gmail.com",
   "address": "carrera",
   "birthday": "2022-12-02",
+  "password": "Lina12345678",
   "img": "img_user_default.png"
  },
  {
-  "id": 1663710671590,
+  "id": 1664748855238,
   "firstname": "johan",
   "lastname": "leon",
   "email": "johanleon0705@gmail.com",
-  "birthday": "2022-09-20",
+  "birthday": "2002-05-07",
   "address": "crr 118 #83a 21",
-  "password": "Jo100000000",
-  "confirmPassword": "Jo100000000",
-  "img": "img_user_default.png"
- },
- {
-  "id": 1664559891363,
-  "firstname": "a",
-  "lastname": "b",
-  "email": "c@c.com",
-  "birthday": "2022-09-21",
-  "address": "a",
-  "password": "$2a$10$kD63X2As5722ydYuc9Q/hO28G1YjLAGRJu/TYJS7TMgBggUb0k5tW",
-  "confirmPassword": "$2a$10$0ByIeWkNnAa/zvXcKU4KNu9sU2thc7n3wI.8UgHrlmA3pJOEem81e",
+  "password": "$2a$10$yjJfF0LuNUvohtQjd8.UP.M4q/KdTqk.Gg.SQUnRZI9Zx0u2FBuZy",
   "img": "img_user_default.png"
  }
 ]
