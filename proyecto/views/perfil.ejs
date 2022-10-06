@@ -17,7 +17,7 @@
             </div>
             <nav>
                 <ul class="ingreso">
-                    
+
                     <li>
                         <div class="carroCompras">
                             <a href="/compras/shopping-cart"><i class="fas fa-shopping-cart fa-2x"></i></a>
@@ -25,50 +25,63 @@
                     </li>
                     <li>
                         <div class="buttonSes">
-                            <a href="/user/logout">cerrar sesion</a>
+                            <a href="/user/logout">Cerrar sesión</a>
                         </div>
                     </li>
                 </ul>
             </nav>
         </div>
-        
+
         <nav>
             <ul class="barra">
-                
+
             </ul>
         </nav>
     </header>
 
-        <main>
-            <section class="detalleProducto">
-                
-                <article class="producto">
-                    <h4>
-                        <p> Hola <%=user.firstname%> <%=user.lastname%></p>
-                    </h4>
-                    
-                    <div class="user-img">
-                        <img src="/images/user-images/<%=user.img%>" />
-                        
-                    </div>
-                    <br>
-                    
-                </article>
-                <article class="caracteristicas">
-                    <h4>Características</h4>
-                    <h3>Email:</h3><p><%=user.email%></p>
+    <main>
+        <section class="detalleProducto">
 
-                    <h3>Dirección:</h3><p><%=user.address%> </p>
+            <article class="producto">
+                <h4>
+                    Hola <%=user.firstname%>
+                        <%=user.lastname%>
+                </h4>
 
-                    <h3>Nacimiento:</h3><p><%=user.birthday%></p>
-                
-                </article>
-                                                              
-            </section>
-            <br>
-            
-        </main>
-        <%- include ("./partials/footer.ejs")%>
+                <div class="user-img">
+                    <img src="/images/user-images/<%=user.img%>" />
+
+                </div>
+                <br>
+
+            </article>
+            <article class="caracteristicas">
+                <h4>Perfil</h4>
+                <div class=" infoPerfil">
+                    <h3>Email:</h3>
+                    <p>
+                        <%=user.email%>
+                    </p>
+
+                    <h3>Dirección:</h3>
+                    <p>
+                        <%=user.address%>
+                    </p>
+
+                    <h3>Nacimiento:</h3>
+                    <p>
+                        <%=user.birthday%>
+                    </p>
+                </div>
+
+
+            </article>
+
+        </section>
+        <br>
+
+    </main>
+    <%- include ("./partials/footer.ejs")%>
 </body>
 
 </html>

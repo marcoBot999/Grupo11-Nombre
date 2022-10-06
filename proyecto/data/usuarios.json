@@ -1,22 +1,22 @@
 [
- {
-  "id": 1,
-  "firstname": "Lina",
-  "lastname": "Gómez",
-  "email": "linamarce@gmail.com",
-  "address": "carrera",
-  "birthday": "2022-12-02",
-  "password": "Lina12345678",
-  "img": "img_user_default.png"
- },
- {
-  "id": 1664748855238,
-  "firstname": "johan",
-  "lastname": "leon",
-  "email": "johanleon0705@gmail.com",
-  "birthday": "2002-05-07",
-  "address": "crr 118 #83a 21",
-  "password": "$2a$10$yjJfF0LuNUvohtQjd8.UP.M4q/KdTqk.Gg.SQUnRZI9Zx0u2FBuZy",
-  "img": "img_user_default.png"
- }
+    {
+        "id": 1664748855238,
+        "firstname": "johan",
+        "lastname": "leon",
+        "email": "johanleon0705@gmail.com",
+        "birthday": "2002-05-07",
+        "address": "crr 118 #83a 21",
+        "password": "$2a$10$yjJfF0LuNUvohtQjd8.UP.M4q/KdTqk.Gg.SQUnRZI9Zx0u2FBuZy",
+        "img": "img_user_default.png"
+    },
+    {
+        "id": 1664990154587,
+        "firstname": "Lina ",
+        "lastname": "Gómez",
+        "email": "linamarceg17@gmail.com",
+        "birthday": "1989-12-21",
+        "address": "Carrera xx # xx-xx",
+        "password": "$2a$10$xUOYSkhArIquMUNZx5lY2e5e0bnjfTWc8NPKBAHzqwqaZC2BRaEQi",
+        "img": "1664990154333lina2.jpg"
+    }
 ]

@@ -8,20 +8,24 @@
         </div>
         <nav>
             <ul class="ingreso">
-                
 
-                <% if (locals.isLogged == true) { %>
-					<li><a href="/user/perfil">¡Hola <%%>!</a></li>
-				<% } else { %>
-					<li><a href="/user/login">Ingresar <i class="fas fa-user"></i></a></li>
-                    <li><a href="/user/register">Registrarse <i class="fas fa-sign-in-alt"></i></a></li>
-				<% } %>
 
-                <li>
-                    <div class="carroCompras">
-                        <a href="/compras/shopping-cart"><i class="fas fa-shopping-cart fa-2x"></i></a>
+                <% if (locals.isLogged) { %>
+                    <div class=" img-name-login">
+                        <img src="/images/user-images/<%=locals.userLogged.img%>" class="imgcircle">
+                        <li><a href="/user/perfil">¡Hola <%= locals.userLogged.firstname %>
+                                    <%= locals.userLogged.lastname %>!</a></li>
                     </div>
-                </li>
+                    <% } else { %>
+                        <li><a href="/user/login">Ingresar <i class="fas fa-user"></i></a></li>
+                        <li><a href="/user/register">Registrarse <i class="fas fa-sign-in-alt"></i></a></li>
+                        <% } %>
+
+                            <li>
+                                <div class="carroCompras">
+                                    <a href="/compras/shopping-cart"><i class="fas fa-shopping-cart fa-2x"></i></a>
+                                </div>
+                            </li>
             </ul>
         </nav>
     </div>

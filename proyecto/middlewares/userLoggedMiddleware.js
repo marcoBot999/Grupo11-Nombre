@@ -1,11 +1,22 @@
+const UserModel = require("../models/User.js")
+
 function userLoggedMiddleware(req, res, next) {
-    //variable local para usar, y mostrar elementos al usuario logeado
+    //Variable local para usar, y mostrar elementos al usuario logeado
 
     res.locals.isLogged = false;
 
-    if (req.session && req.session.userLogged) {
-        res.locals.isLogged = true;
+    let emailInCookie = req.cookies.recordarEmail;
+    let userFromCookie = UserModel.findByField('email', emailInCookie);
+
+    if (userFromCookie) {
+        req.session.userLogged = userFromCookie;
     }
+
+    if (req.session.userLogged) {
+        res.locals.isLogged = true;
+        res.locals.userLogged = req.session.userLogged;
+    }
+
     next();
 }
 

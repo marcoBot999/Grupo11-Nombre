@@ -4,7 +4,8 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
 }
-header nav .barra{
+
+header nav .barra {
     display: none;
 }
 
@@ -32,11 +33,11 @@ main section .producto {
 }
 
 main h4 {
-    font-size: 1.7vw;
     display: flex;
     justify-content: center;
     padding: 2vw;
 }
+
 
 main section div .imagenProducto {
     display: flex;
@@ -44,9 +45,10 @@ main section div .imagenProducto {
     align-items: center;
 }
 
-.user-img{
+.user-img {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 main section .imagenProducto {
@@ -68,98 +70,6 @@ main section img {
     text-align: center;
 }
 
-main article .interacionProducto {
-    padding: 1%;
-}
-
-main .interacionProducto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    gap: 1%;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-top: solid 3px #191068;
-    border-bottom: solid 3px #191068;
-    ;
-}
-
-.contador h5 {
-    width: 3vw;
-    height: 3vw;
-    font-size: 90%;
-    background-color: white;
-    align-self: center;
-}
-
-.precio {
-    padding: 0 0 5% 10%;
-    font-size: 90%;
-}
-
-main section .cantidad {
-    font-size: 1.5vw;
-}
-
-main section .carroComprasProduct {
-    color: #c0fd68;
-    background-color: #191068;
-    width: 4%;
-    padding: 1.5%;
-    border-radius: 10px;
-    text-decoration: none;
-    align-self: center;
-    font-size: 1.3vw;
-    transition: 1s all;
-    margin: 2% 0;
-}
-
-main section .carroComprasProduct:hover {
-    color: #191068;
-    background-color: #c0fd68
-}
-
-main section .carroComprasProduct i {
-    font-size: 150%;
-}
-
-main section .enlaceComprarEditar {
-    background-color: #191068;
-    color: #c0fd68;
-    max-width: max-content;
-    padding: 2%;
-    border-radius: 10px;
-    border: none;
-    text-decoration: none;
-    align-self: center;
-    font-size: 1.3vw;
-    transition: 1s all;
-}
-
-main section .enlaceComprarEditar:hover {
-    color: #191068;
-    background-color: #c0fd68
-}
-
-main form .botonEliminar {
-    background-color: #ffff;
-    color: #c0fd68;
-    padding: 1.2vw;
-    background-color: #191068;
-    border: #191068 solid 1px;
-    border-radius: 10px;
-    font-size: 70%;
-    font-weight: bolder;
-    transition: all .8s;
-}
-
-main form .botonEliminar:hover {
-    background-color: #c0fd68;
-    color: #191068;
-    transition: all .8s;
-}
-
 main .caracteristicas {
     display: flex;
     justify-content: center;
@@ -170,133 +80,15 @@ main .caracteristicas {
     background-color: rgba(255, 255, 255, 0.8);
     border: solid 3px #191068;
     border-radius: 5px;
-    padding: 0 1vw 2vw 1vw;
+}
+
+main .infoPerfil {
+    padding: 2.5vw;
 }
 
 main p {
-    font-size: 1.3vw;
-    padding: 1%;
+    padding: 2%;
     text-align: justify;
-}
-
-main .productoRelacionado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: solid 3px #191068;
-    border-radius: 10px;
-    margin: 0vw 10vw 0vw 10vw;
-    box-sizing: border-box;
-    padding-bottom: 2vw;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-main .productoRelacionado img {
-    box-shadow: 0px 0px 10px #191068;
-    padding: 2%;
-    background-color: #FFF;
-}
-
-main .productoRelacionado img:hover {
-    box-shadow: 0px 0px 20px #191068;
-}
-
-main .productoRelacionado .img-text1 {
-    position: relative;
-    text-align: center;
-}
-
-main .productoRelacionado .text1 {
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    padding: 2% 5%;
-    text-align: left;
-}
-
-main section .detalleProdRela {
-    padding: 1%;
-    font-size: 1.5vw;
-}
-
-main .carrousel {
-    width: 100%;
-    max-width: 120em;
-    border-top: solid 3px #191068;
-    border-bottom: solid 3px #191068;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-sizing: border-box;
-    overflow: hidden;
-    font-size: 90%;
-    display: none;
-}
-
-main .carrousel h4 {
-    text-align: center;
-    font-size: 1.7vw;
-}
-
-main .carrousel .grande {
-    width: 200%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    transition: all .5s ease;
-    transform: translateX(0%);
-    font-size: 100%;
-}
-
-main .carrousel .img {
-    text-align: center;
-    padding: 2%;
-    box-shadow: 0px 0px 10px #191068;
-    background-color: #FFF;
-}
-
-main .carrousel .img:hover {
-    box-shadow: 0px 0px 20px #191068;
-}
-
-main .carrousel .img-text2 {
-    position: relative;
-}
-
-main .carrousel .text2 {
-    position: absolute;
-    bottom: 0%;
-    width: 103%;
-    padding: 2% 3%;
-}
-
-main .carrousel .text2 p {
-    font-size: 1vw;
-}
-
-main .carrousel .puntos {
-    width: 100%;
-    padding: .4em;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 1em 0 0;
-    list-style: none;
-}
-
-main .carrousel .punto {
-    width: 2em;
-    height: 2em;
-    margin: .2em;
-    border: #191068 solid 2px;
-    border-radius: 50%;
-}
-
-main .carrousel .punto.activo {
-    background-color: #c0fd68;
-    border: #c0fd68 solid 2px;
-    border-radius: 50%;
 }
 
 
@@ -331,20 +123,4 @@ main .carrousel .punto.activo {
         top: auto;
     }
 
-    main .interacionProducto {
-        display: flex;
-        justify-content: flex-end;
-        box-sizing: border-box;
-        gap: 1%;
-        padding: 0vw 14vw 0vw 20vw;
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-
-    main .productoRelacionado {
-        display: none;
-    }
-
-    main .carrousel {
-        display: block;
-    }
 }

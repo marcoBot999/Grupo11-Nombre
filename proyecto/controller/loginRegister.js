@@ -37,26 +37,26 @@ const loginRegisterController = {
             }
 
             let usuarioDB = UserModel.findByField("email", req.body.email)
-            //el usuario esta en la base de datos?
-             if (usuarioDB) {
+            //El usuario esta en la base de datos?
+            if (usuarioDB) {
                 res.render('register', {
                     errors: {
-                        email:{
-                            msg: "este email ya esta registrado"
+                        email: {
+                            msg: "Este email ya esta registrado"
                         }
                     },
                     old: req.body
                 })
-            }else{
+            } else {
                 users.push(userNew);
 
-            const data = JSON.stringify(users, null, ' ');
-            fs.writeFileSync(usersFilePath, data);
+                const data = JSON.stringify(users, null, ' ');
+                fs.writeFileSync(usersFilePath, data);
 
-            res.redirect("/user/login");
+                res.redirect("/user/login");
             }
 
-            
+
         } else {
             res.render('register', {
                 errors: errors.mapped(),
@@ -69,7 +69,7 @@ const loginRegisterController = {
     },
     //Mostrar formulario de login//
     login: (req, res) => {
-        
+
         res.render("login")
     },
 
@@ -78,33 +78,37 @@ const loginRegisterController = {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
 
-            let userToLog = UserModel.findByField("email",req.body.email)
-            if(userToLog){
-                let isOkThePass = bcrypt.compareSync(req.body.password,userToLog.password)
+            let userToLog = UserModel.findByField("email", req.body.email)
+            if (userToLog) {
+                let isOkThePass = bcrypt.compareSync(req.body.password, userToLog.password)
                 if (isOkThePass) {
-                    delete userToLog.password
-                    req.session.userLogged = userToLog
+                    delete userToLog.password;
+                    req.session.userLogged = userToLog;
+                    if (req.body.recordarme) {
+                        res.cookie('recordarEmail', req.body.email, { maxAge: 90000 })
+                    }
+
                     return res.redirect("perfil");
-                }else{
-                    return res.render("login",{
-                        errors:{
-                            email:{
-                                msg: "las credenciales son invalidas"
+                } else {
+                    return res.render("login", {
+                        errors: {
+                            email: {
+                                msg: "Las credenciales son inválidas"
                             }
                         }
                     })
                 }
-                
-            }else{
-                res.render("login",{
-                    errors:{
-                        email:{
+
+            } else {
+                res.render("login", {
+                    errors: {
+                        email: {
                             msg: "Este email no está registrado"
                         }
                     }
                 })
             }
-            
+
 
         } else {
             res.render('login', {
@@ -112,18 +116,19 @@ const loginRegisterController = {
                 old: req.body
             })
         }
-        
+
     },
-    
+
     perfil: (req, res) => {
         return res.render("perfil", {
             user: req.session.userLogged
-        })
+        });
     },
-    logout:(req,res)=>{
+    logout: (req, res) => {
+        res.clearCookie('recordarEmail');
         req.session.destroy();
-		return res.redirect('/')
-    }
+        return res.redirect('/');
+    },
 }
 
 
