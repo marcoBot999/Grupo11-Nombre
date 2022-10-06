@@ -4,7 +4,7 @@ const productsFilePath = path.join(__dirname, '../data/productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-const comprasController = {
+const productosController = {
     //Mostrar el carro de compras//
     shoppingCart: (req, res) => {
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -36,7 +36,7 @@ const comprasController = {
         if (req.file) {
             productNew.img = req.file.filename;
         }
-        
+
 
         products.push(productNew);
 
@@ -66,21 +66,21 @@ const comprasController = {
                 p.price = req.body.price;
                 p.discount = req.body.discount;
                 p.description = req.body.description;
-                console.log("//////////////////////////",req.file);
+                console.log("//////////////////////////", req.file);
                 if (req.file) {
-                    
+
                     p.img = req.file.filename;
                     //eliminar imagen existente cuando viene una imagen nueva, siempre que no sea la imagen por defecto
                 }
             }
         });
-        
-        
+
+
 
         const data = JSON.stringify(products, null, ' ');
         fs.writeFileSync(productsFilePath, data);
 
-        res.redirect("/compras/product-detail/" + req.params.id);
+        res.redirect("/productos/product-detail/" + req.params.id);
     },
 
 
@@ -97,4 +97,4 @@ const comprasController = {
 
 }
 
-module.exports = comprasController;
+module.exports = productosController;

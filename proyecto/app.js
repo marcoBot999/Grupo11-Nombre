@@ -29,12 +29,12 @@ app.set("view engine", "ejs");
 
 const indexRouter = require("./routers/indexRouter");
 const loginRegister = require("./routers/loginRegisterR");
-const comprasRouter = require("./routers/comprasR");
+const productosRouter = require("./routers/productosR");
 
 
 app.use("/", indexRouter);
 app.use("/user", loginRegister);
-app.use("/compras", comprasRouter);
+app.use("/productos", productosRouter);
 
 
 app.listen(3000, () => {

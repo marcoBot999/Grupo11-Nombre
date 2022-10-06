@@ -1,31 +1,31 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Montserrat', sans-serif, 'Open Sans'
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Montserrat', sans-serif, 'Open Sans'
 }
 
 body {
-    position: relative;
-    padding-bottom: 12vh;
-    min-height: 100vh;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
+	position: relative;
+	padding-bottom: 12vh;
+	min-height: 100vh;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
-.CartContainer{
+.CartContainer {
 	margin: auto;
 	margin-top: 2%;
 	width: 70%;
 	height: 90%;
-	background-color: rgba(255,255,255,0.8);
-    border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
 	box-shadow: 0px 0px 10px #191068;
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.Header{
+.Header {
 	margin: auto;
 	width: 90%;
 	height: 15%;
@@ -34,7 +34,7 @@ body {
 	align-items: center;
 }
 
-.Heading{
+.Heading {
 	font-size: 20px;
 	font-family: 'Open Sans';
 	font-weight: 700;
@@ -42,7 +42,7 @@ body {
 	padding: 2%;
 }
 
-.Action{
+.Action {
 	font-size: 14px;
 	font-family: 'Open Sans';
 	font-weight: 600;
@@ -51,7 +51,7 @@ body {
 	border-bottom: 1px solid #E44C4C;
 }
 
-.Cart-Items{
+.Cart-Items {
 	padding: 2%;
 	margin: auto;
 	display: flex;
@@ -59,50 +59,60 @@ body {
 	align-items: center;
 	flex-direction: column;
 	border-top: #191068 2px solid;
-	border-bottom:#191068 2px solid;
+	border-bottom: #191068 2px solid;
 	width: 100%;
 }
-.Cart-Items:hover .image-box{
-	box-shadow: 0px 0px 10px #191068;;
+
+.Cart-Items:hover .image-box {
+	box-shadow: 0px 0px 10px #191068;
+	;
 }
-.Cart-Items:hover{
-	box-shadow: 0px 0px 10px #191068;;
+
+.Cart-Items:hover {
+	box-shadow: 0px 0px 10px #191068;
+	;
 
 }
-.about{
+
+.about {
 	height: 100%;
 	width: 24%;
 	display: flex;
 	flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 	box-sizing: border-box;
 }
-.title{
+
+.title {
 	padding-top: 10px;
 	font-size: 18px;
 	font-family: 'Open Sans';
 	font-weight: 800;
 	color: #202020;
 }
-.subtitle{
+
+.subtitle {
 	font-size: 18px;
 	font-family: 'Open Sans';
 	font-weight: 600;
 	color: #909090;
 }
-.radio{
-    align-items: center;
-    justify-content: center;
-    
+
+.radio {
+	align-items: center;
+	justify-content: center;
+
 }
-.counter{
+
+.counter {
 	width: 15%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.btn{
+
+.btn {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -116,18 +126,20 @@ body {
 	color: #202020;
 	cursor: pointer;
 }
-.count{
+
+.count {
 	font-size: 20px;
 	font-family: 'Open Sans';
 	font-weight: 600;
 	color: #202020;
 }
 
-.prices{
+.prices {
 	height: 100%;
 	text-align: right;
 }
-.amount{
+
+.amount {
 	font-size: 26px;
 	font-family: 'Open Sans';
 	font-weight: 800;
@@ -135,7 +147,8 @@ body {
 	display: flex;
 	justify-content: center;
 }
-.save{
+
+.save {
 	padding-top: 5px;
 	font-size: 14px;
 	font-family: 'Open Sans';
@@ -143,7 +156,8 @@ body {
 	color: #1687d9;
 	cursor: pointer;
 }
-.remove{
+
+.remove {
 	padding-top: 5px;
 	font-size: 14px;
 	font-family: 'Open Sans';
@@ -152,41 +166,45 @@ body {
 	cursor: pointer;
 }
 
-.pad{
+.pad {
 	margin-top: 5px;
 }
 
-hr{
+hr {
 	width: 66%;
 	float: right;
 	margin-right: 5%;
 }
 
-.checkout{
+.checkout {
 	float: right;
 	margin-right: 5%;
 	width: 32%;
 }
-.total{
+
+.total {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	padding: 4%;
 }
-.Subtotal{
+
+.Subtotal {
 	font-size: 20px;
 	font-family: 'Open Sans';
 	font-weight: 700;
 	color: #202020;
 }
-.items{
+
+.items {
 	font-size: 16px;
 	font-family: 'Open Sans';
 	font-weight: 500;
 	color: #909090;
 	line-height: 10px;
 }
-.total-amount{
+
+.total-amount {
 	font-size: 28px;
 	font-family: 'Open Sans';
 	font-weight: 900;
@@ -194,7 +212,7 @@ hr{
 }
 
 
-.button{
+.button {
 	margin-top: 10px;
 	width: 100%;
 	height: 40px;
@@ -209,12 +227,10 @@ hr{
 }
 
 
-@media(max-width:250){
+@media(max-width:250) {}
 
-}
-
-@media (min-width: 769px){
-    .Cart-Items{
+@media (min-width: 769px) {
+	.Cart-Items {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

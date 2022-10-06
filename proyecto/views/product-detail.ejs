@@ -8,7 +8,7 @@
 
 <body background="/images/fondo-product-detail.avif">
     <%- include ("./partials/header.ejs")%>
-    
+
 
         <main>
             <section class="detalleProducto">
@@ -25,7 +25,7 @@
                     </div>
                     <br>
                     <div class="precio">
-                        <p>$ <%=p.price%>
+                        <p>US$ <%=p.price%>
                         </p>
                     </div>
                 </article>
@@ -53,15 +53,15 @@
                         </select>
                     </div>
                     <a class="carroComprasProduct"><i class="fas fa-cart-arrow-down"></i></a>
-                    <a class="enlaceComprarEditar" href="/compras/shopping-cart">Comprar</a>
-                    <a class="enlaceComprarEditar" href="/compras/edicion-de-producto/<%=p.id %>">Editar</a>
-                    <form action="/compras/delete/<%=p.id%>?_method=DELETE" method="POST">
+                    <a class="enlaceComprarEditar" href="/productos/shopping-cart">Comprar</a>
+                    <a class="enlaceComprarEditar" href="/productos/edicion-de-producto/<%=p.id %>">Editar</a>
+                    <form action="/productos/delete/<%=p.id%>?_method=DELETE" method="POST">
                         <button class="botonEliminar" type="submit" class="">Eliminar</button> </button>
                     </form>
                 </article>
             </section>
             <br>
-            
+
         </main>
         <%- include ("./partials/footer.ejs")%>
 </body>

@@ -3,73 +3,73 @@
 
 <head>
     <%- include ("./partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/compras.css">
+        <link rel="stylesheet" href="/css/carroCompras.css">
 </head>
 
 <body background="/images/fondo shopcar.jpg">
 
     <%- include ("./partials/header.ejs")%>
-    
-    <main>
-        <div class="CartContainer">
-            <div class="Header">
-                <h3 class="Heading">Shopping Cart</h3>
-                <h5 class="Action">Remove all</h5>
+
+        <main>
+            <div class="CartContainer">
+                <div class="Header">
+                    <h3 class="Heading">Carro de Compras</h3>
+                    <h5 class="Action">Remover todo</h5>
+                </div>
+
+                <div class="Cart-Items">
+                    <div class="image-box">
+                        <img src="/images/logitech hero g502.jpg" height="100px">
+                    </div>
+                    <div class="about">
+                        <h1 class="title">Logitech G Series Hero G502 negro</h1>
+                        <h3 class="subtitle">Periféricos</h3>
+                    </div>
+                    <div class="counter">
+                        <div class="btn">+</div>
+                        <div class="count">1</div>
+                        <div class="btn">-</div>
+                    </div>
+                    <div class="prices">
+                        <div class="amount">US $80</div>
+                        <div class="save"><u>Guardar para después</u></div>
+                        <div class="remove"><u>Borrar</u></div>
+                    </div>
+                </div>
+
+                <div class="Cart-Items">
+                    <div class="image-box">
+                        <img src="/images/Auriculares Gamer Redragon H260.PNG" height="100px">
+                    </div>
+                    <div class="about">
+                        <h1 class="title">Auriculares Gamer Redragon H260 Hylas RGB</h1>
+                        <h3 class="subtitle">Periféricos</h3>
+                    </div>
+                    <div class="counter">
+                        <div class="btn">+</div>
+                        <div class="count">1</div>
+                        <div class="btn">-</div>
+                    </div>
+                    <div class="prices">
+                        <div class="amount">US $20</div>
+                        <div class="save"><u>Guardar para después</u></div>
+                        <div class="remove"><u>Borrar</u></div>
+                    </div>
+                </div>
+
+                <div class="total">
+                    <div>
+                        <div class="Subtotal">Sub-Total</div>
+                        <div class="items">2 productos</div>
+                    </div>
+                    <div class="total-amount">US $100</div>
+                </div>
+                <button class="button">Pagar</button>
             </div>
 
-            <div class="Cart-Items">
-                <div class="image-box">
-                    <img src="images\Motherboard MSI A320M-A PRO MAX AMD AM4.png" height="100px">
-                </div>
-                <div class="about">
-                    <h1 class="title">Motherboard MSI</h1>
-                    <h3 class="subtitle">Para PC simples</h3>
-                </div>
-                <div class="counter">
-                    <div class="btn">+</div>
-                    <div class="count">2</div>
-                    <div class="btn">-</div>
-                </div>
-                <div class="prices">
-                    <div class="amount">$25.000</div>
-                    <div class="save"><u>Guardar para despues</u></div>
-                    <div class="remove"><u>Borrar todo</u></div>
-                </div>
-            </div>
+        </main>
 
-            <div class="Cart-Items">
-                <div class="image-box">
-                    <img src="images\Motherboard MSI A320M-A PRO MAX AMD AM4.png" height="100px">
-                </div>
-                <div class="about">
-                    <h1 class="title">Motherboard MSI</h1>
-                    <h3 class="subtitle">Para PC simples</h3>
-                </div>
-                <div class="counter">
-                    <div class="btn">+</div>
-                    <div class="count">2</div>
-                    <div class="btn">-</div>
-                </div>
-                <div class="prices">
-                    <div class="amount">$25.000</div>
-                    <div class="save"><u>Guardar para despues</u></div>
-                    <div class="remove"><u>Borrar todo</u></div>
-                </div>
-            </div>
-
-            <div class="total">
-                <div>
-                    <div class="Subtotal">Sub-Total</div>
-                    <div class="items">2 items</div>
-                </div>
-                <div class="total-amount">$50.000</div>
-            </div>
-            <button class="button">Pagar</button>
-        </div>
-
-    </main>
-
-    <%- include ("./partials/footer.ejs")%>  
+        <%- include ("./partials/footer.ejs")%>
 </body>
 
 </html>

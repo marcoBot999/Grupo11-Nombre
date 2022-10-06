@@ -35,14 +35,14 @@
                 <h2>Componentes</h2>
             </div>
 
-            <section   class="productos">
+            <section class="productos">
                 <!-- hacer dinamico cada uno de los productos -->
-                
+
 
                 <% for(let p of componentes) { %>
                     <article>
                         <div>
-                            <a href="/compras/product-detail/<%= p.id %>">
+                            <a href="/productos/product-detail/<%= p.id %>">
                                 <div>
                                     <img class="imgs" src="/images/<%=p.img%>" />
                                 </div>
@@ -50,81 +50,81 @@
                         </div>
                         <div class="main-desc">
                             <p class="price">
-                                <%=p.price%>
+                                US <%=p.price%>
                             </p>
                             <h4 class="title">
                                 <%=p.name%>
                             </h4>
                         </div>
                     </article>
-                <% } %> 
-                <div id="portatiles" class="titP">
-                    <h2>Portátiles</h2>
-                </div>
-                <% for(let p of portatiles) { %>
-                    <article>
-                        <div>
-                            <a href="/compras/product-detail/<%= p.id %>">
+                    <% } %>
+                        <div id="portatiles" class="titP">
+                            <h2>Portátiles</h2>
+                        </div>
+                        <% for(let p of portatiles) { %>
+                            <article>
                                 <div>
-                                    <img class="imgs" src="/images/<%=p.img%>" />
+                                    <a href="/productos/product-detail/<%= p.id %>">
+                                        <div>
+                                            <img class="imgs" src="/images/<%=p.img%>" />
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="main-desc">
-                            <p class="price">
-                                <%=p.price%>
-                            </p>
-                            <h4 class="title">
-                                <%=p.name%>
-                            </h4>
-                        </div>
-                    </article>
-                <% } %> 
-                <div id="perifericos" class="titP">
-                    <h2>Periféricos</h2>
-                </div>
-                <% for(let p of perifericos) { %>
-                    <article>
-                        <div>
-                            <a href="/compras/product-detail/<%= p.id %>">
-                                <div>
-                                    <img class="imgs" src="/images/<%=p.img%>" />
+                                <div class="main-desc">
+                                    <p class="price">
+                                        <%=p.price%>
+                                    </p>
+                                    <h4 class="title">
+                                        <%=p.name%>
+                                    </h4>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="main-desc">
-                            <p class="price">
-                                <%=p.price%>
-                            </p>
-                            <h4 class="title">
-                                <%=p.name%>
-                            </h4>
-                        </div>
-                    </article>
-                <% } %> 
-                <div id="pcArmadas" class="titP">
-                    <h2>Pc Armadas</h2>
-                </div>
-                <% for(let p of pcArmada) { %>
-                    <article>
-                        <div>
-                            <a href="/compras/product-detail/<%= p.id %>">
-                                <div>
-                                    <img class="imgs" src="/images/<%=p.img%>" />
+                            </article>
+                            <% } %>
+                                <div id="perifericos" class="titP">
+                                    <h2>Periféricos</h2>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="main-desc">
-                            <p class="price">
-                                <%=p.price%>
-                            </p>
-                            <h4 class="title">
-                                <%=p.name%>
-                            </h4>
-                        </div>
-                    </article>
-                <% } %> 
-                    
+                                <% for(let p of perifericos) { %>
+                                    <article>
+                                        <div>
+                                            <a href="/productos/product-detail/<%= p.id %>">
+                                                <div>
+                                                    <img class="imgs" src="/images/<%=p.img%>" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="main-desc">
+                                            <p class="price">
+                                                <%=p.price%>
+                                            </p>
+                                            <h4 class="title">
+                                                <%=p.name%>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                    <% } %>
+                                        <div id="pcArmadas" class="titP">
+                                            <h2>Pc Armadas</h2>
+                                        </div>
+                                        <% for(let p of pcArmada) { %>
+                                            <article>
+                                                <div>
+                                                    <a href="/productos/product-detail/<%= p.id %>">
+                                                        <div>
+                                                            <img class="imgs" src="/images/<%=p.img%>" />
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="main-desc">
+                                                    <p class="price">
+                                                        <%=p.price%>
+                                                    </p>
+                                                    <h4 class="title">
+                                                        <%=p.name%>
+                                                    </h4>
+                                                </div>
+                                            </article>
+                                            <% } %>
+
             </section>
         </main>
         <%- include ("./partials/footer.ejs")%>
