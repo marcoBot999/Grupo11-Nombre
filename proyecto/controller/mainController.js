@@ -8,8 +8,8 @@ const mainController = {
     index:(req,res)=>{
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         
-		const componentes = products.filter((p)=> p.category =="Componente")
-		const portatiles = products.filter((p)=> p.category =="Portatil")
+		const componentes = products.filter((p)=> p.category =="Componentes")
+		const portatiles = products.filter((p)=> p.category =="Portatiles")
 		const pcArmada = products.filter((p)=> p.category =="Pc Armadas")
 		const perifericos = products.filter((p)=> p.category =="Perifericos")
 		res.render("index",{
