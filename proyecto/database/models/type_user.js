@@ -19,7 +19,7 @@ module.exports=(sequelize,DataTypes) =>{
     const type_user= sequelize.define(alias,cols,config)
 
     type_user.associate=function(models){
-        type_user.HasMany(models.Users,{
+        type_user.hasMany(models.Users,{
             as:"Users",
             foreignKey:"id_type_user"
         })
