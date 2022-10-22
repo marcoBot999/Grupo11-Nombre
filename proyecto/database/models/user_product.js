@@ -1,17 +1,17 @@
 module.exports=(sequelize,DataTypes) =>{
 
-    let alias= "Products_Shoppings" 
+    let alias= "Users_products" 
     let cols={
-        id_products_shopping: {type:DataTypes.INTEGER,
+        id_user_product: {type:DataTypes.INTEGER,
         primaryKey:true ,
     autoincrement:true},
-        id_products:{type:DataTypes.INTEGER},
-        id_shopping:{type:DataTypes.INTEGER}
+        id_user:{type:DataTypes.INTEGER},
+        id_product:{type:DataTypes.INTEGER}
 
 
     }
     let config={
-        tableName : "shopping",
+        tableName : "user_product",
         timestamps: false,
 
     }

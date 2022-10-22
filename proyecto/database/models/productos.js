@@ -8,7 +8,7 @@ module.exports=(sequelize,DataTypes) =>{
         name:{type:DataTypes.STRING},
         description:{type:DataTypes.STRING},
         price:{type:DataTypes.INTEGER},
-        id_category:{type:DataTypes.INTEGER},
+        id_product_category:{type:DataTypes.INTEGER},
 
     }
     let config={

@@ -1,17 +1,16 @@
 module.exports=(sequelize,DataTypes) =>{
 
-    let alias= "Users_category" 
+    let alias= "Types_users" 
     let cols={
-        id_user_category: {type:DataTypes.INTEGER,
+        id_type_user: {type:DataTypes.INTEGER,
         primaryKey:true ,
     autoincrement:true},
-        buyer:{type:DataTypes.BOOLEAN},
-        seller:{type:DataTypes.BOOLEAN}
+        type_name:{type:DataTypes.STRING},
 
 
     }
     let config={
-        tableName : "shopping",
+        tableName : "type_user",
         timestamps: false,
 
     }

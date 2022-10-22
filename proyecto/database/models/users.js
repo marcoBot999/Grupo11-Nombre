@@ -11,11 +11,11 @@ module.exports=(sequelize,DataTypes) =>{
         birthday:{type:DataTypes.DATE},
         adress:{type:DataTypes.STRING},
         password:{type:DataTypes.STRING},
-        id_user_category:{type:DataTypes.INTEGER},
+        id_type_user:{type:DataTypes.INTEGER},
 
     }
     let config={
-        tableName : "user",
+        tableName : "users",
         timestamps: false,
 
     }
