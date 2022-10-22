@@ -18,5 +18,7 @@ module.exports=(sequelize,DataTypes) =>{
     }
     const producto= sequelize.define(alias,cols,config)
 
+    producto.associate=function(models){}
+
     return producto
 }

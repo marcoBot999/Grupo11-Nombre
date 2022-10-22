@@ -15,7 +15,9 @@ module.exports=(sequelize,DataTypes) =>{
         timestamps: false,
 
     }
-    const product_shopping= sequelize.define(alias,cols,config)
+    const user_product= sequelize.define(alias,cols,config)
+    
+    user_product.associate=function(models){}
 
-    return product_shopping
+    return user_product
 }

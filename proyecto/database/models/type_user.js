@@ -1,6 +1,8 @@
+const { HasMany } = require("sequelize")
+
 module.exports=(sequelize,DataTypes) =>{
 
-    let alias= "Types_users" 
+    let alias= "Type_user" 
     let cols={
         id_type_user: {type:DataTypes.INTEGER,
         primaryKey:true ,
@@ -14,7 +16,14 @@ module.exports=(sequelize,DataTypes) =>{
         timestamps: false,
 
     }
-    const user_category= sequelize.define(alias,cols,config)
+    const type_user= sequelize.define(alias,cols,config)
 
-    return user_category
+    type_user.associate=function(models){
+        type_user.HasMany(models.Users,{
+            as:"Users",
+            foreignKey:"id_type_user"
+        })
+    }
+
+    return type_user
 }
