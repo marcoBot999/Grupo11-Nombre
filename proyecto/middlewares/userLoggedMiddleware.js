@@ -1,4 +1,4 @@
-const UserModel = require("../models/User.js")
+const UserModel = require("../models/modelUser.js")
 
 function userLoggedMiddleware(req, res, next) {
     //Variable local para usar, y mostrar elementos al usuario logeado

@@ -5,7 +5,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs');
 
-const UserModel = require("../models/User.js")
+const UserModel = require("../models/modelUser.js")
 
 const loginRegisterController = {
 
