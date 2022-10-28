@@ -30,8 +30,13 @@
                 <br>
                 <div>
                     <label>Categoría</label>
-                    <select name="category" class="categoria">
+                    <select name="categorias" class="categoria">
                         <option value="none">---</option>
+                        <%  for(let i =0 ; i < categorias.length; i++) {%>
+                           <option value=" <%categorias[i].id%>">
+                            <%= categorias[i].name_category %>
+                           </option> 
+                            <% } %>
                         <option value="Componentes">Componentes</option>
                         <option value="Perifericos">Periféricos</option>
                         <option value="Portatiles">Portátiles</option>
