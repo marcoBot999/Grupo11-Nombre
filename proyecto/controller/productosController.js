@@ -2,7 +2,6 @@ const path = require("path");
 const fs = require("fs")
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-let db=require("../database/models")
 
 
 const productosController = {
@@ -20,11 +19,7 @@ const productosController = {
 
     //Ingresar un producto//
     create: (req, res) => {
-        db.category.findAll()
-        .then(function(categorias){
-            return res.render("creacion-de-producto-form", {categorias:categorias})
-        })
-        //res.render("creacion-de-producto-form");
+        res.render("creacion-de-producto-form");
     },
 
     store: (req, res) => {
