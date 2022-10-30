@@ -4,6 +4,7 @@ const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs');
+let db=  require("../database/models")
 
 const UserModel = require("../models/modelUser.js")
 
@@ -16,7 +17,7 @@ const loginRegisterController = {
     //Procesar el registro//
     processRegister: (req, res) => {
 
-        let errors = validationResult(req)
+         let errors = validationResult(req)
         if (errors.isEmpty()) {
             const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
@@ -64,7 +65,18 @@ const loginRegisterController = {
             })
         }
         console.log(req.body);
+   // probar hacer el resgitro en la  base de datos
+   /*db.User.create({
+    first_name:req.body.firstname,
+    last_name:req.body.lastname,
+    email:req.body.email,
+    birthday:req.body.birthday,
+    address:req.body.address,
+    password:req.body.password,
+    
+})*/
 
+res.redirect("/")
 
     },
     //Mostrar formulario de login//
