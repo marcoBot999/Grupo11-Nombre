@@ -1,34 +1,32 @@
-module.exports=(sequelize,DataTypes) =>{
+module.exports = (sequelize, dataTypes) => {
 
-    let alias= "User" 
+    let alias = "TypeUser"
 
-    let cols={
+    let cols = {
         id: {
             type: dataTypes.INTEGER,
-            primaryKey:true ,
-            autoIncrement:true,
+            primaryKey: true,
+            autoIncrement: true,
         },
-        type_name:{
-            type:DataTypes.INTEGER
+        type_name: {
+            type: dataTypes.INTEGER
         },
     }
-    
-    let config={
-        tableName : "users",
+
+    let config = {
+        tableName: "Type_User",
         timestamps: false,
 
     }
-    
-   
 
-    let user= sequelize.define(alias,cols,config)
+    let TypeUser = sequelize.define(alias, cols, config)
 
-    type_user.associate=function(models){
-        type_user.hasMany(models.Users,{
-            as:"Users",
-            foreignKey:"id_type_user"
+    TypeUser.associate = function (models) {
+        TypeUser.hasMany(models.User, {
+            as: "Users",
+            foreignKey: "id_type_user",
         })
     }
 
-    return user
+    return TypeUser
 }

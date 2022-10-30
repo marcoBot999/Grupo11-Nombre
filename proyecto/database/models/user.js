@@ -1,63 +1,69 @@
-module.exports=(sequelize,DataTypes) =>{
+module.exports = (sequelize, dataTypes) => {
 
-    let alias= "User" 
+    let alias = "User"
 
-    let cols={
+    let cols = {
         id: {
             type: dataTypes.INTEGER,
-            primaryKey:true ,
-            autoIncrement:true,
+            primaryKey: true,
+            autoIncrement: true,
         },
-        first_name:{
-            type:DataTypes.STRING
+        first_name: {
+            type: dataTypes.STRING
         },
-        last_name:{
-            type:DataTypes.STRING
+        last_name: {
+            type: dataTypes.STRING
         },
-        email:{
-            type:DataTypes.STRING
+        email: {
+            type: dataTypes.STRING
         },
-        birthday:{
-            type:DataTypes.DATE
+        birthday: {
+            type: dataTypes.DATE
         },
-        adress:{
-            type:DataTypes.STRING
+        adress: {
+            type: dataTypes.STRING
         },
-        password:{
-            type:DataTypes.STRING
+        password: {
+            type: dataTypes.STRING
         },
-        id_type_user:{
-            type:DataTypes.INTEGER
+        id_type_user: {
+            type: dataTypes.INTEGER
         },
     }
-    
-    let config={
-        tableName : "users",
+
+    let config = {
+        tableName: "Users",
         timestamps: false,
 
     }
 
-    
-    let user = sequelize.define(alias,cols,config)
 
-    user.associate=function(models){
-        user.belongsToMany(models.user_products,{
-            as:"products_user",
-            through:"userProduct",
-            foreignKey:"id_user",
-            otherKey:"id_product",
-            timestamps:"false"
+    let User = sequelize.define(alias, cols, config)
+
+    //User.associate = function (models) {
+    //User.belongsToMany(models.user_products, {
+    //as: "products_user",
+    //through: "userProduct",
+    //foreignKey: "id_user",
+    //otherKey: "id_product",
+    // timestamps: "false"
+    //})
+    // }
+
+    User.associate = function (models) {
+        User.belongsToMany(models.Product, {
+            as: "products",
+            through: "User_Product",
+            foreignKey: "id_user",
+            otherKey: "id_product",
+            timestamps: "false"
         })
-    }
 
-    user.associate = function (models) {
-        user.belongsTo(models.typeUser,{
-            as: "types_user",
+        User.belongsTo(models.TypeUser, {
+            as: "typesUsers",
             foreignKey: "id_type_user"
         })
     }
 
-
-
-    return user
+    return User
 }
