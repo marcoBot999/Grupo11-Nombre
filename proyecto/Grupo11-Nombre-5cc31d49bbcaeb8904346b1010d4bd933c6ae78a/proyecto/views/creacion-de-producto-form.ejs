@@ -31,11 +31,6 @@
                 <div>
                     <label>Categoría</label>
                     <select name="category" class="categoria">
-                        <%for (let i = 0 ; i < categorias.length ; i++ {%>
-                            <option value="<%= categorias[i].id%>">
-                                <%=categorias[i].name_category%>
-                                <% } %>
-                            </option>
                         <option value="none">---</option>
                         <option value="Componentes">Componentes</option>
                         <option value="Perifericos">Periféricos</option>

@@ -4,9 +4,9 @@ const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs');
-let db=  require("../database/models")
+let db = require("../database/models")
 
-const UserModel = require("../models/modelUser.js")
+const UserModel = require("../models/userModel.js")
 
 const loginRegisterController = {
 
@@ -15,69 +15,61 @@ const loginRegisterController = {
         res.render("register")
     },
     //Procesar el registro//
-    processRegister: (req, res) => {
+    processRegister: async function (req, res) {
+        let db = require("../database/models")
+        let errors = validationResult(req)
+        try {
+            if (errors.isEmpty()) {
 
-         let errors = validationResult(req)
-        if (errors.isEmpty()) {
-            const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-
-            const userNew = {
-                id: Date.now(),
-                firstname: req.body.firstname,
-                lastname: req.body.lastname,
-                email: req.body.email,
-                birthday: req.body.birthday,
-                address: req.body.address,
-                password: bcrypt.hashSync(req.body.password, 10),
-                img: "img_user_default.png"
-            };
-
-
-            if (req.file) {
-                userNew.img = req.file.filename;
-            }
-
-            let usuarioDB = UserModel.findByField("email", req.body.email)
-            //El usuario esta en la base de datos?
-            if (usuarioDB) {
+                let userNew = ({
+                    id_user: Date.now(),
+                    firstname: req.body.firstname,
+                    lastname: req.body.lastname,
+                    email: req.body.email,
+                    birthday: req.body.birthday,
+                    address: req.body.address,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                    img: "img_user_default.png",
+                    id_type_user: 1
+                });
+    
+                if (req.file) {
+                    userNew.img = req.file.filename;
+                }
+    
+                let encontrarEmail = db.User.findOne({
+                    where:{
+                        email : req.body.email
+                        
+                    }
+                })
+                if (encontrarEmail) {
+                    res.render('register', {
+                        errors: {
+                            email: {
+                                msg: "Este email ya esta registrado"
+                            }
+                        },
+                        old: req.body
+                    })
+                } else {
+    
+                    await db.User.create(userNew);
+    
+                    res.redirect("/user/login");
+                }
+                
+    
+            } else {
                 res.render('register', {
-                    errors: {
-                        email: {
-                            msg: "Este email ya esta registrado"
-                        }
-                    },
+                    errors: errors.mapped(),
                     old: req.body
                 })
-            } else {
-                users.push(userNew);
-
-                const data = JSON.stringify(users, null, ' ');
-                fs.writeFileSync(usersFilePath, data);
-
-                res.redirect("/user/login");
             }
 
-
-        } else {
-            res.render('register', {
-                errors: errors.mapped(),
-                old: req.body
-            })
+          } catch (error) {
+            console.log(error);
         }
-        console.log(req.body);
-   // probar hacer el resgitro en la  base de datos
-   /*db.User.create({
-    first_name:req.body.firstname,
-    last_name:req.body.lastname,
-    email:req.body.email,
-    birthday:req.body.birthday,
-    address:req.body.address,
-    password:req.body.password,
-    
-})*/
-
-res.redirect("/")
-
     },
     //Mostrar formulario de login//
     login: (req, res) => {

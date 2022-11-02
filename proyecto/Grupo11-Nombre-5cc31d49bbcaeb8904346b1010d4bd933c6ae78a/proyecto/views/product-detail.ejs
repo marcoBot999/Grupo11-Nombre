@@ -14,25 +14,25 @@
             <section class="detalleProducto">
                 <article class="producto">
                     <h4>
-                        <%=p.name%>
+                        <%=resultado.name%>
                     </h4>
                     <div class="meGustaCompartir">
                         <a href=""><i class="far fa-heart"></i></a>
                         <a href=""><i class="fas fa-share-alt"></i></a>
                     </div>
                     <div class="imagenProducto">
-                        <img src="/images/<%=p.img%>" />
+                        <img src="/images/<%=resultado.img%>" />
                     </div>
                     <br>
                     <div class="precio">
-                        <p>US$ <%=p.price%>
+                        <p>US$ <%=resultado.price%>
                         </p>
                     </div>
                 </article>
                 <article class="caracteristicas">
                     <h4>Características</h4>
                     <p>
-                        <%=p.description%>
+                        <%=resultado.description%>
                     </p>
 
                 </article>
@@ -54,8 +54,8 @@
                     </div>
                     <a class="carroComprasProduct"><i class="fas fa-cart-arrow-down"></i></a>
                     <a class="enlaceComprarEditar" href="/productos/shopping-cart">Comprar</a>
-                    <a class="enlaceComprarEditar" href="/productos/edicion-de-producto/<%=p.id %>">Editar</a>
-                    <form action="/productos/delete/<%=p.id%>?_method=DELETE" method="POST">
+                    <a class="enlaceComprarEditar" href="/productos/edicion-de-producto/<%=resultado.id %>">Editar</a>
+                    <form action="/productos/delete/<%=resultado.id%>?_method=DELETE" method="POST">
                         <button class="botonEliminar" type="submit" class="">Eliminar</button> </button>
                     </form>
                 </article>

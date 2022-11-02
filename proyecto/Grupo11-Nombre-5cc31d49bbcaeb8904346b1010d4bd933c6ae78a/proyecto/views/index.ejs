@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ("./partials/head.ejs")%>
+        <link rel="stylesheet" href="/css/index-styles.css">
+</head>
+
+<body background="/images/wallhaven-4lrg1p.jpg">
+
+    <%- include ("./partials/header.ejs")%>
+
+        <main>
+            <section class="offers">
+                <div>
+                    <a href="product-detail">
+                        <div>
+                            <img src="images\Motherboard MSI A320M-A PRO MAX AMD AM4.png" />
+                        </div>
+                    </a>
+                </div>
+                <div class="contenedorFlechas">
+                    <div>
+                        <button><i class="fas fa-angle-left"></i></button>
+                    </div>
+                    <div>
+                        <button><i class="fas fa-angle-right"></i></button>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <div id="componentes" class="titP">
+                <h2>Componentes</h2>
+            </div>
+
+            <section class="productos">
+                <!-- hacer dinamico cada uno de los productos -->
+                        <% for(let p of resultado) { %>
+                            <article>
+                                <div>
+                                    <a href="/productos/product-detail/<%= p.id_product %>">
+                                        <div>
+                                            <img class="imgs" src="/images/<%=p.img%>" />
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="main-desc">
+                                    <p class="price">
+                                        US <%=p.price%>
+                                    </p>
+                                    <h4 class="title">
+                                        <%=p.name%>
+                                    </h4>
+                                </div>
+                            </article>
+                            <% } %>
+            </section>
+        </main>
+        <%- include ("./partials/footer.ejs")%>
+            </div>
+</body>
+
+</html>
