@@ -52,14 +52,23 @@ const productosController = {
 
         const data = JSON.stringify(products, null, ' ');
         fs.writeFileSync(productsFilePath, data);*/
-        db.Product.create({
+        console.log(req.body);
+        const productNew = {
             name:req.body.name,
             description:req.body.description,
             price:req.body.price,
-            id_product_category:req.body.category,
+            id_product_category:1,
+            img: "image-default.png"
+        }
+        if (req.file) {
+            productNew.img = req.file.filename;
+        }
+        
+        db.Product.create(productNew)
+        .then(function () {
+            res.redirect("/");
         })
-
-        res.redirect("/");
+        
     },
 
     //Editar un producto//

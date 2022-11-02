@@ -20,8 +20,7 @@ const loginRegisterController = {
         let errors = validationResult(req)
         try {
             if (errors.isEmpty()) {
-
-                let userNew = ({
+                let userNew = {
                     id_user: Date.now(),
                     firstname: req.body.firstname,
                     lastname: req.body.lastname,
@@ -31,18 +30,18 @@ const loginRegisterController = {
                     password: bcrypt.hashSync(req.body.password, 10),
                     img: "img_user_default.png",
                     id_type_user: 1
-                });
+                };
     
                 if (req.file) {
                     userNew.img = req.file.filename;
                 }
-    
-                let encontrarEmail = db.User.findOne({
+                
+                let encontrarEmail = await db.User.findOne({
                     where:{
                         email : req.body.email
-                        
                     }
                 })
+                
                 if (encontrarEmail) {
                     res.render('register', {
                         errors: {

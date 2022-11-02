@@ -11,6 +11,8 @@ const mainController = {
 		
 		db.Product.findAll()
 		.then((resultado)=>{
+			console.log("///////////////////////////////////////");
+			console.log(resultado);
 			return res.render("index",{resultado})
 		})
 		
