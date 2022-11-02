@@ -33,26 +33,7 @@ const productosController = {
     },
 
     store: (req, res) => {
-       /* const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        const productNew = {
-            id: Date.now(),
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            category: req.body.category,
-            img: "image-default.png"
-        };
-
-        if (req.file) {
-            productNew.img = req.file.filename;
-        }
-
-
-        products.push(productNew);
-
-        const data = JSON.stringify(products, null, ' ');
-        fs.writeFileSync(productsFilePath, data);*/
-        console.log(req.body);
+        
         const productNew = {
             name:req.body.name,
             description:req.body.description,
