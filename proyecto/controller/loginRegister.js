@@ -77,48 +77,60 @@ const loginRegisterController = {
     },
 
     //Loguearse//
-    processLogin: function (req, res) {
+    processLogin: async function (req, res) {
         let errors = validationResult(req)
-        if (errors.isEmpty()) {
+        try {
+            if (errors.isEmpty()) {
 
-            let userToLog = UserModel.findByField("email", req.body.email)
-            if (userToLog) {
-                let isOkThePass = bcrypt.compareSync(req.body.password, userToLog.password)
-                if (isOkThePass) {
-                    delete userToLog.password;
-                    req.session.userLogged = userToLog;
-                    if (req.body.recordarme) {
-                        res.cookie('recordarEmail', req.body.email, { maxAge: 90000 })
+                let userToLog = await db.User.findOne({
+                    where:{
+                        email : req.body.email
                     }
+                })  
 
-                    return res.redirect("perfil");
+
+                if (userToLog) {
+
+                    let isOkThePass = bcrypt.compareSync(req.body.password, userToLog.password)
+                    console.log("///////////////////////////////////////////");
+                    console.log(userToLog);
+
+                    if (isOkThePass) {
+                        delete userToLog.password;
+                        req.session.userLogged = userToLog;
+                        if (req.body.recordarme) {
+                            res.cookie('recordarEmail', req.body.email, { maxAge: 90000 })
+                        }
+                        return res.redirect("perfil");
+                    } else {
+                        return res.render("login", {
+                            errors: {
+                                email: {
+                                    msg: "Las credenciales son inválidas"
+                                }
+                            }
+                        })
+                    }
                 } else {
-                    return res.render("login", {
+                    res.render("login", {
                         errors: {
                             email: {
-                                msg: "Las credenciales son inválidas"
+                                msg: "Este email no está registrado"
                             }
                         }
                     })
                 }
-
             } else {
-                res.render("login", {
-                    errors: {
-                        email: {
-                            msg: "Este email no está registrado"
-                        }
-                    }
+                res.render('login', {
+                    errors: errors.mapped(),
+                    old: req.body
                 })
             }
 
-
-        } else {
-            res.render('login', {
-                errors: errors.mapped(),
-                old: req.body
-            })
-        }
+        } catch (error) {
+            console.log(error);
+    }
+      
 
     },
 
