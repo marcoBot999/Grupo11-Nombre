@@ -63,76 +63,58 @@ const productosController = {
     },
 
     //Editar un producto//
-    edit: (req,res)=>{
-        // al descomentar hay un error
-
-        // const {name,description,price,id_product_category} = req.body
-
-        // db.Product.findByPk(req.params.id)
-        // .then(producto=>{
-        //     const productImg = producto.img
-        //     db.Product.update({
-        //         name,
-        //         description,
-        //         price,
-        //         id_product_category,
-        //         img = req.file ? req.file.filename : productImg
-        //     },{
-        //         where: req.params.id
-        //     })
-        //     .then(
-        //         res.redirect("/productos/product-detail/" + req.params.id)
-        //     )
-        // })
+    edit: async function (req,res) {
+        try{
+            let productEdit = db.Product.findOne({
+                where:{
+                    id_product: req.params.id
+                }
+            })
+            .then((pToEdit)=>{
+                return res.render("edicion-de-producto-form.ejs",{ pToEdit })
+            })
+        }catch (error) {
+            console.log(error);
+        }
     }
     ,
     update: async function (req, res) {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        try {
 
-            products.forEach((p) => {
-                if (p.id == req.params.id) {
-                    p.name = req.body.name;
-                    p.price = req.body.price;
-                    p.discount = req.body.discount;
-                    p.description = req.body.description;
-                    console.log("//////////////////////////", req.file);
-                    if (req.file) {
-    
-                        p.img = req.file.filename;
-                        //eliminar imagen existente cuando viene una imagen nueva, siempre que no sea la imagen por defecto
-                    }
-                }
-            });
-    
-    
-            let newData = db.Product.findAll()
-            .then((resultado)=>{
+        try{
+
+            const pToEdit = {
+                name:req.body.name,
+                description:req.body.description,
+                price:req.body.price,
+                id_product_category:req.body.category,
                 
-                return res.render("index",{resultado})
+            }
+            
+            await db.Product.update(pToEdit,
+                {where:{
+                    id_product: req.params.id
+                }})
+            .then(function () {
+                res.redirect("/productos/product-detail/"+req.params.id);
+            })
 
-            });
-    
-            db.Product.create(newData)
-    
-            const data = JSON.stringify(products, null, ' ');
-            fs.writeFileSync(productsFilePath, data);
-    
-            res.redirect("/productos/product-detail/" + req.params.id);
-
-        } catch (error) {
+        }catch (error) {
             console.log(error);
-        }   
-        
+        }
     },
 
-    delete: (req, res) => {
-        let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        products = products.filter((p) => p.id != req.params.id);
-        let data = JSON.stringify(products, null, ' ');
-        fs.writeFileSync(productsFilePath, data);
-        res.redirect("/");
-        //eliminar imagen existente cuando viene una imagen nueva, siempre que no sea la imagen por defecto
+    delete: async function (req, res) {
+        try {
+            await db.Product.destroy({
+                where:{
+                    id_product : req.params.id
+                }
+            })
+            res.redirect("/")
+        } catch (error) {
+            console.log(error);
+        }
+        
     }
 
 }
