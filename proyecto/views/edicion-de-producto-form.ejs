@@ -32,11 +32,14 @@
                 <div>
                     <label>Categoría</label>
                     <select name="category" class="categoria">
-                        <option value="none" <%=(pToEdit.id_product_category == "none" )? "selected" :"" %> ---</option>
-                        <option value="1" <%=(pToEdit.id_product_category=="1" )? "selected" :"" %>>Componentes</option>
-                        <option value="2" <%=(pToEdit.id_product_category=="2" )? "selected" :"" %>> Portatiles</option>
-                        <option value="3" <%=(pToEdit.id_product_category=="3" )? "selected" :"" %>> Pc Armadas</option>
-                        <option value="4" <%=(pToEdit.id_product_category=="4" )? "selected" :"" %>>Perifericos</option>
+                        <option value="none">---</option>
+                        <% for(let i=0; i< categorias.length; i++) { %>
+                            <option <% if (pToEdit.id_product_category==categorias[i].id_product_category){ %> selected
+                                <%} %>
+                                    value="<%= categorias[i].id_product_category %>">
+                                        <%= categorias[i].name_category %>
+                            </option>
+                            <% } %>
                     </select>
                 </div>
                 <br>

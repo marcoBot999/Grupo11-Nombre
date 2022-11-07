@@ -14,91 +14,93 @@ const productosController = {
     detail: (req, res) => {
 
         db.Product.findOne({
-            where:{
+            where: {
                 id_product: req.params.id
             }
         })
-		.then((resultado)=>{
-			return res.render("product-detail",{ resultado })
-		})
+            .then((resultado) => {
+                return res.render("product-detail", { resultado })
+            })
 
-       
+
     },
 
     //Ingresar un producto//
     create: async function (req, res) {
-        try{
+        try {
             await db.ProductCategory.findAll()
-        .then(function(categorias){
-            res.render("creacion-de-producto-form",  {categorias:categorias})
-        }) 
-        }catch(error) {
+                .then(function (categorias) {
+                    res.render("creacion-de-producto-form", { categorias: categorias })
+                })
+        } catch (error) {
             console.log(error);
         }
     },
 
     store: async function (req, res) {
-        try{
+        try {
             const productNew = {
-                name:req.body.name,
-                description:req.body.description,
-                price:req.body.price,
-                id_product_category:req.body.category,
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                id_product_category: req.body.category,
                 img: "image-default.png"
             }
             if (req.file) {
                 productNew.img = req.file.filename;
             }
-            
-            await db.Product.create(productNew)
-            .then(function () {
-                res.redirect("/");
-            })
 
-        }catch (error) {
+            await db.Product.create(productNew)
+                .then(function () {
+                    res.redirect("/");
+                })
+
+        } catch (error) {
             console.log(error);
         }
-        
-        
+
+
     },
 
     //Editar un producto//
-    edit: async function (req,res) {
-        try{
-            let productEdit = db.Product.findOne({
-                where:{
-                    id_product: req.params.id
-                }
-            })
-            .then((pToEdit)=>{
-                return res.render("edicion-de-producto-form.ejs",{ pToEdit })
-            })
-        }catch (error) {
+    edit: async function (req, res) {
+        try {
+            let productEdit = db.Product.findByPk(req.params.id);
+
+            let categorias = db.ProductCategory.findAll();
+
+            Promise.all([productEdit, categorias])
+                .then(function ([pToEdit, categorias]) {
+                    return res.render("edicion-de-producto-form.ejs", { pToEdit, categorias });
+                })
+        } catch (error) {
             console.log(error);
         }
     }
     ,
     update: async function (req, res) {
 
-        try{
+        try {
 
             const pToEdit = {
-                name:req.body.name,
-                description:req.body.description,
-                price:req.body.price,
-                id_product_category:req.body.category,
-                
-            }
-            
-            await db.Product.update(pToEdit,
-                {where:{
-                    id_product: req.params.id
-                }})
-            .then(function () {
-                res.redirect("/productos/product-detail/"+req.params.id);
-            })
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                id_product_category: req.body.category,
 
-        }catch (error) {
+            }
+
+            await db.Product.update(pToEdit,
+                {
+                    where: {
+                        id_product: req.params.id
+                    }
+                })
+                .then(function () {
+                    res.redirect("/productos/product-detail/" + req.params.id);
+                })
+
+        } catch (error) {
             console.log(error);
         }
     },
@@ -106,15 +108,15 @@ const productosController = {
     delete: async function (req, res) {
         try {
             await db.Product.destroy({
-                where:{
-                    id_product : req.params.id
+                where: {
+                    id_product: req.params.id
                 }
             })
             res.redirect("/")
         } catch (error) {
             console.log(error);
         }
-        
+
     }
 
 }

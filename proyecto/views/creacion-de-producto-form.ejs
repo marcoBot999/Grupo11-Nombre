@@ -32,11 +32,11 @@
                     <label>Categoría</label>
                     <select name="category" class="categoria">
                         <option value="none">---</option>
-                        <option value="1">Componentes</option>
-                        <option value="2">Portátiles</option>
-                        <option value="3">Pc Armadas</option>
-                        <option value="4">Periféricos</option>
-
+                        <% for(let i=0; i< categorias.length; i++) { %>
+                            <option value="<%= categorias[i].id_product_category %>">
+                                <%= categorias[i].name_category %>
+                            </option>
+                            <% } %>
                     </select>
                 </div>
                 <br>
