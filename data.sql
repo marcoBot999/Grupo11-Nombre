@@ -1,10 +1,10 @@
-INSERT INTO type_user (id_type_user, type_name) VALUES (1, 'buyer'), (2, 'seller');
+INSERT INTO type_user (id_type_user, type_name) VALUES (1, 'Buyer'), (2, 'Seller');
 
 INSERT INTO users ( id_user, firstname, lastname, email, birthday, address, password, img, id_type_user) VALUES 
 (1664748855238,'johan','leon','johanleon0705@gmail.com','2002-05-07','crr 118 #83a 21','$2a$10$yjJfF0LuNUvohtQjd8.UP.M4q/KdTqk.Gg.SQUnRZI9Zx0u2FBuZy','img_user_default.png', 2),
 (1664990154587,'Lina ','Gómez','linamarceg17@gmail.com','1989-12-21','Carrera xx # xx-xx','$2a$10$xUOYSkhArIquMUNZx5lY2e5e0bnjfTWc8NPKBAHzqwqaZC2BRaEQi','1664990154333lina2.jpg', 2);
 
-INSERT INTO product_category (id_product_category, name_category) VALUES (1, 'componentes'), (2, 'portatiles'), (3, 'pc armadas'), (4, 'perifericos');
+INSERT INTO product_category (id_product_category, name_category) VALUES (1, 'Componentes'), (2, 'Portatiles'), (3, 'Pc Armadas'), (4, 'Perifericos');
 
 INSERT INTO products (id_product, name, description, price, img, id_product_category) VALUES
     (1,'Motherboard MSI A320M-A PRO MAX AMD AM4','La A320M-A Pro Max es un motherboard básico para PCs simples, compatible con procesadores Ryzen de generaciones pasadas.',49.99,'MotherboardMSIA320MAPROMAXAMDAM4.png', 1),
