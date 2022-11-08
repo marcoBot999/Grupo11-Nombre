@@ -14,25 +14,23 @@ header input {
 }
 
 body {
-    background-color: #191068ab;
+    background-color: #191068;
     position: relative;
     padding-bottom: 12vh;
     min-height: 100vh;
-    background-position: center center;
+    background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
 
-
-
 .formulario {
-    border: solid 4px #c0fd68;
+    border: solid 4px #191068;
     border-radius: 50px;
-    margin: 10%;
-    padding: 5%;
-    max-width: 80vw;
-    background-color: rgba(25, 16, 104, 0.6);
-    color: #c0fd68;
+    margin: 7% 30%;
+    padding: 3%;
+    max-width: 50vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #191068;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -89,7 +87,7 @@ main button {
     color: #c0fd68;
     padding: 1vw;
     background-color: #191068;
-    border: #c0fd68 solid 1px;
+    border: #191068 solid 1px;
     border-radius: 5px;
     font-size: 100%;
     font-weight: bolder;
@@ -102,7 +100,7 @@ main button:hover {
 }
 
 .registrarse {
-    color: #c0fd68;
+    color: #191068;
     font-size: 90%;
     margin-top: 1vw;
 }
@@ -134,5 +132,9 @@ main button:hover {
 
     .burgerMenu {
         display: show;
+    }
+
+    header .buscador {
+        padding: 0%;
     }
 }

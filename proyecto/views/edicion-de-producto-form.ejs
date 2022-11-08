@@ -14,8 +14,7 @@
             <form action="/productos/edicion-de-producto/<%=pToEdit.id_product %>?_method=PUT" method="POST"
                 enctype="multipart/form-data">
                 <div><label for="name">Nombre del Producto</label>
-                    <input type="text" id="name" name="name" value="<%=pToEdit.name%>"
-                        placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4" required>
+                    <input type="text" id="name" name="name" value="<%=pToEdit.name%>" required>
                 </div>
                 <br>
                 <div>
@@ -25,8 +24,7 @@
                 <br>
                 <div>
                     <label for="price">Precio</label>
-                    <input type="number" id="price" value="<%=pToEdit.price%>" name="price" placeholder="Precio"
-                        required>
+                    <input type="number" id="price" value="<%=pToEdit.price%>" name="price" required>
                 </div>
                 <br>
                 <div>

@@ -65,6 +65,14 @@ router.post("/register", upload.single("img"), validaciones, loginRegisterContro
 router.get("/perfil", authMiddlware, loginRegisterController.perfil);
 
 //Cerrar sesión //video 2 horas --- 1:21:00 ---
-router.get('/logout', loginRegisterController.logout);;
+router.get('/logout', loginRegisterController.logout);
+
+//Editar el perfil
+router.get('/edicion-perfil/:id', loginRegisterController.edit);
+router.put('/edicion-perfil/:id', upload.single("img"), loginRegisterController.update);
+
+//Eliminar el usuario//
+router.delete("/delete/:id", loginRegisterController.delete);
+
 
 module.exports = router;

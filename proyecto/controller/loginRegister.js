@@ -14,6 +14,7 @@ const loginRegisterController = {
     register: (req, res) => {
         res.render("register")
     },
+
     //Procesar el registro//
     processRegister: async function (req, res) {
         let db = require("../database/models")
@@ -29,19 +30,19 @@ const loginRegisterController = {
                     address: req.body.address,
                     password: bcrypt.hashSync(req.body.password, 10),
                     img: "img_user_default.png",
-                    id_type_user: 1
+                    id_type_user: req.body.type
                 };
-    
+
                 if (req.file) {
                     userNew.img = req.file.filename;
                 }
-                
+
                 let encontrarEmail = await db.User.findOne({
-                    where:{
-                        email : req.body.email
+                    where: {
+                        email: req.body.email
                     }
                 })
-                
+
                 if (encontrarEmail) {
                     res.render('register', {
                         errors: {
@@ -52,13 +53,13 @@ const loginRegisterController = {
                         old: req.body
                     })
                 } else {
-    
+
                     await db.User.create(userNew);
-    
+
                     res.redirect("/user/login");
                 }
-                
-    
+
+
             } else {
                 res.render('register', {
                     errors: errors.mapped(),
@@ -66,10 +67,11 @@ const loginRegisterController = {
                 })
             }
 
-          } catch (error) {
+        } catch (error) {
             console.log(error);
         }
     },
+
     //Mostrar formulario de login//
     login: (req, res) => {
 
@@ -83,10 +85,10 @@ const loginRegisterController = {
             if (errors.isEmpty()) {
 
                 let userToLog = await db.User.findOne({
-                    where:{
-                        email : req.body.email
+                    where: {
+                        email: req.body.email
                     }
-                })  
+                })
 
 
                 if (userToLog) {
@@ -129,11 +131,8 @@ const loginRegisterController = {
 
         } catch (error) {
             console.log(error);
-    }
-      
-
+        }
     },
-
     perfil: (req, res) => {
         return res.render("perfil", {
             user: req.session.userLogged
@@ -144,6 +143,67 @@ const loginRegisterController = {
         req.session.destroy();
         return res.redirect('/');
     },
+
+    edit: async function (req, res) {
+        try {
+            let userEdit = db.User.findByPk(req.params.id);
+
+            let tipos = db.TypeUser.findAll();
+
+            Promise.all([userEdit, tipos])
+                .then(function ([userToEdit, tipos]) {
+                    return res.render("edicion-perfil.ejs", { userToEdit, tipos });
+                })
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+    update: async function (req, res) {
+
+        try {
+            const userEdit = {
+                id_user: req.params.id,
+                firstname: req.body.firstname,
+                lastname: req.body.lastname,
+                email: req.body.email,
+                birthday: req.body.birthday,
+                address: req.body.address,
+                password: bcrypt.hashSync(req.body.password, 10),
+                img: "img_user_default.png",
+                id_type_user: req.body.type
+            }
+
+            await db.User.update(userEdit,
+                {
+                    where: {
+                        id_user: req.params.id
+                    }
+                })
+                .then(function () {
+                    delete userEdit.password;
+                    req.session.userLogged = userEdit;
+                    res.redirect("/user/perfil");
+                })
+
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+    delete: async function (req, res) {
+        try {
+            await db.User.destroy({
+                where: {
+                    id_user: req.params.id
+                }
+            })
+            res.redirect("/")
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
 }
 
 

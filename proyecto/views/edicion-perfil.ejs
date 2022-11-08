@@ -12,11 +12,12 @@
 
         <main class="formulario">
             <br>
-            <form action="/user/register" method="POST" enctype="multipart/form-data" charset=utf-8>
+            <form action="/user/edicion-perfil/<%=userToEdit.id_user %>?_method=PUT" method="POST"
+                enctype="multipart/form-data" charset=utf-8>
                 <div>
                     <label for="firstname">Nombre</label>
                     <input type="text" name="firstname" id="firstname"
-                        value="<%= locals.old && old.firstname ? old.firstname:'' %>" placeholder="John">
+                        value="<%= locals.old && old.firstname ? old.firstname:'' %>">
                     <% if (locals.errors && errors.firstname) { %>
                         <div class="errores">
                             <%= errors.firstname.msg%>
@@ -26,8 +27,8 @@
                 <br>
                 <div>
                     <label for="lastname">Apellido</label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Doe"
-                        value="<%= locals.old && old.lastname ? old.lastname:'' %>">
+                    <input type="text" id="lastname" name="lastname""
+                        value=" <%=locals.old && old.lastname ? old.lastname:'' %>">
                     <% if (locals.errors && errors.lastname) { %>
                         <div class="errores">
                             <%= errors.lastname.msg%>
@@ -48,7 +49,7 @@
                 <br>
                 <div>
                     <label for="birthday">Fecha de Nacimiento</label>
-                    <input type="date" id="birthday" name="birthday"
+                    <input type="date" id="birthday" name="birthday" placeholder="12/12/2012"
                         value="<%= locals.old && old.birthday ? old.birthday:'' %>">
                     <% if (locals.errors && errors.birthday) { %>
                         <div class="errores">
@@ -92,8 +93,13 @@
                 <div>
                     <label>Tipo de Usuario</label>
                     <select name="type" class="categoria">
-                        <option value="1">Comprador</option>
-                        <option value="2">Vendedor</option>
+                        <% for(let i=0; i< tipos.length; i++) { %>
+                            <option <% if (userToEdit.id_type_user==tipos[i].id_type_user){ %> selected
+                                <%} %>
+                                    value="<%= tipos[i].id_type_user %>">
+                                        <%= tipos[i].type_name %>
+                            </option>
+                            <% } %>
                     </select>
                 </div>
                 <br>
@@ -103,7 +109,7 @@
                 </div>
                 <br>
                 <div class="buttonReg">
-                    <button type="submit">Registrarse</button>
+                    <button type="post">Guardar</button>
                     <button type="reset">Cancelar</button>
                 </div>
             </form>

@@ -54,9 +54,10 @@
                     </div>
                     <a class="carroComprasProduct"><i class="fas fa-cart-arrow-down"></i></a>
                     <a class="enlaceComprarEditar" href="/productos/shopping-cart">Comprar</a>
-                    <a class="enlaceComprarEditar" href="/productos/edicion-de-producto/<%=resultado.id_product %>">Editar</a>
+                    <a class="enlaceComprarEditar"
+                        href="/productos/edicion-de-producto/<%=resultado.id_product %>">Editar</a>
                     <form action="/productos/delete/<%=resultado.id_product%>?_method=DELETE" method="POST">
-                        <button class="botonEliminar" type="submit" class="">Eliminar</button> </button>
+                        <button class="botonEliminar" type="submit" class="">Eliminar</button>
                     </form>
                 </article>
             </section>
