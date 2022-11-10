@@ -7,14 +7,19 @@ let db = require("../database/models")
 
 const mainController = {
 	//Mostrar el index//
-    index:(req,res)=>{
-		
-		db.Product.findAll()
-		.then((resultado)=>{
-			console.log("///////////////////////////////////////");
-			console.log(resultado);
-			return res.render("index",{resultado})
-		})
+    index:async function (req,res){
+		try {
+			
+			
+			let resultado = await db.Product.findAll();
+			
+			Promise.all([resultado])
+					.then(function ([resultado]) {
+						return res.render("index", {resultado });
+					})
+		} catch (error) {
+			console.log(error);
+		}
 		
 	},
 	//Buscador//

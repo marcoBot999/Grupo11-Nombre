@@ -83,13 +83,16 @@ const productosController = {
         try {
 
             const pToEdit = {
-                name: req.body.name,
-                description: req.body.description,
-                price: req.body.price,
-                id_product_category: req.body.category,
-
+                name:req.body.name,
+                description:req.body.description,
+                price:req.body.price,
+                id_product_category:1,
+                
             }
-
+            if (req.file) {
+                pToEdit.img = req.file.filename;
+            }
+            
             await db.Product.update(pToEdit,
                 {
                     where: {

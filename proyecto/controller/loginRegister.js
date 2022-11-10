@@ -74,7 +74,6 @@ const loginRegisterController = {
 
     //Mostrar formulario de login//
     login: (req, res) => {
-
         res.render("login")
     },
 
@@ -94,8 +93,6 @@ const loginRegisterController = {
                 if (userToLog) {
 
                     let isOkThePass = bcrypt.compareSync(req.body.password, userToLog.password)
-                    console.log("///////////////////////////////////////////");
-                    console.log(userToLog);
 
                     if (isOkThePass) {
                         delete userToLog.password;
@@ -103,7 +100,7 @@ const loginRegisterController = {
                         if (req.body.recordarme) {
                             res.cookie('recordarEmail', req.body.email, { maxAge: 90000 })
                         }
-                        return res.redirect("perfil");
+                        return res.redirect("perfil/" + userToLog.id_user);
                     } else {
                         return res.render("login", {
                             errors: {
@@ -134,9 +131,15 @@ const loginRegisterController = {
         }
     },
     perfil: (req, res) => {
-        return res.render("perfil", {
-            user: req.session.userLogged
-        });
+        db.User.findOne({
+            where: {
+                id_user: req.params.id
+            }
+            })
+            .then((user) => {
+                return res.render("perfil", { user })
+            })
+
     },
     logout: (req, res) => {
         res.clearCookie('recordarEmail');
@@ -169,9 +172,15 @@ const loginRegisterController = {
                 email: req.body.email,
                 birthday: req.body.birthday,
                 address: req.body.address,
-                password: bcrypt.hashSync(req.body.password, 10),
-                img: "img_user_default.png",
                 id_type_user: req.body.type
+            }
+
+            if (req.file) {
+                userEdit.img = req.file.filename;
+            }
+
+            if (req.password) {
+                userEdit.password = req.file.password;
             }
 
             await db.User.update(userEdit,
@@ -183,7 +192,7 @@ const loginRegisterController = {
                 .then(function () {
                     delete userEdit.password;
                     req.session.userLogged = userEdit;
-                    res.redirect("/user/perfil");
+                    res.redirect("/user/perfil/" + req.params.id);
                 })
 
         } catch (error) {
@@ -198,12 +207,15 @@ const loginRegisterController = {
                     id_user: req.params.id
                 }
             })
+            res.clearCookie('recordarEmail');
+            req.session.destroy();
             res.redirect("/")
         } catch (error) {
             console.log(error);
         }
 
     }
+    
 }
 
 
