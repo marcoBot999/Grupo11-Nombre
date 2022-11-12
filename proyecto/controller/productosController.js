@@ -86,7 +86,7 @@ const productosController = {
                 name:req.body.name,
                 description:req.body.description,
                 price:req.body.price,
-                id_product_category:1,
+                id_product_category: req.body.category,
                 
             }
             if (req.file) {
