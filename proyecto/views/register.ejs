@@ -16,7 +16,7 @@
                 <div>
                     <label for="firstname">Nombre</label>
                     <input type="text" name="firstname" id="firstname"
-                        value="<%= locals.old && old.firstname ? old.firstname:'' %>" placeholder="John">
+                        value="<%= locals.old && old.firstname ? old.firstname:'' %>" placeholder="John" required>
                     <% if (locals.errors && errors.firstname) { %>
                         <div class="errores">
                             <%= errors.firstname.msg%>
@@ -27,7 +27,7 @@
                 <div>
                     <label for="lastname">Apellido</label>
                     <input type="text" id="lastname" name="lastname" placeholder="Doe"
-                        value="<%= locals.old && old.lastname ? old.lastname:'' %>">
+                        value="<%= locals.old && old.lastname ? old.lastname:'' %>"  required>
                     <% if (locals.errors && errors.lastname) { %>
                         <div class="errores">
                             <%= errors.lastname.msg%>
@@ -38,7 +38,7 @@
                 <div>
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" placeholder="correo@correo.com"
-                        value="<%= locals.old && old.email ? old.email:'' %>">
+                        value="<%= locals.old && old.email ? old.email:'' %>"  required>
                     <% if (locals.errors && errors.email) { %>
                         <div class="errores">
                             <%= errors.email.msg%>
@@ -49,7 +49,7 @@
                 <div>
                     <label for="birthday">Fecha de Nacimiento</label>
                     <input type="date" id="birthday" name="birthday"
-                        value="<%= locals.old && old.birthday ? old.birthday:'' %>">
+                        value="<%= locals.old && old.birthday ? old.birthday:'' %>"  required>
                     <% if (locals.errors && errors.birthday) { %>
                         <div class="errores">
                             <%= errors.birthday.msg%>
@@ -60,7 +60,7 @@
                 <div>
                     <label for="address">Domicilio</label>
                     <input type="text" id="address" name="address" placeholder="calle 3 # 3-33"
-                        value="<%= locals.old && old.address ? old.address:'' %>">
+                        value="<%= locals.old && old.address ? old.address:'' %>"  required>
                     <% if (locals.errors && errors.address) { %>
                         <div class="errores">
                             <%= errors.address.msg%>
@@ -70,7 +70,7 @@
                 <br>
                 <div>
                     <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="password" placeholder="Contraseña" minlength="5">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" minlength="5"  required>
                     <% if (locals.errors && errors.password) { %>
                         <div class="errores">
                             <%= errors.password.msg%>
@@ -81,7 +81,7 @@
                 <div>
                     <label for="confirmPassword">Confirmar Contraseña</label>
                     <input type="password" id="confirmPassword" name="confirmPassword"
-                        placeholder="Confirmar Contraseña">
+                        placeholder="Confirmar Contraseña"  required>
                     <% if (locals.errors && errors.confirmPassword) { %>
                         <div class="errores">
                             <%= errors.confirmPassword.msg%>
@@ -99,7 +99,7 @@
                 <br>
                 <div>
                     <label for="img">Foto de Perfil</label>
-                    <input type="file" id="img" name="img" accept=".jpg,.png">
+                    <input type="file" id="img" name="img" accept=".jpg,.png"  required>
                 </div>
                 <br>
                 <div class="buttonReg">
