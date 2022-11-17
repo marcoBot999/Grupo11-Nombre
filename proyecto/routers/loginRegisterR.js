@@ -9,7 +9,9 @@ const loginRegisterController = require("../controller/loginRegister.js");
 //Validaciones
 const validaciones = [
     body("firstname").notEmpty().withMessage("Debes agregar un nombre"),
+    body("firstname").isLength({ min: 2 }).withMessage("El nombre debe tener al menos 2 caracteres"),
     body("lastname").notEmpty().withMessage("Debes agregar un apellido"),
+    body("lastname").isLength({ min: 2 }).withMessage("El apellido debe tener al menos 2 caracteres"),
     body("email").isEmail().withMessage("Debes ingresar un email"),
     body("address").notEmpty().withMessage("Debes agregar una dirección"),
     body("password").notEmpty().withMessage("Debes agregar una contraseña"),

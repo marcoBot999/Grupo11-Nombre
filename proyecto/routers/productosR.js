@@ -3,6 +3,15 @@ const router = express.Router();
 const productosController = require("../controller/productosController")
 const multer = require("multer");
 const path = require("path");
+const { body } = require("express-validator");
+
+//Validaciones
+const validacionesProd = [
+  body("name").notEmpty().withMessage("Debes agregar un nombre para el producto"),
+  body("name").isLength({ min: 5 }).withMessage("El nombre debe tener al menos 5 caracteres"),
+  body("description").notEmpty().withMessage("Debes agregar una descripción"),
+  body("description").isLength({ min: 20 }).withMessage("La descripción debe tener al menos 20 caracteres"),
+]
 
 var storage = multer.diskStorage({
   //ESTO ES DONDE SE VA A GUARDAR LA IMAGEN NUEVA AUTOMATICAMENTE
@@ -30,7 +39,7 @@ router.get("/product-detail/:id", productosController.detail);
 
 //Creación de producto//
 router.get("/creacion-de-producto", productosController.create);
-router.post("/creacion-de-producto", upload.single("img"), productosController.store);
+router.post("/creacion-de-producto", upload.single("img"), validacionesProd, productosController.store);
 
 //Edición de producto//
 router.get("/edicion-de-producto/:id", productosController.edit);

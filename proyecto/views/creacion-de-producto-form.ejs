@@ -12,16 +12,28 @@
 
         <main class="formulario">
 
-            <form action="/productos/creacion-de-producto" method="POST" enctype="multipart/form-data" charset=utf-8>
+            <form action="/productos/creacion-de-producto" method="POST" class="formProductos"
+                enctype="multipart/form-data" charset=utf-8>
 
                 <div><label for="name">Nombre del Producto</label>
-                    <input type="text" id="name" name="name" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4">
+                    <input type="text" id="name" name="name" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4"
+                        value="<%= locals.old && old.name ? old.name:'' %>">
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="errores">
+                            <%= errors.name.msg%>
+                        </div>
+                        <% } %>
                 </div>
                 <br>
                 <div>
                     <label for="description">Descripción</label>
-                    <textarea name="description" id="description"></textarea>
-                </div>
+                    <textarea name="description" id="description"></textarea value="<%= locals.old && old.description ? old.description:'' %>" >
+                        <% if (locals.errors && errors.description) { %>
+                            <div class="errores">
+                                <%= errors.description.msg%>
+                            </div>
+                            <% } %>
+                    </div>
                 <br>
                 <div>
                     <label for="price">Precio</label>
@@ -51,7 +63,7 @@
             </form>
         </main>
         <%- include ("./partials/footer.ejs")%>
-            </div>
+            <script src="/js/validacionesProductos.js"> </script>
 </body>
 
 </html>
