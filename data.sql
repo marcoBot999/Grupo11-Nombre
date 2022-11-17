@@ -1,10 +1,10 @@
-INSERT INTO type_user (id_type_user, type_name) VALUES (1, 'Buyer'), (2, 'Seller');
+INSERT INTO type_user (id_type_user, type_name) VALUES (1, 'buyer'), (2, 'seller');
 
 INSERT INTO users ( id_user, firstname, lastname, email, birthday, address, password, img, id_type_user) VALUES 
-(1664748855238,'johan','leon','johanleon0705@gmail.com','2002-05-07','crr 118 #83a 21','$2a$10$yjJfF0LuNUvohtQjd8.UP.M4q/KdTqk.Gg.SQUnRZI9Zx0u2FBuZy','img_user_default.png', 2),
+(1664748855238,'johan','leon','johanleon0705@gmail.com','2002-05-07','crr 00 #00 - 00','$2a$10$7UTeRRaYOQSZPe52k3CYVuEREdKWtCOi.H69J/qkgnhEOvv.UEPUC','1668120556336Edificios-monserrate33.jpg', 2),
 (1664990154587,'Lina ','Gómez','linamarceg17@gmail.com','1989-12-21','Carrera xx # xx-xx','$2a$10$xUOYSkhArIquMUNZx5lY2e5e0bnjfTWc8NPKBAHzqwqaZC2BRaEQi','1664990154333lina2.jpg', 2);
 
-INSERT INTO product_category (id_product_category, name_category) VALUES (1, 'Componentes'), (2, 'Portatiles'), (3, 'Pc Armadas'), (4, 'Perifericos');
+INSERT INTO product_category (id_product_category, name_category) VALUES (1, 'componentes'), (2, 'portatiles'), (3, 'pc armadas'), (4, 'perifericos');
 
 INSERT INTO products (id_product, name, description, price, img, id_product_category) VALUES
     (1,'Motherboard MSI A320M-A PRO MAX AMD AM4','La A320M-A Pro Max es un motherboard básico para PCs simples, compatible con procesadores Ryzen de generaciones pasadas.',49.99,'MotherboardMSIA320MAPROMAXAMDAM4.png', 1),
@@ -35,5 +35,4 @@ INSERT INTO products (id_product, name, description, price, img, id_product_cate
     (1662603882344,'Torre Cpu Gamer Ryzen 5 5600g','• Chasis: Gamer AX-6 con vidrio lateral templado • Fuente de poder: REAL 300W WHITE • Board: BOARD AMD A320M • Procesador: AMD Ryzen™ 5 5600G • Ram: 16GB DDR4 3200 (2X8) Dual Channel Blindada • Disco duro: Sata 1TB (ó SSD 240GB) • Sistema operativo: WINDOWS 10',700,'1662603882310TorreCpuGamerRyzen55600gVega7.PNG',3),
     (1662603982630,'Torre Cpu Gamer Ryzen 7 5700g','TORRE SMART 340, FUENTE REAL 350W, BOARD AMD A520M, PROCESADOR AMD RYZEN 7 5700G, GRAFICOS INTEGRADOS AMD RADEON VEGA 8, RAM DDR4 16GB BLINDADA 3200MHZ 1X16GB (Ó 2X8GB), DISCO DURO 1TB (Ó SSD 240GB)',900,'1662603982605TorreCpuGamerRyzen7.PNG', 3),
     (1662604110561,'Pc Gamer Amd Ryzen 5 ','PC EQUIPO GAMER AMD RYZEN 5 5600G CON B450M SOLIDO 240GB RAM 16GB 3200 MHZ RGB.',950,'1662604110528PcGamerAmdRyzen5.PNG', 3);
-
 

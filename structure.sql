@@ -13,7 +13,7 @@ CREATE TABLE users (
     firstname VARCHAR(50) NOT NULL,
     lastname VARCHAR(50) NOT NULL,
     email VARCHAR(23) NOT NULL,
-    birthday DATETIME NOT NULL,
+    birthday DATE NOT NULL,
     address VARCHAR(30) NOT NULL,
     password VARCHAR(60) NOT NULL,
     img VARCHAR(50) NOT NULL,
@@ -47,4 +47,3 @@ id_user BIGINT NOT NULL,
  FOREIGN KEY (id_product) REFERENCES products(id_product),
  FOREIGN KEY (id_user) REFERENCES users(id_user)
 );
-
