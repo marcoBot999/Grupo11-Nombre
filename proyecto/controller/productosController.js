@@ -27,10 +27,14 @@ const productosController = {
     //Ingresar un producto//
     create: async function (req, res) {
         try {
-            await db.ProductCategory.findAll()
-                .then(function (categorias) {
-                    res.render("creacion-de-producto-form", { categorias: categorias })
-                })
+            // db.ProductCategory.findAll()
+            //  .then(function (categorias) {
+            //res.render("creacion-de-producto-form", { categorias: categorias })
+            //  })
+            const categorias = await db.ProductCategory.findAll()
+
+            res.render("creacion-de-producto-form", { categorias: categorias })
+
         } catch (error) {
             console.log(error);
         }
@@ -58,9 +62,11 @@ const productosController = {
                     })
             }
             else {
+                const categorias = await db.ProductCategory.findAll()
                 res.render('creacion-de-producto-form', {
                     errors: errors.mapped(),
-                    old: req.body
+                    old: req.body,
+                    categorias: categorias
                 })
             }
 

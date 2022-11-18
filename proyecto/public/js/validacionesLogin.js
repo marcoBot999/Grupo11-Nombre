@@ -1,33 +1,44 @@
 window.addEventListener("load", function () {
-    let formulario = document.querySelector("form.formLogin");
+    const formulario = document.querySelector("form.formLogin")
+    const campoEmail = document.querySelector('#email')
+    const campoContrasenia = document.querySelector('#password')
+
+    const correo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
     formulario.addEventListener("submit", function (e) {
+        e.preventDefault();
+        validaCampos();
+    })
 
-
-        let campoEmail = document.querySelector('#email');
-        const correo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
+    const validaCampos = function () {
         if (campoEmail.value == "") {
-            alert(" Debes ingresar un email");
+            validacionFalla(campoEmail, "Debes ingresar un email");
         } else if (!correo.test(campoEmail.value)) {
-            alert(" Debes ingresar un email válido");
+            validacionFalla(campoEmail, "Debes ingresar un email válido");
+        } else {
+            validacionOk
         };
-
-        let campoContrasenia = document.querySelector('#password');
 
         if (campoContrasenia.value == "") {
-            alert(" Debes agregar una contraseña");
+            validacionFalla(campoContrasenia, "Debes agregar una contraseña");
         } else if (campoContrasenia.value.length < 8) {
-            alert(" La contraseña debe tener mínimo 8 caracteres");
+            validacionFalla(campoContrasenia, "La contraseña debe tener mínimo 8 caracteres");
+        } else {
+            validacionOk
         };
+    }
 
-        let campoImagen = document.querySelector('#img');
-        const imagen = /(.jpg|.jpeg|.png|.gif)$/i;
+    const validacionFalla = (input, msje) => {
+        const formControl = input.parentElement;
+        const aviso = formControl.querySelector('p');
+        aviso.innerText = msje;
 
-        if (!imagen.exec(campoImagen.value)) {
-            alert(" La imagen debe ser un archivo válido (JPG, JPEG, PNG, GIF)");
-        };
+        formControl.className = 'form-control falla';
+    }
 
+    const validacionOk = (input, msje) => {
+        const formControl = input.parentElement;
 
-    });
+        formControl.className = 'form-control ok';
+    }
 })

@@ -15,7 +15,8 @@
             <form action="/productos/creacion-de-producto" method="POST" class="formProductos"
                 enctype="multipart/form-data" charset=utf-8>
 
-                <div><label for="name">Nombre del Producto</label>
+                <div class="form-control">
+                    <label for="name">Nombre del Producto</label>
                     <input type="text" id="name" name="name" placeholder="Ej:Motherboard MSI A320M-A PRO MAX AMD AM4"
                         value="<%= locals.old && old.name ? old.name:'' %>">
                     <% if (locals.errors && errors.name) { %>
@@ -23,9 +24,10 @@
                             <%= errors.name.msg%>
                         </div>
                         <% } %>
+                            <p class="errores"></p>
                 </div>
                 <br>
-                <div>
+                <div class="form-control">
                     <label for="description">Descripción</label>
                     <textarea name="description" id="description"></textarea value="<%= locals.old && old.description ? old.description:'' %>" >
                         <% if (locals.errors && errors.description) { %>
@@ -33,7 +35,8 @@
                                 <%= errors.description.msg%>
                             </div>
                             <% } %>
-                    </div>
+                        <p class="errores"></p>
+                </div>
                 <br>
                 <div>
                     <label for="price">Precio</label>
@@ -52,8 +55,10 @@
                     </select>
                 </div>
                 <br>
-                <div><label for="img">Foto del Producto</label>
+                <div class="form-control">
+                    <label for="img">Foto del Producto</label>
                     <input type="file" id="img" name="img" accept=".jpg,.png">
+                    <p class="errores"></p>
                 </div>
                 <br>
                 <div class="buttonReg">
@@ -63,7 +68,7 @@
             </form>
         </main>
         <%- include ("./partials/footer.ejs")%>
-            <script src="/js/validacionesProductos.js"> </script>
+        <script src="/js/validacionesProductos.js"> </script>
 </body>
 
 </html>

@@ -14,7 +14,7 @@
             <br>
             <form action="/user/register" method="POST" enctype="multipart/form-data" charset=utf-8
                 class="formRegistro">
-                <div>
+                <div class="form-control">
                     <label for="firstname">Nombre</label>
                     <input type="text" name="firstname" id="firstname" class="firstname"
                         value="<%= locals.old && old.firstname ? old.firstname:'' %>" placeholder="John">
@@ -23,9 +23,10 @@
                             <%= errors.firstname.msg%>
                         </div>
                         <% } %>
+                            <p class="errores"></p>
                 </div>
                 <br>
-                <div>
+                <div class="form-control">
                     <label for="lastname">Apellido</label>
                     <input type="text" id="lastname" name="lastname" class="lastname" placeholder="Doe"
                         value="<%= locals.old && old.lastname ? old.lastname:'' %>">
@@ -34,9 +35,10 @@
                             <%= errors.lastname.msg%>
                         </div>
                         <% } %>
+                            <p class="errores"></p>
                 </div>
                 <br>
-                <div>
+                <div class="form-control">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" class="email" placeholder="correo@correo.com"
                         value="<%= locals.old && old.email ? old.email:'' %>">
@@ -45,6 +47,7 @@
                             <%= errors.email.msg%>
                         </div>
                         <% } %>
+                            <p class="errores"></p>
                 </div>
                 <br>
                 <div>
@@ -69,7 +72,7 @@
                         <% } %>
                 </div>
                 <br>
-                <div>
+                <div class="form-control">
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" name="password" class="password" placeholder="Contraseña"
                         minlength="5">
@@ -78,6 +81,7 @@
                             <%= errors.password.msg%>
                         </div>
                         <% } %>
+                            <p class="errores"></p>
                 </div>
                 <br>
                 <div>
@@ -99,9 +103,10 @@
                     </select>
                 </div>
                 <br>
-                <div>
+                <div class="form-control">
                     <label for="img">Foto de Perfil</label>
                     <input type="file" id="img" name="img" class="img">
+                    <p class="errores"></p>
                 </div>
                 <br>
                 <div class="buttonReg">

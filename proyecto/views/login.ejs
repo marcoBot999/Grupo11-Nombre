@@ -12,7 +12,7 @@
 
         <main class="formulario">
             <form action="/user/login" method="POST" class="formLogin">
-                <div>
+                <div class="form-control">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" class="email" placeholder="correo@correo.com"
                         value="<%= locals.old && old.email ? old.email:'' %>">
@@ -21,9 +21,10 @@
                             <%= errors.email.msg%>
                         </div>
                         <% } %>
+                            <p class="errores"></p>
                 </div>
                 <br>
-                <div>
+                <div class="form-control">
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" name="password" class="password" placeholder="Contraseña"
                         required>
@@ -32,6 +33,7 @@
                             <%= errors.password.msg%>
                         </div>
                         <% } %>
+                            <p class="errores"></p>
                 </div>
                 <br>
                 <div class="chekbox">
@@ -42,9 +44,7 @@
                 <div>
                     <button class="buttonSes" type="submit">Iniciar Sesión</button>
                     <br>
-
                 </div>
-
             </form>
             <br>
             <nav class="registrarse">¿Aún no tienes cuenta? <a href="/user/register"><button class="buttonSes"

@@ -1,47 +1,69 @@
 window.addEventListener("load", function () {
-    let formulario = document.querySelector("form.formRegistro");
+    const formulario = document.querySelector("form.formRegistro");
+    const campoNombre = document.querySelector('#firstname');
+    const campoApellido = document.querySelector('#lastname');
+    const campoEmail = document.querySelector('#email');
+    const campoContrasenia = document.querySelector('#password');
+    const campoImagen = document.querySelector('#img');
+
+    const imagen = /(.jpg|.jpeg|.png|.gif)$/i;
+    const correo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     formulario.addEventListener("submit", function (e) {
+        e.preventDefault();
+        validaCampos();
+    });
 
-        let campoNombre = document.querySelector('#firstname');
-
+    const validaCampos = function () {
         if (campoNombre.value == "") {
-            alert("Debes agregar un nombre");
+            validacionFalla(campoNombre, "Debes agregar un nombre");
         } else if (campoNombre.value.length < 2) {
-            alert(" El nombre debe tener al menos 2 caracteres");
+            validacionFalla(campoNombre, "El nombre debe tener al menos 2 caracteres");
+        } else {
+            validacionOk
         };
-
-        let campoApellido = document.querySelector('#lastname');
 
         if (campoApellido.value == "") {
-            alert(" Debes agregar un apellido");
+            validacionFalla(campoApellido, "Debes agregar un apellido");
         } else if (campoApellido.value.length < 2) {
-            alert(" El apellido debe tener al menos 2 caracteres");
+            validacionFalla(campoApellido, "El apellido debe tener al menos 2 caracteres");
+        } else {
+            validacionOk
         };
-
-        let campoEmail = document.querySelector('#email');
-        const correo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
         if (campoEmail.value == "") {
-            alert(" Debes ingresar un email");
+            validacionFalla(campoEmail, "Debes ingresar un email");
         } else if (!correo.test(campoEmail.value)) {
-            alert(" Debes ingresar un email válido");
+            validacionFalla(campoEmail, "Debes ingresar un email válido");
+        } else {
+            validacionOk
         };
-
-        let campoContrasenia = document.querySelector('#password');
 
         if (campoContrasenia.value == "") {
-            alert(" Debes agregar una contraseña");
+            validacionFalla(campoContrasenia, "Debes agregar una contraseña");
         } else if (campoContrasenia.value.length < 8) {
-            alert(" La contraseña debe tener mínimo 8 caracteres");
+            validacionFalla(campoContrasenia, "La contraseña debe tener mínimo 8 caracteres");
+        } else {
+            validacionOk
         };
-
-        let campoImagen = document.querySelector('#img');
-        const imagen = /(.jpg|.jpeg|.png|.gif)$/i;
 
         if (!imagen.exec(campoImagen.value)) {
-            alert(" La imagen debe ser un archivo válido (JPG, JPEG, PNG, GIF)");
+            validacionFalla(campoImagen, "La imagen debe ser un archivo válido (JPG, JPEG, PNG, GIF)");
+        } else {
+            validacionOk
         };
+    }
+    const validacionFalla = (input, msje) => {
+        const formControl = input.parentElement;
+        const aviso = formControl.querySelector('p');
+        aviso.innerText = msje;
 
-    });
+        formControl.className = 'form-control falla';
+    }
+
+    const validacionOk = (input, msje) => {
+        const formControl = input.parentElement;
+
+        formControl.className = 'form-control ok';
+    }
 })
