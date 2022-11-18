@@ -17,7 +17,7 @@
                 <div>
                     <label for="firstname">Nombre</label>
                     <input type="text" name="firstname" id="firstname"
-                        value="<%= locals.old && old.firstname ? old.firstname:'' %>">
+                        value="<%= userToEdit.firstname %>">
                     <% if (locals.errors && errors.firstname) { %>
                         <div class="errores">
                             <%= errors.firstname.msg%>
@@ -28,7 +28,7 @@
                 <div>
                     <label for="lastname">Apellido</label>
                     <input type="text" id="lastname" name="lastname""
-                        value=" <%=locals.old && old.lastname ? old.lastname:'' %>">
+                        value=" <%=userToEdit.lastname %>">
                     <% if (locals.errors && errors.lastname) { %>
                         <div class="errores">
                             <%= errors.lastname.msg%>
@@ -39,7 +39,7 @@
                 <div>
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" placeholder="correo@correo.com"
-                        value="<%= locals.old && old.email ? old.email:'' %>">
+                        value="<%= userToEdit.email  %>">
                     <% if (locals.errors && errors.email) { %>
                         <div class="errores">
                             <%= errors.email.msg%>
@@ -50,7 +50,7 @@
                 <div>
                     <label for="birthday">Fecha de Nacimiento</label>
                     <input type="date" id="birthday" name="birthday" placeholder="12/12/2012"
-                        value="<%= locals.old && old.birthday ? old.birthday:'' %>">
+                        value="<%= userToEdit.birthday %>">
                     <% if (locals.errors && errors.birthday) { %>
                         <div class="errores">
                             <%= errors.birthday.msg%>
@@ -61,7 +61,7 @@
                 <div>
                     <label for="address">Domicilio</label>
                     <input type="text" id="address" name="address" placeholder="calle 3 # 3-33"
-                        value="<%= locals.old && old.address ? old.address:'' %>">
+                        value="<%= userToEdit.address %>">
                     <% if (locals.errors && errors.address) { %>
                         <div class="errores">
                             <%= errors.address.msg%>
@@ -71,7 +71,7 @@
                 <br>
                 <div>
                     <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="password" placeholder="Contraseña" minlength="5">
+                    <input type="password" id="password" name="password" placeholder="Cambiar Contraseña" minlength="5">
                     <% if (locals.errors && errors.password) { %>
                         <div class="errores">
                             <%= errors.password.msg%>
@@ -80,7 +80,7 @@
                 </div>
                 <br>
                 <div>
-                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <label for="confirmPassword">Confirmar Contraseña nueva</label>
                     <input type="password" id="confirmPassword" name="confirmPassword"
                         placeholder="Confirmar Contraseña">
                     <% if (locals.errors && errors.confirmPassword) { %>

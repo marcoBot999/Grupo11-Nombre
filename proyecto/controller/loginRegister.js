@@ -103,7 +103,7 @@ const loginRegisterController = {
                         if (req.body.recordarme) {
                             res.cookie('recordarEmail', req.body.email, { maxAge: 90000 })
                         }
-                        return res.redirect("perfil");
+                        return res.redirect("perfil/" + userToLog.id_user);
                     } else {
                         return res.render("login", {
                             errors: {
@@ -180,11 +180,11 @@ const loginRegisterController = {
                         id_user: req.params.id
                     }
                 })
-                .then(function () {
+                
                     delete userEdit.password;
                     req.session.userLogged = userEdit;
                     res.redirect("/user/perfil");
-                })
+                
 
         } catch (error) {
             console.log(error);

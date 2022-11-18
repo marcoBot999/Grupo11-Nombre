@@ -64,7 +64,7 @@ router.get("/register", guestMiddlware, loginRegisterController.register);
 router.post("/register", upload.single("img"), validaciones, loginRegisterController.processRegister);
 
 //Mostrar perfil
-router.get("/perfil", authMiddlware, loginRegisterController.perfil);
+router.get("/perfil/:id", authMiddlware, loginRegisterController.perfil);
 
 //Cerrar sesión //video 2 horas --- 1:21:00 ---
 router.get('/logout', loginRegisterController.logout);

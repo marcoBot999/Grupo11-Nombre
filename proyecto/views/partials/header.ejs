@@ -13,7 +13,7 @@
                 <% if (locals.isLogged) { %>
                     <div class=" img-name-login">
                         <img src="/images/user-images/<%=locals.userLogged.img%>" class="imgcircle">
-                        <li><a href="/user/perfil">¡Hola <%= locals.userLogged.firstname %>
+                        <li><a href="/user/perfil/<%=locals.userLogged.id_user%>">¡Hola <%= locals.userLogged.firstname %>
                                     <%= locals.userLogged.lastname %>!</a></li>
                     </div>
                     <% } else { %>

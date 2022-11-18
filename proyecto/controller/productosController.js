@@ -110,9 +110,8 @@ const productosController = {
                         id_product: req.params.id
                     }
                 })
-                .then(function () {
                     res.redirect("/productos/product-detail/" + req.params.id);
-                })
+                
 
         } catch (error) {
             console.log(error);

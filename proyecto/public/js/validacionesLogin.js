@@ -6,12 +6,12 @@ window.addEventListener("load", function () {
     const correo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
     formulario.addEventListener("submit", function (e) {
-        e.preventDefault();
+        //e.preventDefault();
         validaCampos();
     })
 
     const validaCampos = function () {
-        if (campoEmail.value == "") {
+        if (campoEmail.value === "") {
             validacionFalla(campoEmail, "Debes ingresar un email");
         } else if (!correo.test(campoEmail.value)) {
             validacionFalla(campoEmail, "Debes ingresar un email válido");
