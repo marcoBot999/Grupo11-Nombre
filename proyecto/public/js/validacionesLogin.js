@@ -4,10 +4,14 @@ window.addEventListener("load", function () {
     const campoContrasenia = document.querySelector('#password')
 
     const correo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    let existenErrores = false;
 
     formulario.addEventListener("submit", function (e) {
-        //e.preventDefault();
+
         validaCampos();
+        if (existenErrores == true) {
+            e.preventDefault();
+        }
     })
 
     const validaCampos = function () {
@@ -16,7 +20,7 @@ window.addEventListener("load", function () {
         } else if (!correo.test(campoEmail.value)) {
             validacionFalla(campoEmail, "Debes ingresar un email válido");
         } else {
-            validacionOk
+            validacionOk(campoEmail, "");
         };
 
         if (campoContrasenia.value == "") {
@@ -24,7 +28,7 @@ window.addEventListener("load", function () {
         } else if (campoContrasenia.value.length < 8) {
             validacionFalla(campoContrasenia, "La contraseña debe tener mínimo 8 caracteres");
         } else {
-            validacionOk
+            validacionOk(campoContrasenia, "");
         };
     }
 
@@ -34,10 +38,13 @@ window.addEventListener("load", function () {
         aviso.innerText = msje;
 
         formControl.className = 'form-control falla';
+        existenErrores = true;
     }
 
     const validacionOk = (input, msje) => {
         const formControl = input.parentElement;
+        const aviso = formControl.querySelector('p');
+        aviso.innerText = msje;
 
         formControl.className = 'form-control ok';
     }
