@@ -11,8 +11,12 @@ const UserModel = require("../models/userModel.js")
 const loginRegisterController = {
 
     //Mostrar formulario de registro//
-    register: (req, res) => {
-        res.render("register")
+    register: async function (req, res) {
+        try {
+            res.render("register")
+        } catch (error) {
+            console.log(error);
+        }
     },
 
     //Procesar el registro//
@@ -73,9 +77,14 @@ const loginRegisterController = {
     },
 
     //Mostrar formulario de login//
-    login: (req, res) => {
-
-        res.render("login")
+    login: async function (req, res) {
+        try {
+            
+            res.render("login")
+        } catch (error) {
+            console.log(error);
+        }
+        
     },
 
     //Loguearse//
@@ -94,8 +103,7 @@ const loginRegisterController = {
                 if (userToLog) {
 
                     let isOkThePass = bcrypt.compareSync(req.body.password, userToLog.password)
-                    console.log("///////////////////////////////////////////");
-                    console.log(userToLog);
+                    
 
                     if (isOkThePass) {
                         delete userToLog.password;
@@ -134,9 +142,15 @@ const loginRegisterController = {
         }
     },
     perfil: (req, res) => {
-        return res.render("perfil", {
-            user: req.session.userLogged
-        });
+        db.User.findOne({
+            where: {
+                id_user: req.params.id
+            }
+            })
+            .then((user) => {
+                return res.render("perfil", { user })
+            })
+
     },
     logout: (req, res) => {
         res.clearCookie('recordarEmail');
@@ -169,9 +183,15 @@ const loginRegisterController = {
                 email: req.body.email,
                 birthday: req.body.birthday,
                 address: req.body.address,
-                password: bcrypt.hashSync(req.body.password, 10),
-                img: "img_user_default.png",
-                id_type_user: req.body.type
+                id_type_user: req.body.type,
+            }
+
+            if (req.file) {
+                userEdit.img = req.file.filename;
+            }
+
+            if (req.password) {
+                userEdit.password = req.file.password;
             }
 
             await db.User.update(userEdit,
@@ -180,10 +200,9 @@ const loginRegisterController = {
                         id_user: req.params.id
                     }
                 })
-                
                     delete userEdit.password;
                     req.session.userLogged = userEdit;
-                    res.redirect("/user/perfil");
+                    res.redirect("/user/perfil/" + req.params.id);
                 
 
         } catch (error) {
@@ -198,6 +217,8 @@ const loginRegisterController = {
                     id_user: req.params.id
                 }
             })
+            res.clearCookie('recordarEmail');
+            req.session.destroy();
             res.redirect("/")
         } catch (error) {
             console.log(error);

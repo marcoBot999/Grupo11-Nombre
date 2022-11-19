@@ -91,6 +91,46 @@ main p {
     text-align: justify;
 }
 
+.editarBorrar{
+    display: flex;
+}
+
+main section .enlaceComprarEditar {
+    background-color: #ffff;
+    color: #c0fd68;
+    padding: 0.7vw;
+    background-color: #191068;
+    border: #191068 solid 1px;
+    border-radius: 10px;
+    font-size: 70%;
+    font-weight: bolder;
+    transition: all .8s;
+
+    text-decoration: none;
+}
+
+main section .enlaceComprarEditar:hover {
+    color: #191068;
+    background-color: #c0fd68
+}
+main form .botonEliminar {
+    margin-left: 1px;
+    background-color: #ffff;
+    color: #c0fd68;
+    padding: 0.7vw;
+    background-color: #191068;
+    border: #191068 solid 1px;
+    border-radius: 10px;
+    font-size: 70%;
+    font-weight: bolder;
+    transition: all .8s;
+}
+
+main form .botonEliminar:hover {
+    background-color: #c0fd68;
+    color: #191068;
+    transition: all .8s;
+}
 
 @media (min-width: 0px) {
 

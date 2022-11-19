@@ -73,7 +73,7 @@
                         <%=user.birthday %>
                     </p>
                 </div>
-                <div>
+                <div class="editarBorrar">
                     <a class="enlaceComprarEditar" href="/user/edicion-perfil/<%=user.id_user %>">Editar</a>
                     <form action="/user/delete/<%=user.id_user%>?_method=DELETE" method="POST">
                         <button class="botonEliminar" type="submit" class="">Eliminar</button> </button>
