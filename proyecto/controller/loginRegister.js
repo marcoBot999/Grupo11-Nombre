@@ -4,9 +4,9 @@ const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs');
-let db = require("../database/models")
+let db = require("../database/models");
 
-const UserModel = require("../models/userModel.js")
+const UserModel = require("../models/userModel.js");
 
 const loginRegisterController = {
 
@@ -79,12 +79,12 @@ const loginRegisterController = {
     //Mostrar formulario de login//
     login: async function (req, res) {
         try {
-            
+
             res.render("login")
         } catch (error) {
             console.log(error);
         }
-        
+
     },
 
     //Loguearse//
@@ -103,7 +103,7 @@ const loginRegisterController = {
                 if (userToLog) {
 
                     let isOkThePass = bcrypt.compareSync(req.body.password, userToLog.password)
-                    
+
 
                     if (isOkThePass) {
                         delete userToLog.password;
@@ -146,7 +146,7 @@ const loginRegisterController = {
             where: {
                 id_user: req.params.id
             }
-            })
+        })
             .then((user) => {
                 return res.render("perfil", { user })
             })
@@ -200,10 +200,10 @@ const loginRegisterController = {
                         id_user: req.params.id
                     }
                 })
-                    delete userEdit.password;
-                    req.session.userLogged = userEdit;
-                    res.redirect("/user/perfil/" + req.params.id);
-                
+            delete userEdit.password;
+            req.session.userLogged = userEdit;
+            res.redirect("/user/perfil/" + req.params.id);
+
 
         } catch (error) {
             console.log(error);

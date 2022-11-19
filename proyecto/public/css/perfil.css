@@ -36,6 +36,7 @@ main h4 {
     display: flex;
     justify-content: center;
     padding: 2vw;
+    font-size: 20px;
 }
 
 
@@ -91,8 +92,9 @@ main p {
     text-align: justify;
 }
 
-.editarBorrar{
+.editarBorrar {
     display: flex;
+    padding: 0vw 0vw 2.5vw 2.5vw;
 }
 
 main section .enlaceComprarEditar {
@@ -113,8 +115,9 @@ main section .enlaceComprarEditar:hover {
     color: #191068;
     background-color: #c0fd68
 }
+
 main form .botonEliminar {
-    margin-left: 1px;
+    margin-left: 10px;
     background-color: #ffff;
     color: #c0fd68;
     padding: 0.7vw;
