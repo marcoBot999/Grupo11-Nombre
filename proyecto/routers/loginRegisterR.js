@@ -76,5 +76,7 @@ router.put('/edicion-perfil/:id', upload.single("img"), loginRegisterController.
 //Eliminar el usuario//
 router.delete("/delete/:id", loginRegisterController.delete);
 
+//lista de users para la api
+router.get("/list", loginRegisterController.list)
 
 module.exports = router;

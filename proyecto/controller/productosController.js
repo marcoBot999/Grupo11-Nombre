@@ -4,6 +4,7 @@ const productsFilePath = path.join(__dirname, '../data/productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const { validationResult } = require("express-validator");
 let db = require("../database/models")
+const op= db.sequelize.Op
 
 const productosController = {
     //Mostrar el carro de compras//
@@ -130,7 +131,7 @@ const productosController = {
             console.log(error);
         }
 
-    }
+    },
 
 }
 
