@@ -1,148 +1,74 @@
-//const path = require("path");
-//const fs = require("fs")
-//const productsFilePath = path.join(__dirname, '../data/productos.json');
-//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-//const { validationResult } = require("express-validator");
 let db = require("../../database/models");
+const { findAll } = require("../../models/userModel");
 
 
 const productosController = {
-    // //Mostrar el carro de compras//
-    // shoppingCart: (req, res) => {
-    //     let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-    //     res.render("carro-compras");
-    // },
+    list: async function (req, res) {
+            try {
+                let productos = await db.Product.findAll();
+    
+                let categorias = await db.ProductCategory.findAll();
+            
+                let componentes = await db.Product.findAll({
+                    where:{id_product_category:1}
+                })
 
-    //Lista de productos
-    list: (req, res) => {
+                let portatiles = await db.Product.findAll({
+                    where:{id_product_category:2}
+                })
+                let pcArmadas = await db.Product.findAll({
+                    where:{id_product_category:3}
+                })
+                let perifericos = await db.Product.findAll({
+                    where:{id_product_category:4}
+                })
+                
+                
 
-        db.Product.findAll()
-            .then((productos) => {
-                res.json({ productos });
-            });
+                Promise.all([productos, categorias,componentes,portatiles,pcArmadas,perifericos])
+                    return res.status(200).json({ 
+                        total: productos.length,
+                        data : productos, 
+                        componentes:componentes.length,
+                        portatiles: portatiles.length,
+                        pcArmadas: pcArmadas.length,
+                        perifericos: perifericos.length,
+                        status:200
+                    });
+                
+                    
+                    
+            } catch (error) {
+                console.log(error);
+            }
     },
+    detail: (req, res) => {
 
-    //     //Detalle de un producto//
-    //     detail: (req, res) => {
+        db.Product.findByPk(req.params.id,{ include: ["productsCategorys"]})
+        .then((product) => {
+            res.status(200).json({ 
+                data : product,
+                status:200
+            });
+        });
+    },
+    store:(req,res)=>{
+        
+        db.Product.create(req.body,{ include: ["productsCategorys"]})
+        .then((product) => {
+            res.status(200).json({ 
+                data : product,
+                status:200,
+                created: "ok"
+            });
+        });
+    },
+    edit:()=>{
 
-    //         db.Product.findOne({
-    //             where: {
-    //                 id_product: req.params.id
-    //             }
-    //         })
-    //             .then((resultado) => {
-    //                 return res.render("product-detail", { resultado })
-    //             })
-    //     },
+    },
+    delete:()=>{
 
-    //     //Ingresar un producto//
-    //     create: async function (req, res) {
-    //         try {
-    //             // db.ProductCategory.findAll()
-    //             //  .then(function (categorias) {
-    //             //res.render("creacion-de-producto-form", { categorias: categorias })
-    //             //  })
-    //             const categorias = await db.ProductCategory.findAll()
-
-    //             res.render("creacion-de-producto-form", { categorias: categorias })
-
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-    //     },
-
-    //     store: async function (req, res) {
-    //         let errors = validationResult(req)
-
-    //         try {
-    //             if (errors.isEmpty()) {
-    //                 const productNew = {
-    //                     name: req.body.name,
-    //                     description: req.body.description,
-    //                     price: req.body.price,
-    //                     id_product_category: req.body.category,
-    //                     img: "image-default.png"
-    //                 }
-    //                 if (req.file) {
-    //                     productNew.img = req.file.filename;
-    //                 }
-
-    //                 await db.Product.create(productNew)
-    //                     .then(function () {
-    //                         res.redirect("/");
-    //                     })
-    //             }
-    //             else {
-    //                 const categorias = await db.ProductCategory.findAll()
-    //                 res.render('creacion-de-producto-form', {
-    //                     errors: errors.mapped(),
-    //                     old: req.body,
-    //                     categorias: categorias
-    //                 })
-    //             }
-
-
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-    //     },
-
-    //     //Editar un producto//
-    //     edit: async function (req, res) {
-    //         try {
-    //             let productEdit = db.Product.findByPk(req.params.id);
-
-    //             let categorias = db.ProductCategory.findAll();
-
-    //             Promise.all([productEdit, categorias])
-    //                 .then(function ([pToEdit, categorias]) {
-    //                     return res.render("edicion-de-producto-form.ejs", { pToEdit, categorias });
-    //                 })
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-    //     }
-    //     ,
-    //     update: async function (req, res) {
-
-    //         try {
-
-    //             const pToEdit = {
-    //                 name: req.body.name,
-    //                 description: req.body.description,
-    //                 price: req.body.price,
-    //                 id_product_category: req.body.category,
-
-    //             }
-
-    //             await db.Product.update(pToEdit,
-    //                 {
-    //                     where: {
-    //                         id_product: req.params.id
-    //                     }
-    //                 })
-    //             res.redirect("/productos/product-detail/" + req.params.id);
-
-
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-    //     },
-
-    //     delete: async function (req, res) {
-    //         try {
-    //             await db.Product.destroy({
-    //                 where: {
-    //                     id_product: req.params.id
-    //                 }
-    //             })
-    //             res.redirect("/")
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-
-    //     }
-
+    }
 }
 
 module.exports = productosController;

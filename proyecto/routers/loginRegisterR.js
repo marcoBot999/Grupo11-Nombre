@@ -50,6 +50,7 @@ var storage = multer.diskStorage({
 
 //Para subir el archivo//
 const upload = multer({ storage });
+
 const guestMiddlware = require("../middlewares/guestMiddlware")
 const authMiddlware = require("../middlewares/authMiddleware")
 
@@ -76,5 +77,7 @@ router.put('/edicion-perfil/:id', upload.single("img"), loginRegisterController.
 //Eliminar el usuario//
 router.delete("/delete/:id", loginRegisterController.delete);
 
+//lista de users para la api
+router.get("/list", loginRegisterController.list)
 
 module.exports = router;

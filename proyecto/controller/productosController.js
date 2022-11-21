@@ -4,6 +4,7 @@ const productsFilePath = path.join(__dirname, '../data/productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const { validationResult } = require("express-validator");
 let db = require("../database/models")
+const op= db.sequelize.Op
 
 const productosController = {
     //Mostrar el carro de compras//
@@ -57,9 +58,8 @@ const productosController = {
                 }
 
                 await db.Product.create(productNew)
-                    .then(function () {
                         res.redirect("/");
-                    })
+                    
             }
             else {
                 const categorias = await db.ProductCategory.findAll()
@@ -79,14 +79,13 @@ const productosController = {
     //Editar un producto//
     edit: async function (req, res) {
         try {
-            let productEdit = db.Product.findByPk(req.params.id);
+            let pToEdit = await db.Product.findByPk(req.params.id);
 
-            let categorias = db.ProductCategory.findAll();
+            let categorias = await db.ProductCategory.findAll();
 
-            Promise.all([productEdit, categorias])
-                .then(function ([pToEdit, categorias]) {
-                    return res.render("edicion-de-producto-form.ejs", { pToEdit, categorias });
-                })
+            Promise.all([pToEdit, categorias])
+                return res.render("edicion-de-producto-form.ejs", { pToEdit, categorias });
+                
         } catch (error) {
             console.log(error);
         }
@@ -130,7 +129,7 @@ const productosController = {
             console.log(error);
         }
 
-    }
+    },
 
 }
 

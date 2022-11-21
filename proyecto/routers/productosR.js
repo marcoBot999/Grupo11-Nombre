@@ -37,6 +37,7 @@ router.get("/shopping-cart", productosController.shoppingCart);
 //Detalle de producto//
 router.get("/product-detail/:id", productosController.detail);
 
+
 //Creación de producto//
 router.get("/creacion-de-producto", productosController.create);
 router.post("/creacion-de-producto", upload.single("img"), validacionesProd, productosController.store);

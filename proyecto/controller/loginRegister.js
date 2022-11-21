@@ -224,6 +224,14 @@ const loginRegisterController = {
             console.log(error);
         }
 
+    },
+    //lista de users para la api
+    list: (req,res)=>{
+        db.User.findAll()
+        .then(lista=> {
+            return res.json (lista)
+            
+        })
     }
 }
 
