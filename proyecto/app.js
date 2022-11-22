@@ -31,12 +31,14 @@ const indexRouter = require("./routers/indexRouter");
 const loginRegister = require("./routers/loginRegisterR");
 const productosRouter = require("./routers/productosR");
 const apiProductosRouter = require("./routers/api/productosR");
+const userapiR=require("./routers/api/userapiR")
 
 
 app.use("/", indexRouter);
 app.use("/user", loginRegister);
 app.use("/productos", productosRouter);
 app.use("/api/productos", apiProductosRouter);
+app.use("/api/user",userapiR)
 
 
 app.listen(3000, () => {
