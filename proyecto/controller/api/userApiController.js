@@ -1,5 +1,7 @@
 
 let db = require("../../database/models");
+const fetch = (...args) =>
+  import('node-fetch').then(({ default: fetch }) => fetch(...args))
 
 
 
@@ -26,6 +28,14 @@ const userApiController= {
             });
         });
     },
+    read: (req,res) => {
+        fetch ("http://localhost:3000/api/user/")
+        .then(response =>response.json())
+        .then(users => {
+             res.render("users",{users})
+           
+        })
+    }
 }
 
 module.exports=userApiController
