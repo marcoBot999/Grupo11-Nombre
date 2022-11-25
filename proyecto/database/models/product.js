@@ -22,26 +22,27 @@ module.exports = (sequelize, dataTypes) => {
         },
         img: {
             type: dataTypes.STRING
+        },
+        detail: {
+            type: dataTypes.VIRTUAL,
+            get() {
+                return '/api/productos/' + this.id_product;
+            },
+        },
+        url_img: {
+            type: dataTypes.VIRTUAL,
+            get() {
+                return '/public/images/' + this.img;
+            },
         }
     }
 
     let config = {
         tableName: "Products",
         timestamps: false,
-
     }
 
     let Product = sequelize.define(alias, cols, config);
-
-    //Product.associate = function (models) {
-    //User_Products.belongsToMany(models.User_Products, {
-    //as: "user_to_products",
-    // through: "userProduct",
-    //foreignKey: "id_product",
-    //otherKey: "id_user",
-    //timestamps: "false"
-    //})
-    // }
 
     Product.associate = function (models) {
         Product.belongsToMany(models.User, {
@@ -58,13 +59,5 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
 
-    //Product.associate = function (models) {
-    //Product.hasMany(models.ProductCategory, {
-    //as: "category",
-    // foreignKey: "id_product_category"
-    // })
-    // }
-
     return Product;
-
 }

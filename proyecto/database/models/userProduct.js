@@ -19,11 +19,8 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         tableName: "User_Product",
         timestamps: false,
-
     }
 
-
     let UserProducts = sequelize.define(alias, cols, config)
-
     return UserProducts
 }

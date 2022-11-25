@@ -16,9 +16,7 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         tableName: "Product_Category",
         timestamps: false,
-
     }
-
 
     let ProductCategory = sequelize.define(alias, cols, config)
 

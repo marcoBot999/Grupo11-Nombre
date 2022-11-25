@@ -34,21 +34,10 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         tableName: "users",
         timestamps: false,
-
     }
 
 
     let User = sequelize.define(alias, cols, config)
-
-    //User.associate = function (models) {
-    //User.belongsToMany(models.user_products, {
-    //as: "products_user",
-    //through: "userProduct",
-    //foreignKey: "id_user",
-    //otherKey: "id_product",
-    // timestamps: "false"
-    //})
-    // }
 
     User.associate = function (models) {
         User.belongsToMany(models.Product, {
@@ -66,4 +55,5 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     return User
+
 }
