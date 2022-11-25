@@ -8,7 +8,11 @@ const fetch = (...args) =>
 
 const userApiController= {
     list: (req,res)=>{
-    db.User.findAll()
+    db.User.findAll(
+        {
+                attributes: ['firstname']
+        }
+    )
     .then(lista=> {
         return res.json (
             {total:lista.length,
