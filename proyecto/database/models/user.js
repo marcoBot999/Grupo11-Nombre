@@ -28,6 +28,18 @@ module.exports = (sequelize, dataTypes) => {
         },
         img: {
             type: dataTypes.STRING
+        },
+        detail: {
+            type: dataTypes.VIRTUAL,
+            get() {
+                return '/api/user/' + this.id_user;
+            },
+        },
+        url_img: {
+            type: dataTypes.VIRTUAL,
+            get() {
+                return '/public/images/user-images' + this.img;
+            },
         }
     }
 
