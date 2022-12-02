@@ -58,6 +58,21 @@ const productosController = {
                 });
             });
     },
+    category: (req, res) => {
+        db.ProductCategory.findAll(
+            {
+                attributes: ["name_category"]
+            }
+        )
+            .then(lista => {
+                console.log(lista)
+                return res.json(
+                    {
+                        data: lista,
+                    })
+
+            })
+    },
     edit: (req, res) => {
         db.Product.update(req.body, {
             include: ["productsCategorys"],

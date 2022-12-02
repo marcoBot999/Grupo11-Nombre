@@ -32,19 +32,23 @@ const userApiController = {
                 });
             });
     },
-    lastUser:(req,res)=>{
-        db.User.findAll()
-        .then(user=>{
-            
-            console.log(user);
-            let lastUser = user.pop()
-            console.log(lastUser);
-            res
-                .status(200)
-                .json({
-                    data: lastUser
-                })
-        })
+    lastUser: (req, res) => {
+        db.User.findAll(
+            {
+                attributes: ["id_user", 'firstname', "lastname", "email", "detail", "url_img"]
+            }
+        )
+            .then(user => {
+
+                console.log(user);
+                let lastUser = user.pop()
+                console.log(lastUser);
+                res
+                    .status(200)
+                    .json({
+                        data: lastUser
+                    })
+            })
     }
 }
 
