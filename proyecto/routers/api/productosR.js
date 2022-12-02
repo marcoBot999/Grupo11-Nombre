@@ -12,4 +12,6 @@ router.put("/edit-product/:id", productosController.edit);
 
 router.delete("/delete-product/:id", productosController.delete);
 
+
+
 module.exports = router;

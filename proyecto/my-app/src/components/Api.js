@@ -12,17 +12,22 @@ class TraerApi extends Component {
           .then((r) => r.json())
           .then((respuesta) => {
             console.log(respuesta);
-            this.setState({ productos: respuesta.meta });
+            this.setState({ productos: respuesta.data });
           })
           .catch((error) => console.log(error));
           
     }
     
     render(){
-        console.log("estoy renderizando");
+        console.log(this.state.productos[0]);
         return(
             <div>
-                <p>holaaaaaaa</p>
+                {this.state.productos.map(e=>{
+                    return(
+                        <p>{e.name}</p>
+                    )
+                    
+                })}
             </div>
         )
     }

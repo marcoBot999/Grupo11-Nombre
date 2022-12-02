@@ -32,13 +32,19 @@ const userApiController = {
                 });
             });
     },
-    read: (req, res) => {
-        fetch("http://localhost:3000/api/user/")
-            .then(response => response.json())
-            .then(users => {
-                res.render("users", { users })
-
-            })
+    lastUser:(req,res)=>{
+        db.User.findAll()
+        .then(user=>{
+            
+            console.log(user);
+            let lastUser = user.pop()
+            console.log(lastUser);
+            res
+                .status(200)
+                .json({
+                    data: lastUser
+                })
+        })
     }
 }
 
