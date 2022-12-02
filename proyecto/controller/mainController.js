@@ -7,14 +7,31 @@ let db = require("../database/models")
 
 const mainController = {
 	//Mostrar el index//
-    index:(req,res)=>{
+    index: async function(req,res){
+		try {
+
+            let componentes = await db.Product.findAll({
+				where:{id_product_category:1}
+			})
+
+			let portatiles = await db.Product.findAll({
+				where:{id_product_category:2}
+			})
+			let pcArmadas = await db.Product.findAll({
+				where:{id_product_category:3}
+			})
+			let perifericos = await db.Product.findAll({
+				where:{id_product_category:4}
+			})
+
+			Promise.all([componentes,portatiles,pcArmadas,perifericos])
+                return res.render("index", { componentes,portatiles,pcArmadas,perifericos });
+
+
+        } catch (error) {
+            console.log(error);
+        }
 		
-		db.Product.findAll()
-		.then((resultado)=>{
-			console.log("///////////////////////////////////////");
-			console.log(resultado);
-			return res.render("index",{resultado})
-		})
 		
 	},
 	//Buscador//

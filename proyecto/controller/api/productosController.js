@@ -1,5 +1,5 @@
 let db = require("../../database/models");
-const { findAll } = require("../../models/userModel");
+
 
 const productosController = {
     list: async function (req, res) {

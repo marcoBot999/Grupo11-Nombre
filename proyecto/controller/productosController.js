@@ -99,7 +99,7 @@ const productosController = {
                 name: req.body.name,
                 description: req.body.description,
                 price: req.body.price,
-                id_product_category: req.body.category,
+                id_product_category: req.body.category
 
             }
 
