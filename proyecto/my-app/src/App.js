@@ -1,5 +1,6 @@
 import './App.css';
 import ContentWrapper from './components/ContentWrapper';
+import "./assets/css/app.css";
 
 
 function App() {
