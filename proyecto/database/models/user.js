@@ -38,7 +38,7 @@ module.exports = (sequelize, dataTypes) => {
         url_img: {
             type: dataTypes.VIRTUAL,
             get() {
-                return '/public/images/user-images' + this.img;
+                return '/images/user-images/' + this.img;
             },
         }
     }
