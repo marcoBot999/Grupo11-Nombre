@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
         detail: {
             type: dataTypes.VIRTUAL,
             get() {
-                return '/api/user/' + this.id_user;
+                return '/api/user/detalle/' + this.id_user;
             },
         },
         url_img: {
