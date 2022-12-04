@@ -68,6 +68,7 @@ const productosController = {
                 console.log(lista)
                 return res.json(
                     {
+                        total: lista.length,
                         data: lista,
                     })
 

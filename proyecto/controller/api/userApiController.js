@@ -35,7 +35,7 @@ const userApiController = {
     lastUser: (req, res) => {
         db.User.findAll(
             {
-                attributes: ["id_user", 'firstname', "lastname", "email", "detail", "url_img"]
+                attributes: ["id_user", 'firstname', "lastname", "email", "detail", "img", "url_img"]
             }
         )
             .then(user => {
