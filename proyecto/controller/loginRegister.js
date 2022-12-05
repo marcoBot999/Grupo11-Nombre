@@ -225,12 +225,12 @@ const loginRegisterController = {
 
     },
     //lista de users para la api
-    list: (req,res)=>{
+    list: (req, res) => {
         db.User.findAll()
-        .then(lista=> {
-            return res.json (lista)
-            
-        })
+            .then(lista => {
+                return res.json(lista)
+
+            })
     }
 }
 

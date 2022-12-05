@@ -1,16 +1,12 @@
-import './App.css';
-import ContentWrapper from './components/ContentWrapper';
+// import React from "react";
+// import logo from "./logo.svg";
 import "./assets/css/app.css";
 
+//COMPONENTES
+import RouterApp from "./components/RouterApp";
 
 function App() {
-  return (
-    <div>
-      <ContentWrapper/>
-    </div>
-    
-    
-  );
+  return <RouterApp />;
 }
 
 export default App;
